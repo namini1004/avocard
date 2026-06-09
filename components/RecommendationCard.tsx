@@ -19,15 +19,15 @@ export function RecommendationCard({ analysis, rank }: { analysis: CardAnalysis;
         </div>
         <div className="grid gap-3 sm:grid-cols-3">
           <div>
-            <p className="text-xs font-bold text-ink/50">월 절감액</p>
+            <p className="text-xs font-bold text-ink/50">순 월혜택</p>
             <p className="text-xl font-black text-avocado-700">{formatWon(analysis.monthlySaving)}</p>
           </div>
           <div>
-            <p className="text-xs font-bold text-ink/50">연간 절감액</p>
+            <p className="text-xs font-bold text-ink/50">순 연혜택</p>
             <p className="text-xl font-black text-ink">{formatWon(analysis.annualSaving)}</p>
           </div>
           <div>
-            <p className="text-xs font-bold text-ink/50">피킹률</p>
+            <p className="text-xs font-bold text-ink/50">순피킹률</p>
             <p className="text-xl font-black text-ink">{analysis.pickingRate.toFixed(2)}%</p>
           </div>
         </div>
