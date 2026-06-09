@@ -23,6 +23,24 @@ body {
     linear-gradient(180deg, #fffdf6 0%, #f6faed 52%, #ffffff 100%);
   color: var(--foreground);
   font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+dt,
+dd,
+button,
+a,
+span {
+  word-break: keep-all;
 }
 
 a {
