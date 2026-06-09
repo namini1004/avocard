@@ -23,9 +23,6 @@ export default function HomePage() {
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="#ranking">인기 카드 랭킹 보기</ButtonLink>
-              <ButtonLink href="/recommend" tone="secondary">
-                나만의 카드 찾기
-              </ButtonLink>
             </div>
           </div>
         </section>
@@ -80,9 +77,6 @@ export default function HomePage() {
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link className="focus-ring whitespace-nowrap rounded-full bg-white px-6 py-4 text-sm font-black text-ink" href="#ranking">
                   랭킹 다시 보기
-                </Link>
-                <Link className="focus-ring whitespace-nowrap rounded-full bg-ink px-6 py-4 text-sm font-black text-white" href="/recommend">
-                  나만의 카드 찾기
                 </Link>
               </div>
             </div>
