@@ -35,19 +35,6 @@ export default function HomePage() {
           <CardRankingBoard />
         </section>
 
-        <section className="mx-auto grid max-w-7xl gap-5 px-5 py-12 lg:grid-cols-3 lg:px-8">
-          {[
-            ["광고 문구 대신 실제 한도", "통신 10%, 커피 30%보다 중요한 통합 월 한도를 먼저 보여줍니다."],
-            ["연회비까지 차감", "월 순혜택에서 연회비 월할액을 빼 피킹률을 더 현실적으로 계산합니다."],
-            ["발급 가능 카드 중심", "인기가 높아도 신규 발급이 중지된 카드는 랭킹에서 제외합니다."]
-          ].map(([title, body]) => (
-            <div key={title} className="rounded-[2rem] border border-avocado-900/10 bg-white p-6 shadow-soft">
-              <h2 className="text-xl font-black text-ink">{title}</h2>
-              <p className="mt-3 text-sm leading-7 text-ink/62">{body}</p>
-            </div>
-          ))}
-        </section>
-
         <section id="faq" className="mx-auto max-w-4xl px-5 py-12 lg:px-8">
           <h2 className="text-3xl font-black text-ink">FAQ</h2>
           <div className="mt-6 space-y-4">
