@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { SearchBox } from "@/components/SearchBox";
 import { ButtonLink } from "@/components/ButtonLink";
-import { AvocadoMark } from "@/components/AvocadoMark";
+import { AvocadoMascot } from "@/components/AvocadoMark";
 import { BenefitBar } from "@/components/BenefitBar";
 import { CardVisual } from "@/components/CardVisual";
 import { RecommendationCard } from "@/components/RecommendationCard";
@@ -62,7 +62,7 @@ export default function HomePage() {
             <div className="glass relative overflow-hidden rounded-[2.5rem] p-5 shadow-lift">
               <div className="grid gap-4 sm:grid-cols-[0.9fr_1.1fr]">
                 <div className="rounded-[2rem] bg-avocado-100 p-6">
-                  <AvocadoMark size="lg" />
+                  <AvocadoMascot className="h-36 w-auto drop-shadow-[0_16px_22px_rgba(38,55,25,0.16)]" />
                   <p className="mt-6 text-sm font-black text-avocado-800">실제로 남는 혜택</p>
                   <p className="mt-2 text-4xl font-black text-ink">{formatWon(example.monthlySaving)}</p>
                   <p className="mt-3 text-sm leading-6 text-ink/62">
