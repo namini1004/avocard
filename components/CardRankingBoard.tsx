@@ -6,11 +6,11 @@ import { BenefitCategory, cards, categoryLabels } from "@/data/cards";
 import { CardAnalysis, analyzeCard, defaultProfile, formatWon, SpendingProfile } from "@/lib/calculate";
 
 const totalOptions = [
-  { label: "월 30만원", value: 300000 },
-  { label: "월 50만원", value: 500000 },
-  { label: "월 70만원", value: 700000 },
-  { label: "월 90만원", value: 900000 },
-  { label: "월 120만원", value: 1200000 }
+  { label: "30", value: 300000 },
+  { label: "40", value: 400000 },
+  { label: "50", value: 500000 },
+  { label: "70", value: 700000 },
+  { label: "100", value: 1000000 }
 ];
 
 const focusOptions: Array<{ label: string; value: "balanced" | BenefitCategory }> = [
@@ -196,35 +196,24 @@ export function CardRankingBoard() {
 
   return (
     <section className="rounded-[2rem] bg-white p-4 shadow-soft md:p-7">
-      <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-        <div>
-          <p className="whitespace-nowrap text-sm font-black text-avocado-700">POPULAR CARD RANKING</p>
-          <h2 className="mt-2 text-3xl font-black leading-tight text-ink md:text-4xl">
-            인기 카드 실제 피킹률 순위
-          </h2>
-          <p className="mt-3 max-w-3xl keep-all text-sm leading-6 text-ink/62">
-            발급 가능한 카드만 대상으로 월 사용액, 전월실적, 통합 월 한도, 연회비 월할액을 반영해 순혜택 기준으로 정렬합니다.
-          </p>
-        </div>
-        <Link
-          href="/recommend"
-          className="focus-ring w-fit whitespace-nowrap rounded-full bg-ink px-5 py-3 text-sm font-black text-white"
-        >
-          나만의 카드 찾기
-        </Link>
+      <div>
+        <h2 className="text-3xl font-black leading-tight text-ink md:text-4xl">인기카드 피킹률순위</h2>
+        <p className="mt-3 max-w-3xl keep-all text-sm leading-6 text-ink/62 md:text-base md:leading-7">
+          발급 가능한 카드만 대상으로 월 사용액, 전월실적, 통합 월 한도, 연회비 월할액을 반영해 순혜택 기준으로 정렬합니다.
+        </p>
       </div>
 
-      <div className="mt-6 rounded-[1.75rem] bg-cream p-4">
-        <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="mt-5 rounded-[1.5rem] bg-cream p-3 md:rounded-[1.75rem] md:p-4">
+        <div className="grid gap-3 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
-            <p className="whitespace-nowrap text-xs font-black text-ink/54">월 카드 사용액</p>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <p className="whitespace-nowrap text-xs font-black text-ink/54">월카드사용액(만원)</p>
+            <div className="mt-2 grid grid-cols-5 gap-1.5 sm:flex sm:flex-wrap sm:gap-2">
               {totalOptions.map((option) => (
                 <button
                   key={option.value}
                   type="button"
                   onClick={() => setTotal(option.value)}
-                  className={`focus-ring whitespace-nowrap rounded-full px-4 py-2 text-sm font-black transition ${
+                  className={`focus-ring whitespace-nowrap rounded-full px-2 py-2 text-xs font-black transition sm:px-4 sm:text-sm ${
                     total === option.value ? "bg-ink text-white" : "bg-white text-ink hover:bg-avocado-100"
                   }`}
                 >
@@ -234,14 +223,14 @@ export function CardRankingBoard() {
             </div>
           </div>
           <div>
-            <p className="whitespace-nowrap text-xs font-black text-ink/54">소비 성향</p>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <p className="whitespace-nowrap text-xs font-black text-ink/54">소비성향</p>
+            <div className="mt-2 grid grid-cols-5 gap-1.5 sm:flex sm:flex-wrap sm:gap-2">
               {focusOptions.map((option) => (
                 <button
                   key={option.value}
                   type="button"
                   onClick={() => setFocus(option.value)}
-                  className={`focus-ring whitespace-nowrap rounded-full px-4 py-2 text-sm font-black transition ${
+                  className={`focus-ring whitespace-nowrap rounded-full px-2 py-2 text-xs font-black transition sm:px-4 sm:text-sm ${
                     focus === option.value ? "bg-avocado-700 text-white" : "bg-white text-ink hover:bg-avocado-100"
                   }`}
                 >
@@ -253,7 +242,7 @@ export function CardRankingBoard() {
         </div>
       </div>
 
-      <div className="mt-6 grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
+      <div className="mt-5 grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
         <div className="overflow-hidden rounded-[1.75rem] border border-avocado-900/10 bg-white">
           <div className="max-h-[720px] divide-y divide-avocado-900/10 overflow-auto">
             {rankings.map((analysis, index) => (
