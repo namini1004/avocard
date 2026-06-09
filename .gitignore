@@ -1,0 +1,15 @@
+.next/
+node_modules/
+.tools/
+
+.env*
+!.env.example
+
+.next-dev.log
+.next-dev.err.log
+.avocard-home.png
+.gitconfig
+
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
