@@ -2,13 +2,17 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CardRankingBoard } from "@/components/CardRankingBoard";
+import { AvocadoMascot } from "@/components/AvocadoMark";
 
 export default function HomePage() {
   return (
     <>
       <Header />
       <main>
-        <section className="mx-auto max-w-7xl px-5 pb-4 pt-10 lg:px-8 lg:pt-14">
+        <section className="relative mx-auto max-w-7xl px-5 pb-4 pt-10 lg:px-8 lg:pt-14">
+          <div className="pointer-events-none absolute right-5 top-8 hidden opacity-95 md:block lg:right-10">
+            <AvocadoMascot className="h-24 w-auto lg:h-28" />
+          </div>
           <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center rounded-full border border-avocado-900/10 bg-white px-4 py-2 text-sm font-black text-avocado-800 shadow-soft">
               <span className="whitespace-nowrap">카드 광고보다 솔직하게</span>

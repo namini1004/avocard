@@ -74,8 +74,7 @@ export default function RecommendPage() {
       <main className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
         <section className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
-            <p className="text-sm font-black text-avocado-700">AI CARD MATCHER</p>
-            <h1 className="mt-3 text-5xl font-black leading-tight text-ink">당신의 소비에 맞는 카드는 따로 있습니다</h1>
+            <h1 className="text-5xl font-black leading-tight text-ink">당신의 소비에 맞는 카드는 따로 있습니다</h1>
             <p className="mt-5 text-lg leading-8 text-ink/68">
               월 총 사용액과 카테고리별 지출을 넣으면 실제 피킹률 기준으로 추천합니다. 전월실적 부담, 연회비 민감도,
               브랜드 선호까지 함께 반영하는 경험을 설계했습니다.
