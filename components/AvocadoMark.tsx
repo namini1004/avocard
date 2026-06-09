@@ -21,40 +21,28 @@ export function AvocardCardLogo({ className = "" }: { className?: string }) {
   return (
     <svg
       className={className}
-      width="168"
-      height="52"
-      viewBox="0 0 168 52"
+      width="80"
+      height="50"
+      viewBox="0 0 80 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <rect x="2" y="3" width="164" height="46" rx="15" fill="#263719" />
+      <rect x="2" y="3" width="76" height="44" rx="12" fill="#263719" />
       <path
-        d="M18 39C40 29 55 36 75 27C95 18 114 17 150 9V49H17C16 46 16 42 18 39Z"
+        d="M11 39C24 31 37 35 50 27C60 21 67 14 77 10V47H12C10 45 9 42 11 39Z"
         fill="#405C1D"
         opacity="0.78"
       />
-      <rect x="15" y="12" width="24" height="18" rx="5" fill="#F5D77D" />
-      <path d="M23 13V30M31 13V30M16 21H39" stroke="#A67924" strokeWidth="1.2" opacity="0.72" />
-      <text
-        x="49"
-        y="25"
-        fill="white"
-        fontFamily="Arial, sans-serif"
-        fontSize="13"
-        fontWeight="800"
-      >
-        Avocard
-      </text>
-      <g transform="translate(110 12)">
-        <ellipse cx="18" cy="16" rx="22" ry="17" fill="#FFF9E8" />
-        <circle cx="18" cy="16" r="13" fill="#6F982B" />
-        <circle cx="18" cy="16" r="10.5" fill="#D5A443" />
-        <circle cx="14.5" cy="13.5" r="1.7" fill="#162016" />
-        <circle cx="21.5" cy="13.5" r="1.7" fill="#162016" />
-        <path d="M14.5 18.5C16.5 21.5 19.9 21.5 22 18.5" stroke="#162016" strokeWidth="1.7" strokeLinecap="round" />
-        <circle cx="10.5" cy="17.5" r="2" fill="#FFD65A" opacity="0.9" />
-        <circle cx="25.5" cy="17.5" r="2" fill="#FFD65A" opacity="0.9" />
+      <rect x="13" y="13" width="19" height="15" rx="4" fill="#F5D77D" />
+      <path d="M20 14V28M27 14V28M14 21H32" stroke="#A67924" strokeWidth="1.1" opacity="0.72" />
+      <g transform="translate(43 11)">
+        <ellipse cx="15" cy="14" rx="17" ry="14" fill="#FFF9E8" />
+        <circle cx="15" cy="14" r="10.5" fill="#6F982B" />
+        <circle cx="15" cy="14" r="8" fill="#D5A443" />
+        <circle cx="12.3" cy="12" r="1.35" fill="#162016" />
+        <circle cx="17.7" cy="12" r="1.35" fill="#162016" />
+        <path d="M12.2 16C14 18.4 16.3 18.4 18 16" stroke="#162016" strokeWidth="1.35" strokeLinecap="round" />
       </g>
     </svg>
   );

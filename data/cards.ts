@@ -109,6 +109,7 @@ type CardSeed = {
   name: string;
   issuer: string;
   cardType: "credit" | "check";
+  status?: CardStatus;
   summary: string;
   annualFee: number;
   previousSpend: number;
@@ -217,7 +218,7 @@ function card(seed: CardSeed): CreditCard {
     name: seed.name,
     issuer: seed.issuer,
     cardType: seed.cardType,
-    status: "active",
+    status: seed.status ?? "active",
     reviewStatus: "needs_review",
     summary: seed.summary,
     annualFee: seed.annualFee,
@@ -264,6 +265,7 @@ const seeds: CardSeed[] = [
     name: "신한카드 Mr.Life",
     issuer: "신한",
     cardType: "credit",
+    status: "discontinued",
     summary: "공과금, 통신, 편의점, 병원, 마트, 주유까지 생활비에 강한 카드입니다.",
     annualFee: 15000,
     previousSpend: 300000,
@@ -1303,6 +1305,28 @@ const seeds: CardSeed[] = [
       ["shopping", "온라인", 0.01, 7000, "온라인 쇼핑"],
       ["travel", "해외", 0.012, 7000, "해외 결제"],
       ["dining", "외식", 0.01, 4000, "외식"]
+    ]
+  },
+  {
+    slug: "samsung-id-on",
+    name: "삼성 iD ON 카드",
+    issuer: "삼성",
+    cardType: "credit",
+    summary: "많이 쓰는 영역을 중심으로 자동 맞춤 할인을 제공하는 생활 카드입니다.",
+    annualFee: 20000,
+    previousSpend: 300000,
+    advertisedBenefit: "많이 쓰는 영역 자동 할인",
+    monthlyCap: 42000,
+    color: "from-lime-100 to-avocado-800",
+    bestFor: ["자동 맞춤 할인", "생활비"],
+    strengths: ["소비패턴에 따라 주요 영역이 잡힙니다.", "생활 영역 커버가 넓습니다."],
+    weaknesses: ["자동 선택 기준을 이해해야 합니다."],
+    specs: [
+      ["shopping", "많이 쓰는 영역", 0.1, 12000, "쇼핑/온라인"],
+      ["dining", "외식", 0.1, 8000, "외식"],
+      ["coffee", "커피", 0.1, 5000, "커피"],
+      ["transport", "교통", 0.1, 7000, "대중교통"],
+      ["telecom", "통신", 0.1, 10000, "통신"]
     ]
   }
 ];
