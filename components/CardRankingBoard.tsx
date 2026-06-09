@@ -77,7 +77,7 @@ export function CardRankingBoard() {
         <div>
           <p className="whitespace-nowrap text-sm font-black text-avocado-700">POPULAR CARD RANKING</p>
           <h2 className="mt-2 text-3xl font-black leading-tight text-ink md:text-4xl">
-            인기 카드 30개, 실제 피킹률 순위
+            인기 카드 50개, 실제 피킹률 순위
           </h2>
           <p className="mt-3 max-w-3xl keep-all text-sm leading-6 text-ink/62">
             마케팅 문구의 할인율이 아니라 월 사용액, 전월실적, 통합 월 한도, 연회비 월할액을 반영해 순혜택 기준으로 정렬합니다.

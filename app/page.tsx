@@ -24,7 +24,7 @@ export default function HomePage() {
               <span className="mt-3 block text-avocado-700">아는 만큼 보이는 카드</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg font-bold leading-8 text-ink/70 md:text-xl md:leading-9">
-              “10% 할인”보다 중요한 건 실제로 남는 금액입니다. 인기 카드 30개를 월 사용액, 전월실적, 통합 할인한도, 연회비까지 반영해 피킹률로 정리했습니다.
+              “10% 할인”보다 중요한 건 실제로 남는 금액입니다. 인기 카드 50개를 월 사용액, 전월실적, 통합 할인한도, 연회비까지 반영해 피킹률로 정리했습니다.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="#ranking">인기 카드 랭킹 보기</ButtonLink>
@@ -97,7 +97,7 @@ export default function HomePage() {
               ["피킹률이 뭐예요?", "월 카드 사용액 대비 실제로 돌려받는 순혜택 비율입니다."],
               ["왜 연회비를 빼나요?", "연회비도 실제 비용이기 때문에 월할로 나눠 순혜택에서 차감합니다."],
               ["카드 데이터는 정확한가요?", "MVP는 공식 상품 페이지, 여신금융협회 공시, 인기 랭킹 출처를 연결한 검수 대기 데이터입니다. 약관 PDF 단위의 최종 검수는 계속 확장합니다."],
-              ["검색은 왜 없나요?", "초기에는 30개 인기 카드 랭킹과 상세 분석에 집중하고, 데이터가 충분히 늘어난 뒤 검색을 붙입니다."]
+              ["검색은 왜 없나요?", "초기에는 50개 인기 카드 랭킹과 상세 분석에 집중하고, 데이터가 충분히 늘어난 뒤 검색을 붙입니다."]
             ].map(([q, a]) => (
               <details key={q} className="rounded-3xl border border-avocado-900/10 bg-white p-5 shadow-soft">
                 <summary className="cursor-pointer text-lg font-black text-ink">{q}</summary>
@@ -114,7 +114,7 @@ export default function HomePage() {
                 <p className="whitespace-nowrap text-sm font-black text-avocado-100">답답해서 만들었습니다</p>
                 <h2 className="mt-3 text-4xl font-black">카드 선택, 감이 아니라 데이터로</h2>
                 <p className="mt-4 max-w-2xl text-white/78">
-                  일단 인기 카드 30개부터 제대로 비교하고, 다음 단계에서 카드사별·혜택목적별 데이터를 확장합니다.
+                  일단 인기 카드 50개부터 제대로 비교하고, 다음 단계에서 카드사별·혜택목적별 데이터를 확장합니다.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
