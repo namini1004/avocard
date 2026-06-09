@@ -37,8 +37,8 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
             <h1 className="mt-2 text-4xl font-black text-ink">{card.name}</h1>
             <p className="mt-4 text-lg leading-8 text-ink/68">{card.summary}</p>
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
-              <MetricCard label="예상 월 절감액" value={formatWon(analysis.monthlySaving)} />
-              <MetricCard label="실제 피킹률" value={`${analysis.pickingRate.toFixed(2)}%`} />
+              <MetricCard label="순 월혜택" value={formatWon(analysis.monthlySaving)} />
+              <MetricCard label="순 피킹률" value={`${analysis.pickingRate.toFixed(2)}%`} />
               <MetricCard label="전월실적" value={formatWon(card.previousSpend)} />
             </div>
           </section>
@@ -75,8 +75,8 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
               </div>
               <div className="rounded-3xl bg-avocado-300 p-5 text-ink">
                 <p className="text-sm font-bold text-ink/60">월 70만원 소비 기준</p>
-                <p className="mt-2 text-3xl font-black">{formatWon(analysis.monthlySaving)} 절감</p>
-                <p className="mt-1 font-black">피킹률 {analysis.pickingRate.toFixed(2)}%</p>
+                <p className="mt-2 text-3xl font-black">{formatWon(analysis.monthlySaving)} 순혜택</p>
+                <p className="mt-1 font-black">순피킹률 {analysis.pickingRate.toFixed(2)}%</p>
               </div>
               <p className="leading-7 text-white/72">{analysis.reason}</p>
             </div>
@@ -92,8 +92,12 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
                 <dd className="font-black">{formatWon(card.annualFee)}</dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="font-bold text-ink/56">월 할인한도</dt>
-                <dd className="font-black">{formatWon(card.monthlyCap)}</dd>
+                <dt className="font-bold text-ink/56">연회비 월할</dt>
+                <dd className="font-black">{formatWon(analysis.monthlyFee)}</dd>
+              </div>
+              <div className="flex justify-between gap-4">
+                <dt className="font-bold text-ink/56">통합 월 할인한도</dt>
+                <dd className="font-black">{formatWon(analysis.effectiveMonthlyCap)}</dd>
               </div>
             </dl>
           </div>
@@ -154,19 +158,40 @@ export default async function CardDetailPage({ params }: { params: Promise<{ slu
         </section>
 
         <section className="mt-8 rounded-[2rem] bg-white p-7 shadow-soft">
-          <h2 className="text-2xl font-black">예시 소비 패턴 기준 절감액</h2>
+          <h2 className="text-2xl font-black">순혜택 계산 내역</h2>
+          <div className="mt-5 grid gap-3 md:grid-cols-4">
+            <div className="rounded-2xl bg-cream p-4">
+              <p className="text-xs font-bold text-ink/50">혜택 합계</p>
+              <p className="mt-1 text-xl font-black text-ink">{formatWon(analysis.matchedBenefit)}</p>
+            </div>
+            <div className="rounded-2xl bg-cream p-4">
+              <p className="text-xs font-bold text-ink/50">통합한도 적용</p>
+              <p className="mt-1 text-xl font-black text-ink">{formatWon(analysis.grossMonthlySaving)}</p>
+            </div>
+            <div className="rounded-2xl bg-cream p-4">
+              <p className="text-xs font-bold text-ink/50">월할 연회비</p>
+              <p className="mt-1 text-xl font-black text-ink">-{formatWon(analysis.monthlyFee)}</p>
+            </div>
+            <div className="rounded-2xl bg-avocado-100 p-4">
+              <p className="text-xs font-bold text-ink/50">최종 순혜택</p>
+              <p className="mt-1 text-xl font-black text-avocado-800">{formatWon(analysis.monthlySaving)}</p>
+            </div>
+          </div>
           <div className="mt-6 grid gap-5 md:grid-cols-2">
-            {card.benefitRules.map((benefit) => {
-              const spend = defaultProfile[benefit.category] ?? 0;
-              const saving = Math.min(spend * (benefit.rate ?? 0) + (benefit.fixedAmount ?? 0), benefit.monthlyCap);
-              return <BenefitBar key={benefit.id} label={benefit.label} value={saving} max={benefit.monthlyCap} />;
-            })}
+            {analysis.ruleSavings.map((benefit) => (
+              <BenefitBar
+                key={benefit.id}
+                label={`${benefit.label} · ${formatWon(defaultProfile[benefit.category])} 사용 · ${(benefit.rate * 100).toFixed(0)}%`}
+                value={benefit.saving}
+                max={benefit.cap}
+              />
+            ))}
           </div>
           <Link
-            href="/compare"
+            href="/cards"
             className="focus-ring mt-8 inline-flex rounded-full bg-ink px-6 py-4 text-sm font-black text-white"
           >
-            비슷한 카드와 비교하기
+            랭킹보드로 돌아가기
           </Link>
         </section>
       </main>
