@@ -2,10 +2,9 @@ import Link from "next/link";
 import { AvocardCardLogo } from "./AvocadoMark";
 
 const links = [
-  { href: "/cards", label: "카드 목록" },
-  { href: "/recommend", label: "AI 추천" },
-  { href: "/compare", label: "카드 비교" },
-  { href: "/sources", label: "데이터 현황" },
+  { href: "/cards", label: "인기 랭킹" },
+  { href: "/recommend", label: "내 카드 찾기" },
+  { href: "/sources", label: "데이터 출처" },
   { href: "/#faq", label: "FAQ" }
 ];
 

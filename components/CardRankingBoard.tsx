@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { BenefitCategory, cards, categoryLabels } from "@/data/cards";
 import { analyzeCard, defaultProfile, formatWon, SpendingProfile } from "@/lib/calculate";
-import { BenefitBar } from "./BenefitBar";
 
 const totalOptions = [
   { label: "월 30만원", value: 300000 },
@@ -15,7 +14,7 @@ const totalOptions = [
 ];
 
 const focusOptions: Array<{ label: string; value: "balanced" | BenefitCategory }> = [
-  { label: "균형 소비", value: "balanced" },
+  { label: "균형", value: "balanced" },
   { label: "교통", value: "transport" },
   { label: "커피", value: "coffee" },
   { label: "배달", value: "delivery" },
@@ -23,32 +22,23 @@ const focusOptions: Array<{ label: string; value: "balanced" | BenefitCategory }
   { label: "쇼핑", value: "shopping" },
   { label: "통신", value: "telecom" },
   { label: "OTT", value: "ott" },
-  { label: "마트", value: "mart" }
-];
-
-const issuers = ["전체", ...Array.from(new Set(cards.map((card) => card.issuer)))];
-const cardTypes = [
-  { label: "전체", value: "all" },
-  { label: "신용", value: "credit" },
-  { label: "체크", value: "check" }
+  { label: "여행", value: "travel" }
 ];
 
 function buildProfile(total: number, focus: "balanced" | BenefitCategory): SpendingProfile {
   const profile: SpendingProfile = { ...defaultProfile, total };
-  const categoryTotal = Object.entries(defaultProfile)
-    .filter(([key]) => key !== "total")
-    .reduce((sum, [, value]) => sum + value, 0);
+  const categories = Object.keys(categoryLabels) as BenefitCategory[];
+  const categoryTotal = categories.reduce((sum, category) => sum + (defaultProfile[category] ?? 0), 0);
   const scale = categoryTotal > 0 ? total / categoryTotal : 1;
 
-  (Object.keys(categoryLabels) as BenefitCategory[]).forEach((category) => {
+  categories.forEach((category) => {
     profile[category] = Math.round((defaultProfile[category] ?? 0) * scale);
   });
 
   if (focus !== "balanced") {
-    const categories = Object.keys(categoryLabels) as BenefitCategory[];
-    const focusedAmount = Math.round(total * 0.28);
+    const focusedAmount = Math.round(total * 0.3);
     const remaining = Math.max(0, total - focusedAmount);
-    const otherCurrentTotal = categories
+    const otherTotal = categories
       .filter((category) => category !== focus)
       .reduce((sum, category) => sum + profile[category], 0);
 
@@ -56,14 +46,11 @@ function buildProfile(total: number, focus: "balanced" | BenefitCategory): Spend
     categories
       .filter((category) => category !== focus)
       .forEach((category) => {
-        profile[category] = otherCurrentTotal > 0 ? Math.round((profile[category] / otherCurrentTotal) * remaining) : 0;
+        profile[category] = otherTotal > 0 ? Math.round((profile[category] / otherTotal) * remaining) : 0;
       });
   }
 
-  const normalizedTotal = (Object.keys(categoryLabels) as BenefitCategory[]).reduce(
-    (sum, category) => sum + profile[category],
-    0
-  );
+  const normalizedTotal = categories.reduce((sum, category) => sum + profile[category], 0);
   profile.etc += total - normalizedTotal;
 
   return profile;
@@ -72,229 +59,209 @@ function buildProfile(total: number, focus: "balanced" | BenefitCategory): Spend
 export function CardRankingBoard() {
   const [total, setTotal] = useState(700000);
   const [focus, setFocus] = useState<"balanced" | BenefitCategory>("balanced");
-  const [issuer, setIssuer] = useState("전체");
-  const [cardType, setCardType] = useState("all");
   const [selectedSlug, setSelectedSlug] = useState(cards[0]?.slug ?? "");
 
   const profile = useMemo(() => buildProfile(total, focus), [total, focus]);
   const rankings = useMemo(() => {
     return cards
-      .filter((card) => issuer === "전체" || card.issuer === issuer)
-      .filter((card) => cardType === "all" || card.cardType === cardType)
       .map((card) => analyzeCard(card, profile))
       .sort((a, b) => b.pickingRate - a.pickingRate || b.monthlySaving - a.monthlySaving);
-  }, [cardType, issuer, profile]);
+  }, [profile]);
 
   const selected = rankings.find((analysis) => analysis.card.slug === selectedSlug) ?? rankings[0];
-  const topFocus = (Object.keys(categoryLabels) as BenefitCategory[])
-    .map((category) => ({ category, spend: profile[category] }))
-    .sort((a, b) => b.spend - a.spend)
-    .slice(0, 3);
+  const selectedRank = rankings.findIndex((analysis) => analysis.card.slug === selected?.card.slug) + 1;
 
   return (
-    <section className="rounded-[2rem] bg-white p-5 shadow-soft md:p-7">
-      <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+    <section className="rounded-[2rem] bg-white p-4 shadow-soft md:p-7">
+      <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
         <div>
-          <p className="text-sm font-black text-avocado-700">AVOCARD CORE RANKING</p>
-          <h2 className="mt-2 text-3xl font-black text-ink">월 사용액 기준 순혜택 랭킹보드</h2>
-          <p className="mt-2 max-w-3xl text-sm leading-6 text-ink/60">
-            마케팅 할인율이 아니라, 실제 월 사용액에서 받을 수 있는 통합 월 할인한도와 연회비 월할을 반영해 순피킹률을 계산합니다.
+          <p className="whitespace-nowrap text-sm font-black text-avocado-700">POPULAR CARD RANKING</p>
+          <h2 className="mt-2 text-3xl font-black leading-tight text-ink md:text-4xl">
+            인기 카드 30개, 실제 피킹률 순위
+          </h2>
+          <p className="mt-3 max-w-3xl keep-all text-sm leading-6 text-ink/62">
+            마케팅 문구의 할인율이 아니라 월 사용액, 전월실적, 통합 월 한도, 연회비 월할액을 반영해 순혜택 기준으로 정렬합니다.
           </p>
         </div>
-        <div className="rounded-3xl bg-cream px-5 py-4">
-          <p className="text-xs font-black text-ink/50">현재 계산식</p>
-          <p className="mt-1 text-sm font-black text-ink">카테고리 혜택 - 통합한도 - 월할 연회비 = 순혜택</p>
-        </div>
+        <Link
+          href="/recommend"
+          className="focus-ring w-fit whitespace-nowrap rounded-full bg-ink px-5 py-3 text-sm font-black text-white"
+        >
+          나만의 카드 찾기
+        </Link>
       </div>
 
-      <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_0.72fr]">
-        <div className="rounded-[1.75rem] border border-avocado-900/10 bg-cream p-4">
-          <p className="text-sm font-black text-ink">필터</p>
-          <div className="mt-4 grid gap-4">
-            <div>
-              <p className="text-xs font-black text-ink/52">월 사용액</p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {totalOptions.map((option) => (
-                  <button
-                    key={option.value}
-                    type="button"
-                    onClick={() => setTotal(option.value)}
-                    className={`focus-ring rounded-full px-4 py-2 text-sm font-black transition ${
-                      total === option.value ? "bg-ink text-white" : "bg-white text-ink hover:bg-avocado-100"
-                    }`}
-                  >
-                    {option.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <p className="text-xs font-black text-ink/52">소비 성향</p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {focusOptions.map((option) => (
-                  <button
-                    key={option.value}
-                    type="button"
-                    onClick={() => setFocus(option.value)}
-                    className={`focus-ring rounded-full px-4 py-2 text-sm font-black transition ${
-                      focus === option.value ? "bg-avocado-700 text-white" : "bg-white text-ink hover:bg-avocado-100"
-                    }`}
-                  >
-                    {option.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2">
-              <label>
-                <span className="text-xs font-black text-ink/52">카드사</span>
-                <select
-                  value={issuer}
-                  onChange={(event) => setIssuer(event.target.value)}
-                  className="focus-ring mt-2 h-12 w-full rounded-2xl border border-avocado-900/10 bg-white px-4 font-bold"
+      <div className="mt-6 rounded-[1.75rem] bg-cream p-4">
+        <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="whitespace-nowrap text-xs font-black text-ink/54">월 카드 사용액</p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {totalOptions.map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setTotal(option.value)}
+                  className={`focus-ring whitespace-nowrap rounded-full px-4 py-2 text-sm font-black transition ${
+                    total === option.value ? "bg-ink text-white" : "bg-white text-ink hover:bg-avocado-100"
+                  }`}
                 >
-                  {issuers.map((item) => (
-                    <option key={item}>{item}</option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                <span className="text-xs font-black text-ink/52">카드 유형</span>
-                <select
-                  value={cardType}
-                  onChange={(event) => setCardType(event.target.value)}
-                  className="focus-ring mt-2 h-12 w-full rounded-2xl border border-avocado-900/10 bg-white px-4 font-bold"
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="whitespace-nowrap text-xs font-black text-ink/54">소비 성향</p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {focusOptions.map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setFocus(option.value)}
+                  className={`focus-ring whitespace-nowrap rounded-full px-4 py-2 text-sm font-black transition ${
+                    focus === option.value ? "bg-avocado-700 text-white" : "bg-white text-ink hover:bg-avocado-100"
+                  }`}
                 >
-                  {cardTypes.map((item) => (
-                    <option key={item.value} value={item.value}>
-                      {item.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
+                  {option.label}
+                </button>
+              ))}
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="rounded-[1.75rem] bg-ink p-5 text-white">
-          <p className="text-sm font-black text-avocado-200">소비 프로필</p>
-          <p className="mt-2 text-4xl font-black">{formatWon(profile.total)}</p>
-          <div className="mt-4 grid gap-2">
-            {topFocus.map((item) => (
-              <div key={item.category} className="flex items-center justify-between rounded-2xl bg-white/10 px-4 py-3">
-                <span className="text-sm font-bold text-white/70">{categoryLabels[item.category]}</span>
-                <span className="font-black">{formatWon(item.spend)}</span>
-              </div>
+      <div className="mt-6 grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
+        <div className="overflow-hidden rounded-[1.75rem] border border-avocado-900/10">
+          <div className="grid grid-cols-[58px_1fr_84px] bg-ink px-3 py-3 text-xs font-black text-white/72">
+            <span className="whitespace-nowrap">순위</span>
+            <span className="whitespace-nowrap">카드명</span>
+            <span className="text-right whitespace-nowrap">피킹률</span>
+          </div>
+          <div className="max-h-[720px] divide-y divide-avocado-900/10 overflow-auto bg-white">
+            {rankings.map((analysis, index) => (
+              <button
+                key={analysis.card.slug}
+                type="button"
+                onClick={() => setSelectedSlug(analysis.card.slug)}
+                className={`grid w-full grid-cols-[58px_1fr_84px] items-center gap-2 px-3 py-4 text-left transition ${
+                  selected?.card.slug === analysis.card.slug ? "bg-avocado-50" : "hover:bg-cream"
+                }`}
+              >
+                <span className="w-fit rounded-full bg-cream px-2.5 py-1 text-xs font-black text-ink">
+                  #{index + 1}
+                </span>
+                <span className="min-w-0">
+                  <span className="block truncate text-sm font-black text-ink md:text-base">{analysis.card.name}</span>
+                  <span className="mt-1 block truncate text-xs font-bold text-ink/48">
+                    {analysis.card.issuer} · {analysis.card.cardType === "credit" ? "신용" : "체크"}
+                  </span>
+                </span>
+                <span className="text-right text-base font-black text-avocado-700 md:text-lg">
+                  {analysis.pickingRate.toFixed(2)}%
+                </span>
+              </button>
             ))}
           </div>
         </div>
-      </div>
 
-      <div className="mt-6 overflow-hidden rounded-[1.75rem] border border-avocado-900/10">
-        <div className="hidden grid-cols-[72px_1.2fr_0.8fr_0.8fr_0.8fr_0.7fr] bg-cream px-4 py-3 text-xs font-black text-ink/54 md:grid">
-          <span>순위</span>
-          <span>카드</span>
-          <span>통합 월 한도</span>
-          <span>월할 연회비</span>
-          <span>순혜택</span>
-          <span>순피킹률</span>
-        </div>
-        <div className="divide-y divide-avocado-900/10">
-          {rankings.map((analysis, index) => (
-            <button
-              key={analysis.card.slug}
-              type="button"
-              onClick={() => setSelectedSlug(analysis.card.slug)}
-              className={`grid w-full gap-3 px-4 py-4 text-left transition md:grid-cols-[72px_1.2fr_0.8fr_0.8fr_0.8fr_0.7fr] md:items-center ${
-                selected?.card.slug === analysis.card.slug ? "bg-avocado-50" : "bg-white hover:bg-cream"
-              }`}
-            >
-              <span className="w-fit rounded-full bg-ink px-3 py-1 text-sm font-black text-white">#{index + 1}</span>
-              <span>
-                <span className="block text-lg font-black text-ink">{analysis.card.name}</span>
-                <span className="mt-1 block text-xs font-bold text-ink/50">
-                  {analysis.card.issuer} · 전월실적 {formatWon(analysis.card.previousSpend)}
-                </span>
-              </span>
-              <span>
-                <span className="block text-xs font-bold text-ink/45 md:hidden">통합 월 한도</span>
-                <span className="font-black text-ink">{formatWon(analysis.effectiveMonthlyCap)}</span>
-              </span>
-              <span>
-                <span className="block text-xs font-bold text-ink/45 md:hidden">월할 연회비</span>
-                <span className="font-black text-ink">{formatWon(analysis.monthlyFee)}</span>
-              </span>
-              <span>
-                <span className="block text-xs font-bold text-ink/45 md:hidden">순혜택</span>
-                <span className="font-black text-avocado-700">{formatWon(analysis.monthlySaving)}</span>
-              </span>
-              <span>
-                <span className="block text-xs font-bold text-ink/45 md:hidden">순피킹률</span>
-                <span className="font-black text-ink">{analysis.pickingRate.toFixed(2)}%</span>
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {selected ? (
-        <div className="mt-6 grid gap-5 lg:grid-cols-[1fr_0.85fr]">
-          <article className="rounded-[1.75rem] border border-avocado-900/10 p-5">
-            <div className="flex flex-col justify-between gap-4 md:flex-row md:items-start">
+        {selected ? (
+          <article className="rounded-[1.75rem] border border-avocado-900/10 bg-white p-5 md:p-6">
+            <div className="flex flex-col justify-between gap-3 md:flex-row md:items-start">
               <div>
-                <p className="text-sm font-black text-avocado-700">선택 카드 분석</p>
-                <h3 className="mt-2 text-3xl font-black text-ink">{selected.card.name}</h3>
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-ink/60">{selected.reason}</p>
+                <p className="whitespace-nowrap text-sm font-black text-avocado-700">#{selectedRank} 분석 결과</p>
+                <h3 className="mt-2 text-3xl font-black leading-tight text-ink">{selected.card.name}</h3>
+                <p className="mt-3 keep-all text-sm leading-6 text-ink/62">{selected.card.summary}</p>
               </div>
-              <Link
-                href={`/cards/${selected.card.slug}`}
-                className="focus-ring w-fit rounded-full bg-ink px-5 py-3 text-sm font-black text-white"
-              >
-                상세 보기
-              </Link>
+              <span className="w-fit whitespace-nowrap rounded-full bg-avocado-100 px-4 py-2 text-sm font-black text-avocado-800">
+                {selected.pickingRate.toFixed(2)}%
+              </span>
             </div>
 
-            <div className="mt-5 grid gap-3 sm:grid-cols-4">
+            <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               <div className="rounded-2xl bg-cream p-4">
-                <p className="text-xs font-bold text-ink/50">혜택 합계</p>
-                <p className="mt-1 text-xl font-black text-ink">{formatWon(selected.matchedBenefit)}</p>
+                <p className="whitespace-nowrap text-xs font-bold text-ink/50">월 사용 조건</p>
+                <p className="mt-1 text-lg font-black text-ink">{formatWon(selected.card.previousSpend)}</p>
               </div>
               <div className="rounded-2xl bg-cream p-4">
-                <p className="text-xs font-bold text-ink/50">통합한도 적용 후</p>
-                <p className="mt-1 text-xl font-black text-ink">{formatWon(selected.grossMonthlySaving)}</p>
+                <p className="whitespace-nowrap text-xs font-bold text-ink/50">통합 월 한도</p>
+                <p className="mt-1 text-lg font-black text-ink">{formatWon(selected.effectiveMonthlyCap)}</p>
               </div>
               <div className="rounded-2xl bg-cream p-4">
-                <p className="text-xs font-bold text-ink/50">월할 연회비</p>
-                <p className="mt-1 text-xl font-black text-ink">-{formatWon(selected.monthlyFee)}</p>
+                <p className="whitespace-nowrap text-xs font-bold text-ink/50">연회비 월할</p>
+                <p className="mt-1 text-lg font-black text-ink">-{formatWon(selected.monthlyFee)}</p>
               </div>
               <div className="rounded-2xl bg-avocado-100 p-4">
-                <p className="text-xs font-bold text-ink/50">최종 순혜택</p>
-                <p className="mt-1 text-xl font-black text-avocado-800">{formatWon(selected.monthlySaving)}</p>
+                <p className="whitespace-nowrap text-xs font-bold text-ink/50">월 순혜택</p>
+                <p className="mt-1 text-lg font-black text-avocado-800">{formatWon(selected.monthlySaving)}</p>
               </div>
             </div>
-          </article>
 
-          <article className="rounded-[1.75rem] border border-avocado-900/10 p-5">
-            <h3 className="text-xl font-black text-ink">혜택별 실제 적용액</h3>
-            <div className="mt-5 space-y-5">
-              {selected.ruleSavings.map((rule) => (
-                <BenefitBar
-                  key={rule.id}
-                  label={`${rule.label} · ${formatWon(rule.spend)} 사용 · ${(rule.rate * 100).toFixed(0)}%`}
-                  value={rule.saving}
-                  max={rule.cap}
-                />
-              ))}
+            <div className="mt-5 rounded-3xl bg-ink p-5 text-white">
+              <h4 className="whitespace-nowrap text-lg font-black">왜 이 피킹률인가요?</h4>
+              <p className="mt-3 keep-all text-sm leading-7 text-white/74">{selected.reason}</p>
+            </div>
+
+            <div className="mt-5">
+              <h4 className="whitespace-nowrap text-lg font-black text-ink">영역별 지켜야 할 조건</h4>
+              <div className="mt-3 grid gap-3">
+                {selected.card.benefitRules.map((rule) => {
+                  const applied = selected.ruleSavings.find((item) => item.id === rule.id);
+                  return (
+                    <div key={rule.id} className="rounded-3xl border border-avocado-900/10 p-4">
+                      <div className="flex flex-col justify-between gap-3 md:flex-row md:items-start">
+                        <div>
+                          <p className="font-black text-ink">{rule.label}</p>
+                          <p className="mt-1 keep-all text-sm leading-6 text-ink/58">{rule.note}</p>
+                          <p className="mt-2 keep-all text-xs font-bold leading-5 text-ink/45">
+                            최소 조건 {rule.performanceBand} · 적용처 {rule.merchantScope.join(", ")}
+                          </p>
+                        </div>
+                        <div className="grid grid-cols-3 gap-2 text-center md:min-w-[250px]">
+                          <div className="rounded-2xl bg-cream px-3 py-2">
+                            <p className="whitespace-nowrap text-[11px] font-black text-ink/45">할인율</p>
+                            <p className="whitespace-nowrap text-sm font-black text-ink">
+                              {((rule.rate ?? 0) * 100).toFixed(rule.rate && rule.rate < 0.01 ? 1 : 0)}%
+                            </p>
+                          </div>
+                          <div className="rounded-2xl bg-cream px-3 py-2">
+                            <p className="whitespace-nowrap text-[11px] font-black text-ink/45">월 한도</p>
+                            <p className="whitespace-nowrap text-sm font-black text-ink">{formatWon(rule.monthlyCap)}</p>
+                          </div>
+                          <div className="rounded-2xl bg-avocado-100 px-3 py-2">
+                            <p className="whitespace-nowrap text-[11px] font-black text-ink/45">예상</p>
+                            <p className="whitespace-nowrap text-sm font-black text-avocado-800">
+                              {formatWon(applied?.saving ?? 0)}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href={`/cards/${selected.card.slug}`}
+                className="focus-ring whitespace-nowrap rounded-full bg-ink px-5 py-3 text-center text-sm font-black text-white"
+              >
+                상세 페이지 보기
+              </Link>
+              <a
+                href={selected.card.sourceUrls[0]?.url}
+                className="focus-ring whitespace-nowrap rounded-full bg-cream px-5 py-3 text-center text-sm font-black text-ink"
+              >
+                공식 출처 보기
+              </a>
             </div>
           </article>
-        </div>
-      ) : (
-        <div className="mt-6 rounded-[1.75rem] bg-cream p-6 text-center font-black text-ink/60">
-          조건에 맞는 카드가 없습니다.
-        </div>
-      )}
+        ) : (
+          <div className="rounded-[1.75rem] bg-cream p-6 text-center font-black text-ink/60">
+            조건에 맞는 카드가 없습니다.
+          </div>
+        )}
+      </div>
     </section>
   );
 }

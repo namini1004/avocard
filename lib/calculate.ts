@@ -74,7 +74,7 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
         cap: rule.monthlyCap,
         saving: 0
       })),
-      reason: `월 사용액이 전월실적 ${formatWon(card.previousSpend)}에 미치지 못해 핵심 혜택을 받기 어렵습니다.`
+      reason: `월 사용액이 전월실적 ${formatWon(card.previousSpend)}에 미치지 못해 통합 혜택을 받기 어렵습니다. 이 구간에서는 연회비 월할액만 피킹률에서 차감했습니다.`
     };
   }
 
@@ -107,12 +107,12 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
     };
   });
 
-  const grossSaving = ruleSavings.reduce((sum, rule) => sum + rule.saving, 0);
-  const grossMonthlySaving = Math.min(grossSaving, effectiveMonthlyCap);
+  const matchedBenefit = ruleSavings.reduce((sum, rule) => sum + rule.saving, 0);
+  const grossMonthlySaving = Math.min(matchedBenefit, effectiveMonthlyCap);
   const monthlySaving = grossMonthlySaving - monthlyFee;
   const pickingRate = profile.total > 0 ? (monthlySaving / profile.total) * 100 : 0;
-  const topBenefits = [...card.benefitRules]
-    .sort((a, b) => (profile[b.category] ?? 0) * (b.rate ?? 0) - (profile[a.category] ?? 0) * (a.rate ?? 0))
+  const topBenefits = [...ruleSavings]
+    .sort((a, b) => b.saving - a.saving)
     .slice(0, 2)
     .map((rule) => rule.label)
     .join(", ");
@@ -123,12 +123,16 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
     monthlySaving,
     annualSaving: monthlySaving * 12,
     pickingRate,
-    matchedBenefit: grossSaving,
+    matchedBenefit,
     effectiveMonthlyCap,
     monthlyFee,
     totalRuleCap,
     ruleSavings,
-    reason: `${topBenefits} 지출과 카드 혜택이 잘 맞습니다. 월 ${formatWon(profile.total)} 소비 기준 통합 월 한도와 연회비 월할까지 반영해 순혜택을 계산했습니다.`
+    reason: `${topBenefits || "주요 혜택"}에서 계산된 예상 혜택 ${formatWon(matchedBenefit)} 중 통합 월 한도 ${formatWon(
+      effectiveMonthlyCap
+    )}를 적용하고, 연회비 월할액 ${formatWon(monthlyFee)}을 뺀 값이 월 순혜택입니다. 피킹률은 월 순혜택을 월 사용액 ${formatWon(
+      profile.total
+    )}으로 나눈 비율입니다.`
   };
 }
 

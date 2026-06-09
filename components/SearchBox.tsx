@@ -28,7 +28,7 @@ export function SearchBox() {
           className="focus-ring min-h-14 flex-1 rounded-full border border-avocado-900/10 bg-white px-5 text-base font-bold text-ink placeholder:text-avocado-900/40"
         />
         <Link
-          href={results[0] ? `/cards/${results[0].slug}` : "/cards/fresh-life"}
+          href={results[0] ? `/cards/${results[0].slug}` : "/cards"}
           className="focus-ring inline-flex min-h-14 items-center justify-center rounded-full bg-avocado-600 px-6 text-sm font-black text-white transition hover:bg-avocado-700"
         >
           분석 보기

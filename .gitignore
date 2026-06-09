@@ -15,3 +15,7 @@ node_modules/
 Thumbs.db
 
 .vercel
+
+pat.txt
+.vercel-config/
+.vercel-cache/

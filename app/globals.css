@@ -72,3 +72,7 @@ select {
 .focus-ring:focus-visible {
   box-shadow: 0 0 0 3px rgba(141, 182, 60, 0.36);
 }
+
+.keep-all {
+  word-break: keep-all;
+}
