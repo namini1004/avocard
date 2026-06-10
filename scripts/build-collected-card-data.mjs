@@ -134,7 +134,9 @@ function parsePercent(text, fallback) {
 
 function parseMonthlyCap(text, fallback) {
   const target = cleanText(text);
-  const match = target.match(/(?:월|매월)[^0-9]{0,20}(?:최대|한도)?[^0-9]{0,10}([0-9]+(?:\.[0-9]+)?\s*(?:백만|십만|만원|만|천원|천|원))/);
+  const match = target.match(
+    /(?:월\s*(?:최대|통합|할인한도|적립한도|한도)|매월\s*(?:최대|통합|할인한도|적립한도|한도))[^0-9]{0,20}([0-9]+(?:\.[0-9]+)?\s*(?:백만|십만|만원|만|천원|천|원))/
+  );
   const value = match ? parseKoreanMoney(match[1]) : 0;
   if (value > 0 && value <= 300000) return value;
   return fallback;
@@ -161,14 +163,15 @@ function categoryFromLabel(label) {
 
 function extractBenefitLabels(card) {
   const labels = [];
+  const excludedLabels = /연회비지원|신규|이벤트|캐시백\s*이벤트|발급/i;
   for (const benefit of card.benefits ?? []) {
     const raw = benefit.rootBenefitCategoryIdName ?? "";
     const [, label = raw] = String(raw).split("|");
-    if (label.trim()) labels.push(label.trim());
+    if (label.trim() && !excludedLabels.test(label)) labels.push(label.trim());
   }
   for (const benefit of card.benefitCategories ?? []) {
     const label = typeof benefit === "string" ? benefit : benefit.label;
-    if (String(label ?? "").trim()) labels.push(String(label).trim());
+    if (String(label ?? "").trim() && !excludedLabels.test(String(label))) labels.push(String(label).trim());
   }
   return [...new Set(labels)];
 }
@@ -189,7 +192,7 @@ function makeRules(card, parsed, index) {
   const categories = [...new Set(labels.map(categoryFromLabel))];
   if (categories.length === 0) categories.push(categoryFromLabel(text));
 
-  const baseRate = parsePercent(text, /캐시백|포인트|적립/i.test(text) ? 0.01 : 0.03);
+  const baseRate = Math.min(parsePercent(text, /캐시백|포인트|적립/i.test(text) ? 0.01 : 0.03), 0.1);
   const defaultRuleCap = previousSpend >= 1000000 ? 12000 : previousSpend >= 500000 ? 8000 : 5000;
   const monthlyCap = parseMonthlyCap(text, Math.max(defaultRuleCap * Math.min(categories.length, 4), 10000));
   const perRuleCap = Math.min(monthlyCap, Math.max(1000, Math.round(monthlyCap / Math.max(1, Math.min(categories.length, 4)))));

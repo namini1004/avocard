@@ -23,31 +23,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10304-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10304-shopping-1",
+        "id": "naver-card-10304-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -71,7 +47,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10304-ott-2",
+        "id": "naver-card-10304-ott-1",
         "category": "ott",
         "label": "렌탈",
         "merchantScope": [
@@ -95,7 +71,7 @@ export const collectedCards: CreditCard[] = [
         "note": "렌탈 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10304-medical-3",
+        "id": "naver-card-10304-medical-2",
         "category": "medical",
         "label": "의료",
         "merchantScope": [
@@ -117,6 +93,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10304-etc-3",
+        "category": "etc",
+        "label": "레저",
+        "merchantScope": [
+          "레저"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10304-convenience-4",
@@ -145,13 +145,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.01,
@@ -173,6 +166,13 @@ export const collectedCards: CreditCard[] = [
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "category": "etc",
+        "label": "레저",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.01,
@@ -190,16 +190,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "렌탈"
+      "렌탈",
+      "의료"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 렌탈 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 렌탈, 의료 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -230,9 +230,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10623-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "discount",
         "rate": 0.02,
@@ -249,16 +249,16 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.02,
         "monthlyCap": 10000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -271,16 +271,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "납부 혜택"
+      "납부 혜택",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 납부 혜택 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 납부 혜택, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -298,7 +298,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "커피30% 교통10% 쇼핑7% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -311,13 +311,13 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-1530-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "영화",
         "merchantScope": [
-          "연회비지원"
+          "영화"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -330,7 +330,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-1530-shopping-1",
@@ -340,8 +340,8 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -364,8 +364,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -388,8 +388,8 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -412,8 +412,8 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -432,37 +432,37 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "label": "영화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -476,16 +476,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "영화",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 영화, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "영화, 포인트/캐시백, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -503,7 +503,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 0,
     "advertisedBenefit": "국내외 가맹점 1.3% 청구 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -516,13 +516,13 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10333-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -535,7 +535,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10333-shopping-1",
@@ -546,7 +546,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -570,7 +570,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -594,7 +594,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -618,7 +618,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -637,37 +637,37 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "monthlyCap": 5000,
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.013000000000000001,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -681,16 +681,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "쇼핑"
+      "쇼핑",
+      "레저"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 쇼핑, 레저 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -721,9 +721,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10105-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
         "rate": 0.015,
@@ -740,7 +740,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10105-coffee-1",
@@ -842,10 +842,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.015,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
@@ -886,16 +886,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "카페/베이커리"
+      "카페/베이커리",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 카페/베이커리, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -926,9 +926,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10615-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
         "rate": 0.015,
@@ -945,7 +945,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10615-shopping-1",
@@ -1047,10 +1047,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.015,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -1091,16 +1091,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "쇼핑"
+      "쇼핑",
+      "뷰티"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 쇼핑, 뷰티 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -1131,9 +1131,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10375-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "discount",
         "rate": 0.02,
@@ -1150,7 +1150,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10375-ott-1",
@@ -1252,10 +1252,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.02,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "ott",
@@ -1296,16 +1296,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "렌탈"
+      "렌탈",
+      "의료"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 렌탈 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 렌탈, 의료 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -1336,9 +1336,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10176-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "납부 혜택",
         "merchantScope": [
-          "연회비지원"
+          "납부 혜택"
         ],
         "rewardType": "cashback",
         "rate": 0.01,
@@ -1355,16 +1355,16 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "납부 혜택 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "납부 혜택",
         "rate": 0.01,
         "monthlyCap": 10000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "납부 혜택 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -1377,7 +1377,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "납부 혜택"
     ],
     "cautions": [
@@ -1385,7 +1384,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 납부 혜택 영역 혜택 정보가 수집되었습니다."
+      "납부 혜택 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -1416,9 +1415,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10141-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "관리비",
         "merchantScope": [
-          "연회비지원"
+          "관리비"
         ],
         "rewardType": "cashback",
         "rate": 0.1,
@@ -1435,7 +1434,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10141-telecom-1",
@@ -1537,10 +1536,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "관리비",
         "rate": 0.1,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
@@ -1581,16 +1580,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "관리비",
-      "통신"
+      "통신",
+      "대중교통"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 관리비, 통신 영역 혜택 정보가 수집되었습니다."
+      "관리비, 통신, 대중교통 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -1608,7 +1607,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 7000,
     "previousSpend": 0,
     "advertisedBenefit": "전월실적할인한도없이0.7%·1%할인/",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -1619,39 +1618,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10157-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10157-fuel-1",
+        "id": "naver-card-10157-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
           "주유"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -1667,15 +1642,15 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10157-shopping-2",
+        "id": "naver-card-10157-shopping-1",
         "category": "shopping",
         "label": "간편결제",
         "merchantScope": [
           "간편결제"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -1691,15 +1666,15 @@ export const collectedCards: CreditCard[] = [
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10157-mart-3",
+        "id": "naver-card-10157-mart-2",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
           "대형마트"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -1715,15 +1690,15 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10157-convenience-4",
+        "id": "naver-card-10157-convenience-3",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -1737,43 +1712,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10157-telecom-4",
+        "category": "telecom",
+        "label": "통신",
+        "merchantScope": [
+          "통신"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "간편결제",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "telecom",
+        "label": "통신",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -1786,16 +1785,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "간편결제"
+      "간편결제",
+      "대형마트"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 간편결제 영역 혜택 정보가 수집되었습니다."
+      "주유, 간편결제, 대형마트 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -1813,7 +1812,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 25000,
     "previousSpend": 0,
     "advertisedBenefit": "SKT 통신비 최대 1만3천원 할인",
-    "monthlyCap": 20000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -1832,7 +1831,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 10000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -1856,7 +1855,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 10000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -1877,14 +1876,14 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.03,
-        "monthlyCap": 10000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "납부 혜택",
         "rate": 0.03,
-        "monthlyCap": 10000,
+        "monthlyCap": 5000,
         "note": "납부 혜택 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -2129,7 +2128,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "LG U+ 통신비 최대 2만원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -2148,7 +2147,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2169,7 +2168,7 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -2219,31 +2218,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10452-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10452-shopping-1",
+        "id": "naver-card-10452-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -2267,7 +2242,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10452-coffee-2",
+        "id": "naver-card-10452-coffee-1",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -2291,7 +2266,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10452-mart-3",
+        "id": "naver-card-10452-mart-2",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -2315,7 +2290,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10452-convenience-4",
+        "id": "naver-card-10452-convenience-3",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -2337,16 +2312,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10452-fuel-4",
+        "category": "fuel",
+        "label": "주유",
+        "merchantScope": [
+          "주유"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
@@ -2374,6 +2366,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "fuel",
+        "label": "주유",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -2386,16 +2385,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "카페/베이커리"
+      "카페/베이커리",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 카페/베이커리, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -2424,31 +2423,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10522-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10522-fuel-1",
+        "id": "naver-card-10522-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -2472,7 +2447,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10522-medical-2",
+        "id": "naver-card-10522-medical-1",
         "category": "medical",
         "label": "의료",
         "merchantScope": [
@@ -2496,7 +2471,7 @@ export const collectedCards: CreditCard[] = [
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10522-shopping-3",
+        "id": "naver-card-10522-shopping-2",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -2518,6 +2493,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10522-etc-3",
+        "category": "etc",
+        "label": "문화",
+        "merchantScope": [
+          "문화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10522-telecom-4",
@@ -2546,13 +2545,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
@@ -2574,6 +2566,13 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "category": "etc",
+        "label": "문화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
@@ -2591,16 +2590,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "의료"
+      "의료",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 의료 영역 혜택 정보가 수집되었습니다."
+      "주유, 의료, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -2618,7 +2617,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 25000,
     "previousSpend": 0,
     "advertisedBenefit": "연 2회 전세계 공항 라운지 무료이용",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -2631,13 +2630,13 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10332-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "금융",
         "merchantScope": [
-          "연회비지원"
+          "금융"
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2650,7 +2649,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10332-shopping-1",
@@ -2661,7 +2660,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2685,7 +2684,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2709,7 +2708,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2733,7 +2732,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2752,37 +2751,37 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "금융",
         "rate": 0.01,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "monthlyCap": 5000,
+        "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -2796,16 +2795,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "금융",
-      "프리미엄"
+      "프리미엄",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 금융, 프리미엄 영역 혜택 정보가 수집되었습니다."
+      "금융, 프리미엄, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -2823,7 +2822,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "커피·배달앱 등 많이쓰는영역30%할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -2834,39 +2833,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10102-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10102-dining-1",
+        "id": "naver-card-10102-dining-0",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
           "외식"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2882,15 +2857,15 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10102-coffee-2",
+        "id": "naver-card-10102-coffee-1",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2906,15 +2881,15 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10102-shopping-3",
+        "id": "naver-card-10102-shopping-2",
         "category": "shopping",
         "label": "간편결제",
         "merchantScope": [
           "간편결제"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2930,6 +2905,30 @@ export const collectedCards: CreditCard[] = [
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "id": "naver-card-10102-etc-3",
+        "category": "etc",
+        "label": "문화",
+        "merchantScope": [
+          "문화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "id": "naver-card-10102-transport-4",
         "category": "transport",
         "label": "대중교통",
@@ -2937,8 +2936,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -2956,38 +2955,38 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "dining",
         "label": "외식",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "간편결제",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "문화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -3001,16 +3000,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "외식",
-      "카페/베이커리"
+      "카페/베이커리",
+      "간편결제"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 외식, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
+      "외식, 카페/베이커리, 간편결제 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -3028,7 +3027,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "주유 리터당 60원 청구할인 혜택",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -3039,31 +3038,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-1294-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-1294-fuel-1",
+        "id": "naver-card-1294-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -3071,7 +3046,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3087,7 +3062,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1294-mart-2",
+        "id": "naver-card-1294-mart-1",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -3095,7 +3070,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3111,7 +3086,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1294-telecom-3",
+        "id": "naver-card-1294-telecom-2",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -3119,7 +3094,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3135,7 +3110,7 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1294-transport-4",
+        "id": "naver-card-1294-transport-3",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
@@ -3143,7 +3118,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3157,43 +3132,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-1294-shopping-4",
+        "category": "shopping",
+        "label": "포인트/캐시백",
+        "merchantScope": [
+          "포인트/캐시백"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "shopping",
+        "label": "포인트/캐시백",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -3206,16 +3205,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "대형마트"
+      "대형마트",
+      "통신"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 대형마트 영역 혜택 정보가 수집되었습니다."
+      "주유, 대형마트, 통신 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -3438,7 +3437,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "롯데백화점 15% 청구할인 서비스!",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -3449,39 +3448,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-1684-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.15,
-        "monthlyCap": 150000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-1684-shopping-1",
+        "id": "naver-card-1684-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
           "쇼핑"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
-        "monthlyCap": 150000,
+        "rate": 0.1,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3499,17 +3474,10 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.15,
-        "monthlyCap": 150000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.15,
-        "monthlyCap": 150000,
+        "rate": 0.1,
+        "monthlyCap": 10000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -3523,7 +3491,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑"
     ],
     "cautions": [
@@ -3531,7 +3498,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -3639,38 +3606,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10216-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.15,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10216-shopping-1",
+        "id": "naver-card-10216-shopping-0",
         "category": "shopping",
         "label": "간편결제",
         "merchantScope": [
           "간편결제"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -3687,14 +3630,14 @@ export const collectedCards: CreditCard[] = [
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10216-convenience-2",
+        "id": "naver-card-10216-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
           "편의점"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -3711,14 +3654,14 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10216-dining-3",
+        "id": "naver-card-10216-dining-2",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
           "외식"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -3735,14 +3678,14 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10216-telecom-4",
+        "id": "naver-card-10216-telecom-3",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -3757,43 +3700,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10216-transport-4",
+        "category": "transport",
+        "label": "대중교통",
+        "merchantScope": [
+          "대중교통"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.15,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "간편결제",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "transport",
+        "label": "대중교통",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -3806,16 +3773,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "간편결제",
-      "편의점"
+      "편의점",
+      "외식"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 간편결제, 편의점 영역 혜택 정보가 수집되었습니다."
+      "간편결제, 편의점, 외식 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -3833,7 +3800,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "교통·외식 등 생활영역 10%청구할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -3852,7 +3819,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3876,7 +3843,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3900,7 +3867,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3924,7 +3891,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3948,7 +3915,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -3969,35 +3936,35 @@ export const collectedCards: CreditCard[] = [
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -4038,7 +4005,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "공과금/통신요금 10% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -4051,13 +4018,13 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-1408-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "공과금",
         "merchantScope": [
-          "연회비지원"
+          "공과금"
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4070,7 +4037,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "공과금 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-1408-telecom-1",
@@ -4081,7 +4048,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4105,7 +4072,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4129,7 +4096,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4153,7 +4120,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4172,37 +4139,37 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "공과금",
         "rate": 0.1,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "monthlyCap": 5000,
+        "note": "공과금 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -4216,16 +4183,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "공과금",
-      "통신"
+      "통신",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 공과금, 통신 영역 혜택 정보가 수집되었습니다."
+      "공과금, 통신, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -4243,7 +4210,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "국내 가맹점 0.7% 포인트리 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -4254,31 +4221,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10611-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10611-shopping-1",
+        "id": "naver-card-10611-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -4286,7 +4229,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4302,7 +4245,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10611-dining-2",
+        "id": "naver-card-10611-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -4310,7 +4253,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4326,7 +4269,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10611-coffee-3",
+        "id": "naver-card-10611-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -4334,7 +4277,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4350,7 +4293,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10611-transport-4",
+        "id": "naver-card-10611-transport-3",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
@@ -4358,7 +4301,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4372,43 +4315,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10611-telecom-4",
+        "category": "telecom",
+        "label": "통신",
+        "merchantScope": [
+          "통신"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.006999999999999999,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "telecom",
+        "label": "통신",
+        "rate": 0.006999999999999999,
+        "monthlyCap": 5000,
+        "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -4421,16 +4388,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "외식"
+      "외식",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 외식 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 외식, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -4461,12 +4428,12 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10612-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "프리미엄",
         "merchantScope": [
-          "연회비지원"
+          "프리미엄"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -4480,7 +4447,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10612-shopping-1",
@@ -4490,7 +4457,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -4510,15 +4477,15 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
+        "label": "프리미엄",
+        "rate": 0.1,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -4533,7 +4500,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "프리미엄",
       "쇼핑"
     ],
@@ -4542,7 +4508,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 프리미엄, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "프리미엄, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -4573,12 +4539,12 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10358-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -4592,7 +4558,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10358-telecom-1",
@@ -4602,7 +4568,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -4626,7 +4592,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -4650,7 +4616,7 @@ export const collectedCards: CreditCard[] = [
           "대형마트"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -4670,29 +4636,29 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
+        "label": "언제나할인",
+        "rate": 0.1,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -4707,16 +4673,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "관리비"
+      "관리비",
+      "통신"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 관리비 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 관리비, 통신 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -4734,7 +4700,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "내가 선택한 주유소에서 10% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -4745,31 +4711,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-2337-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-2337-fuel-1",
+        "id": "naver-card-2337-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -4777,7 +4719,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4793,7 +4735,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-2337-convenience-2",
+        "id": "naver-card-2337-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -4801,7 +4743,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4817,7 +4759,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-2337-coffee-3",
+        "id": "naver-card-2337-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -4825,7 +4767,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4841,7 +4783,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-2337-transport-4",
+        "id": "naver-card-2337-transport-3",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
@@ -4849,7 +4791,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -4863,43 +4805,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-2337-etc-4",
+        "category": "etc",
+        "label": "영화",
+        "merchantScope": [
+          "영화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "영화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -4912,16 +4878,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "오토"
+      "오토",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 오토 영역 혜택 정보가 수집되었습니다."
+      "주유, 오토, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -4950,31 +4916,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10286-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "mileage",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10286-travel-1",
+        "id": "naver-card-10286-travel-0",
         "category": "travel",
         "label": "항공마일리지",
         "merchantScope": [
@@ -4996,22 +4938,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10286-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "mileage",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "travel",
         "label": "항공마일리지",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -5024,7 +4990,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "항공마일리지",
       "프리미엄"
     ],
@@ -5033,7 +4998,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 항공마일리지, 프리미엄 영역 혜택 정보가 수집되었습니다."
+      "항공마일리지, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -5064,9 +5029,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10616-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
         "rate": 0.02,
@@ -5083,7 +5048,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10616-shopping-1",
@@ -5185,10 +5150,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.02,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -5229,16 +5194,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "쇼핑"
+      "쇼핑",
+      "뷰티"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 쇼핑, 뷰티 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -5267,31 +5232,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10303-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10303-shopping-1",
+        "id": "naver-card-10303-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -5313,6 +5254,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10303-etc-1",
+        "category": "etc",
+        "label": "언제나할인",
+        "merchantScope": [
+          "언제나할인"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10303-ott-2",
@@ -5389,18 +5354,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "언제나할인",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "ott",
@@ -5434,16 +5399,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "간편결제"
+      "간편결제",
+      "언제나할인"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 간편결제 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 간편결제, 언제나할인 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -5461,7 +5426,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "정부지원금100만원&보육료·병원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -5480,7 +5445,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -5504,7 +5469,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -5528,7 +5493,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -5552,7 +5517,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -5576,7 +5541,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -5597,35 +5562,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "국민행복카드",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "국민행복카드 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
         "label": "교육",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -5684,7 +5649,7 @@ export const collectedCards: CreditCard[] = [
           "주유"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -5708,7 +5673,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -5732,7 +5697,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -5756,7 +5721,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -5780,7 +5745,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -5801,35 +5766,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -5871,7 +5836,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "병의원·조리원·약국 7% 청구할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -5890,7 +5855,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -5914,7 +5879,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -5938,7 +5903,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -5962,7 +5927,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -5986,7 +5951,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6007,35 +5972,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "국민행복카드",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "국민행복카드 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -6087,31 +6052,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10108-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10108-fuel-1",
+        "id": "naver-card-10108-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -6133,6 +6074,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10108-etc-1",
+        "category": "etc",
+        "label": "영화",
+        "merchantScope": [
+          "영화"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10108-shopping-2",
@@ -6161,18 +6126,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "영화",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -6192,16 +6157,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "영화"
+      "영화",
+      "문화"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 영화 영역 혜택 정보가 수집되었습니다."
+      "주유, 영화, 문화 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -6219,7 +6184,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 18000,
     "previousSpend": 0,
     "advertisedBenefit": "신세계백화점 5%, 이마트 6천원할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -6238,7 +6203,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6262,7 +6227,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6286,7 +6251,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6310,7 +6275,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6331,28 +6296,28 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "레저",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "오토",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "오토 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -6404,31 +6369,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-1571-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "point",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-1571-fuel-1",
+        "id": "naver-card-1571-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -6450,6 +6391,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-1571-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "point",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-1571-shopping-2",
@@ -6526,18 +6491,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -6571,16 +6536,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "프리미엄"
+      "프리미엄",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 프리미엄 영역 혜택 정보가 수집되었습니다."
+      "주유, 프리미엄, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -6598,7 +6563,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "네이버페이 온라인간편결제 10% 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -6617,7 +6582,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6641,7 +6606,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6665,7 +6630,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6689,7 +6654,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6710,28 +6675,28 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -6946,7 +6911,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "이동통신·아파트관리비 10% 할인 /",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -6965,7 +6930,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -6989,7 +6954,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -7013,7 +6978,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -7037,7 +7002,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -7061,7 +7026,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -7082,35 +7047,35 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "관리비",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -7367,31 +7332,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-1465-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "mileage",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-1465-travel-1",
+        "id": "naver-card-1465-travel-0",
         "category": "travel",
         "label": "항공마일리지",
         "merchantScope": [
@@ -7415,7 +7356,7 @@ export const collectedCards: CreditCard[] = [
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1465-fuel-2",
+        "id": "naver-card-1465-fuel-1",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -7439,7 +7380,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1465-shopping-3",
+        "id": "naver-card-1465-shopping-2",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -7463,7 +7404,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1465-coffee-4",
+        "id": "naver-card-1465-coffee-3",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -7485,16 +7426,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-1465-convenience-4",
+        "category": "convenience",
+        "label": "편의점",
+        "merchantScope": [
+          "편의점"
+        ],
+        "rewardType": "mileage",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "travel",
         "label": "항공마일리지",
@@ -7522,6 +7480,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "convenience",
+        "label": "편의점",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -7534,16 +7499,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "항공마일리지",
-      "주유"
+      "주유",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 항공마일리지, 주유 영역 혜택 정보가 수집되었습니다."
+      "항공마일리지, 주유, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -7766,7 +7731,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "모든주유소 리터당 최대150원 할인/",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -7777,31 +7742,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-3881-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.01,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-3881-fuel-1",
+        "id": "naver-card-3881-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -7809,7 +7750,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -7825,7 +7766,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-3881-shopping-2",
+        "id": "naver-card-3881-shopping-1",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -7833,7 +7774,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -7849,7 +7790,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-3881-convenience-3",
+        "id": "naver-card-3881-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -7857,7 +7798,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -7873,7 +7814,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-3881-coffee-4",
+        "id": "naver-card-3881-coffee-3",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -7881,7 +7822,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -7899,38 +7840,31 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -7944,16 +7878,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "쇼핑"
+      "쇼핑",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "주유, 쇼핑, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -7989,7 +7923,7 @@ export const collectedCards: CreditCard[] = [
           "주유"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -8013,7 +7947,7 @@ export const collectedCards: CreditCard[] = [
           "금융"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -8037,7 +7971,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -8058,21 +7992,21 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "금융",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -8319,7 +8253,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 7000,
     "previousSpend": 0,
     "advertisedBenefit": "대중교통 10% 결제일 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -8338,7 +8272,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -8362,7 +8296,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -8386,7 +8320,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -8410,7 +8344,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -8434,7 +8368,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -8455,35 +8389,35 @@ export const collectedCards: CreditCard[] = [
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "간편결제",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -8542,7 +8476,7 @@ export const collectedCards: CreditCard[] = [
           "의료"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -8566,7 +8500,7 @@ export const collectedCards: CreditCard[] = [
           "금융"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -8590,7 +8524,7 @@ export const collectedCards: CreditCard[] = [
           "대형마트"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -8614,7 +8548,7 @@ export const collectedCards: CreditCard[] = [
           "렌탈"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -8638,7 +8572,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -8659,35 +8593,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "medical",
         "label": "의료",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "금융",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "ott",
         "label": "렌탈",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "렌탈 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -8742,9 +8676,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10589-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "discount",
         "rate": 0.02,
@@ -8761,16 +8695,16 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.02,
         "monthlyCap": 10000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -8783,7 +8717,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
       "납부 혜택"
     ],
@@ -8792,7 +8725,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 납부 혜택 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 납부 혜택 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -8810,7 +8743,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 21000,
     "previousSpend": 0,
     "advertisedBenefit": "국내 50만원 이상 5만 포인트 적립",
-    "monthlyCap": 50000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -8821,31 +8754,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10451-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.033,
-        "monthlyCap": 25000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10451-shopping-1",
+        "id": "naver-card-10451-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -8853,7 +8762,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.033,
-        "monthlyCap": 25000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -8871,17 +8780,10 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.033,
-        "monthlyCap": 25000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.033,
-        "monthlyCap": 25000,
+        "monthlyCap": 10000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -8895,7 +8797,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백"
     ],
     "cautions": [
@@ -8903,7 +8804,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -8921,7 +8822,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 6000,
     "previousSpend": 0,
     "advertisedBenefit": "대중교통, OTT 결제일 15% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -8932,39 +8833,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10268-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10268-transport-1",
+        "id": "naver-card-10268-transport-0",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -8980,15 +8857,15 @@ export const collectedCards: CreditCard[] = [
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10268-convenience-2",
+        "id": "naver-card-10268-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -9004,6 +8881,30 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "id": "naver-card-10268-etc-2",
+        "category": "etc",
+        "label": "문화",
+        "merchantScope": [
+          "문화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "id": "naver-card-10268-coffee-3",
         "category": "coffee",
         "label": "카페/베이커리",
@@ -9011,8 +8912,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -9035,8 +8936,8 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -9054,38 +8955,38 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.15,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "문화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -9099,16 +9000,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "대중교통",
-      "편의점"
+      "편의점",
+      "문화"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 대중교통, 편의점 영역 혜택 정보가 수집되었습니다."
+      "대중교통, 편의점, 문화 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -9137,31 +9038,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10463-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10463-fuel-1",
+        "id": "naver-card-10463-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -9185,7 +9062,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10463-telecom-2",
+        "id": "naver-card-10463-telecom-1",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -9209,7 +9086,7 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10463-convenience-3",
+        "id": "naver-card-10463-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -9233,7 +9110,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10463-shopping-4",
+        "id": "naver-card-10463-shopping-3",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -9258,13 +9135,6 @@ export const collectedCards: CreditCard[] = [
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "fuel",
         "label": "주유",
@@ -9304,16 +9174,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "통신"
+      "통신",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 통신 영역 혜택 정보가 수집되었습니다."
+      "주유, 통신, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -9485,31 +9355,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10592-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.07,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10592-fuel-1",
+        "id": "naver-card-10592-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -9533,7 +9379,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10592-convenience-2",
+        "id": "naver-card-10592-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -9557,7 +9403,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10592-coffee-3",
+        "id": "naver-card-10592-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -9579,16 +9425,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10592-etc-3",
+        "category": "etc",
+        "label": "문화",
+        "merchantScope": [
+          "문화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.07,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.07,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "fuel",
         "label": "주유",
@@ -9609,6 +9472,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.07,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "문화",
+        "rate": 0.07,
+        "monthlyCap": 5000,
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -9621,16 +9491,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "편의점"
+      "편의점",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 편의점 영역 혜택 정보가 수집되었습니다."
+      "주유, 편의점, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -9648,7 +9518,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "온·오프라인쇼핑 연최대 48만원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -9667,7 +9537,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.015,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -9691,7 +9561,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.015,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -9715,7 +9585,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.015,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -9736,21 +9606,21 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.015,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.015,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "언제나할인",
         "rate": 0.015,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -9978,9 +9848,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10590-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
         "rate": 0.02,
@@ -9997,7 +9867,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10590-shopping-1",
@@ -10027,10 +9897,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.02,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -10050,16 +9920,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "납부 혜택"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 포인트/캐시백, 납부 혜택 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -10088,31 +9958,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10450-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.065,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10450-shopping-1",
+        "id": "naver-card-10450-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -10120,7 +9966,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.065,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -10138,17 +9984,10 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.065,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.065,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -10162,7 +10001,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백"
     ],
     "cautions": [
@@ -10170,7 +10008,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -10505,7 +10343,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "통신요금 최대 2만원 결제일 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -10524,7 +10362,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -10545,7 +10383,7 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -10602,7 +10440,7 @@ export const collectedCards: CreditCard[] = [
           "금융"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -10626,7 +10464,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -10650,7 +10488,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -10674,7 +10512,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -10698,7 +10536,7 @@ export const collectedCards: CreditCard[] = [
           "오토"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -10719,35 +10557,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "etc",
         "label": "금융",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "오토",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "오토 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -10800,31 +10638,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-3878-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-3878-mart-1",
+        "id": "naver-card-3878-mart-0",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -10848,7 +10662,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-3878-dining-2",
+        "id": "naver-card-3878-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -10872,7 +10686,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-3878-shopping-3",
+        "id": "naver-card-3878-shopping-2",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -10896,7 +10710,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-3878-medical-4",
+        "id": "naver-card-3878-medical-3",
         "category": "medical",
         "label": "의료",
         "merchantScope": [
@@ -10918,16 +10732,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-3878-transport-4",
+        "category": "transport",
+        "label": "대중교통",
+        "merchantScope": [
+          "대중교통"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "mart",
         "label": "대형마트",
@@ -10955,6 +10786,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "transport",
+        "label": "대중교통",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -10967,16 +10805,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "대형마트",
-      "외식"
+      "외식",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 대형마트, 외식 영역 혜택 정보가 수집되었습니다."
+      "대형마트, 외식, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -11012,7 +10850,7 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -11036,7 +10874,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -11060,7 +10898,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -11084,7 +10922,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -11105,28 +10943,28 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -11168,7 +11006,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "온라인쇼핑몰 최대2%모니머니리워드적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -11179,31 +11017,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10311-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10311-fuel-1",
+        "id": "naver-card-10311-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -11211,7 +11025,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -11227,6 +11041,30 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "id": "naver-card-10311-etc-1",
+        "category": "etc",
+        "label": "금융",
+        "merchantScope": [
+          "금융"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "id": "naver-card-10311-convenience-2",
         "category": "convenience",
         "label": "편의점",
@@ -11235,7 +11073,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -11259,7 +11097,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -11283,7 +11121,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -11301,38 +11139,38 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "금융",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
         "label": "교육",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -11346,16 +11184,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "금융"
+      "금융",
+      "레저"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 금융 영역 혜택 정보가 수집되었습니다."
+      "주유, 금융, 레저 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -11373,7 +11211,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "온라인 간편결제 연최대 24만원할인/",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -11384,31 +11222,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-3857-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-3857-shopping-1",
+        "id": "naver-card-3857-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -11416,7 +11230,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -11432,6 +11246,30 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "id": "naver-card-3857-etc-1",
+        "category": "etc",
+        "label": "문화",
+        "merchantScope": [
+          "문화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "id": "naver-card-3857-convenience-2",
         "category": "convenience",
         "label": "편의점",
@@ -11440,7 +11278,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -11464,7 +11302,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -11482,31 +11320,31 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "문화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -11520,16 +11358,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "간편결제"
+      "간편결제",
+      "문화"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 간편결제 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 간편결제, 문화 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -11558,31 +11396,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10550-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "point",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10550-shopping-1",
+        "id": "naver-card-10550-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -11604,6 +11418,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10550-etc-1",
+        "category": "etc",
+        "label": "레저",
+        "merchantScope": [
+          "레저"
+        ],
+        "rewardType": "point",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10550-medical-2",
@@ -11680,18 +11518,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "레저",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
@@ -11725,16 +11563,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "레저"
+      "레저",
+      "의료"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 레저 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 레저, 의료 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -12212,7 +12050,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "음식점 월~목5%금토일10%할인 또는",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -12223,31 +12061,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10523-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10523-shopping-1",
+        "id": "naver-card-10523-shopping-0",
         "category": "shopping",
         "label": "간편결제",
         "merchantScope": [
@@ -12255,7 +12069,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -12271,6 +12085,30 @@ export const collectedCards: CreditCard[] = [
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "id": "naver-card-10523-etc-1",
+        "category": "etc",
+        "label": "언제나할인",
+        "merchantScope": [
+          "언제나할인"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "id": "naver-card-10523-dining-2",
         "category": "dining",
         "label": "외식",
@@ -12279,7 +12117,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -12303,7 +12141,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -12327,7 +12165,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -12345,38 +12183,38 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "간편결제",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "언제나할인",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -12390,16 +12228,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "간편결제",
-      "언제나할인"
+      "언제나할인",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 간편결제, 언제나할인 영역 혜택 정보가 수집되었습니다."
+      "간편결제, 언제나할인, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -12428,31 +12266,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10462-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10462-fuel-1",
+        "id": "naver-card-10462-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -12476,7 +12290,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10462-telecom-2",
+        "id": "naver-card-10462-telecom-1",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -12500,7 +12314,7 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10462-convenience-3",
+        "id": "naver-card-10462-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -12524,7 +12338,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10462-shopping-4",
+        "id": "naver-card-10462-shopping-3",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -12549,13 +12363,6 @@ export const collectedCards: CreditCard[] = [
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "fuel",
         "label": "주유",
@@ -12595,16 +12402,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "통신"
+      "통신",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 통신 영역 혜택 정보가 수집되었습니다."
+      "주유, 통신, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -12827,7 +12634,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "쇼핑, 보육, 생활요금 7% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -12846,7 +12653,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -12870,7 +12677,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -12894,7 +12701,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -12918,7 +12725,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -12942,7 +12749,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -12963,35 +12770,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "국민행복카드",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "국민행복카드 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
         "label": "교육",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -13043,31 +12850,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10596-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10596-fuel-1",
+        "id": "naver-card-10596-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -13091,7 +12874,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10596-telecom-2",
+        "id": "naver-card-10596-telecom-1",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -13115,7 +12898,7 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10596-convenience-3",
+        "id": "naver-card-10596-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -13139,7 +12922,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10596-shopping-4",
+        "id": "naver-card-10596-shopping-3",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -13164,13 +12947,6 @@ export const collectedCards: CreditCard[] = [
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "fuel",
         "label": "주유",
@@ -13210,16 +12986,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "통신"
+      "통신",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 통신 영역 혜택 정보가 수집되었습니다."
+      "주유, 통신, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -13237,7 +13013,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "삼성페이 10%, 통신비 10% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -13256,7 +13032,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13280,7 +13056,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13304,7 +13080,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13328,7 +13104,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13352,7 +13128,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13373,35 +13149,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "간편결제",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "영화",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
         "label": "교육",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -13442,7 +13218,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "S-OIL 주유 10% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -13461,7 +13237,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13485,7 +13261,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13509,7 +13285,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13533,7 +13309,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13554,28 +13330,28 @@ export const collectedCards: CreditCard[] = [
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "하이패스",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "하이패스 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -13627,31 +13403,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10552-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "mileage",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10552-travel-1",
+        "id": "naver-card-10552-travel-0",
         "category": "travel",
         "label": "항공마일리지",
         "merchantScope": [
@@ -13659,7 +13411,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -13677,17 +13429,10 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "travel",
         "label": "항공마일리지",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -13701,7 +13446,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "항공마일리지"
     ],
     "cautions": [
@@ -13709,7 +13453,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 항공마일리지 영역 혜택 정보가 수집되었습니다."
+      "항공마일리지 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -13738,31 +13482,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10071-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10071-coffee-1",
+        "id": "naver-card-10071-coffee-0",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -13784,6 +13504,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10071-etc-1",
+        "category": "etc",
+        "label": "영화",
+        "merchantScope": [
+          "영화"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10071-transport-2",
@@ -13860,18 +13604,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "영화",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
@@ -13905,16 +13649,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "카페/베이커리",
-      "영화"
+      "영화",
+      "대중교통"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 카페/베이커리, 영화 영역 혜택 정보가 수집되었습니다."
+      "카페/베이커리, 영화, 대중교통 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -13950,7 +13694,7 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -13974,7 +13718,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -13998,7 +13742,7 @@ export const collectedCards: CreditCard[] = [
           "외식"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -14022,7 +13766,7 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -14046,7 +13790,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -14067,35 +13811,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 25000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -14137,7 +13881,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "E1 충전소부터 일상 영역 10%할인",
-    "monthlyCap": 20000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -14148,31 +13892,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10593-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10593-fuel-1",
+        "id": "naver-card-10593-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -14196,7 +13916,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10593-convenience-2",
+        "id": "naver-card-10593-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -14220,7 +13940,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10593-coffee-3",
+        "id": "naver-card-10593-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -14245,13 +13965,6 @@ export const collectedCards: CreditCard[] = [
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "fuel",
         "label": "주유",
@@ -14284,16 +13997,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "편의점"
+      "편의점",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 편의점 영역 혜택 정보가 수집되었습니다."
+      "주유, 편의점, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -14322,31 +14035,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10512-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10512-shopping-1",
+        "id": "naver-card-10512-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -14370,7 +14059,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10512-mart-2",
+        "id": "naver-card-10512-mart-1",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -14394,7 +14083,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10512-dining-3",
+        "id": "naver-card-10512-dining-2",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -14418,7 +14107,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10512-coffee-4",
+        "id": "naver-card-10512-coffee-3",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -14440,16 +14129,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10512-education-4",
+        "category": "education",
+        "label": "교육",
+        "merchantScope": [
+          "교육"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "쇼핑",
@@ -14477,6 +14183,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "education",
+        "label": "교육",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -14489,16 +14202,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "대형마트"
+      "대형마트",
+      "외식"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 대형마트 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 대형마트, 외식 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -14721,7 +14434,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 19000,
     "previousSpend": 0,
     "advertisedBenefit": "커피, 배달, 외식 7% 결제일 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -14732,31 +14445,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10554-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.07,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10554-dining-1",
+        "id": "naver-card-10554-dining-0",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -14764,7 +14453,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -14780,7 +14469,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10554-coffee-2",
+        "id": "naver-card-10554-coffee-1",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -14788,7 +14477,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -14804,7 +14493,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10554-shopping-3",
+        "id": "naver-card-10554-shopping-2",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -14812,7 +14501,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -14826,36 +14515,60 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10554-etc-3",
+        "category": "etc",
+        "label": "문화",
+        "merchantScope": [
+          "문화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.07,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.07,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "dining",
         "label": "외식",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "문화",
+        "rate": 0.07,
+        "monthlyCap": 5000,
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -14868,16 +14581,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "외식",
-      "카페/베이커리"
+      "카페/베이커리",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 외식, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
+      "외식, 카페/베이커리, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -14913,7 +14626,7 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -14937,7 +14650,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -14961,7 +14674,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -14985,7 +14698,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -15009,7 +14722,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -15030,35 +14743,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -15316,31 +15029,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10536-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "mileage",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10536-travel-1",
+        "id": "naver-card-10536-travel-0",
         "category": "travel",
         "label": "항공마일리지",
         "merchantScope": [
@@ -15364,7 +15053,7 @@ export const collectedCards: CreditCard[] = [
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10536-shopping-2",
+        "id": "naver-card-10536-shopping-1",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -15386,16 +15075,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10536-etc-2",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "mileage",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "travel",
         "label": "항공마일리지",
@@ -15409,6 +15115,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -15421,16 +15134,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "항공마일리지",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 항공마일리지, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "항공마일리지, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -15448,7 +15161,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "음식점·배달앱·커피 60% 할인",
-    "monthlyCap": 20000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -15459,31 +15172,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10106-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10106-dining-1",
+        "id": "naver-card-10106-dining-0",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -15507,7 +15196,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10106-coffee-2",
+        "id": "naver-card-10106-coffee-1",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -15531,7 +15220,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10106-shopping-3",
+        "id": "naver-card-10106-shopping-2",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -15556,13 +15245,6 @@ export const collectedCards: CreditCard[] = [
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "dining",
         "label": "외식",
@@ -15595,16 +15277,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "외식",
-      "카페/베이커리"
+      "카페/베이커리",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 외식, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
+      "외식, 카페/베이커리, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -15633,31 +15315,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10391-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.07,
-        "monthlyCap": 8000,
-        "previousMonthSpendRequired": 500000,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "50만원 이상",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10391-medical-1",
+        "id": "naver-card-10391-medical-0",
         "category": "medical",
         "label": "뷰티",
         "merchantScope": [
@@ -15679,22 +15337,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10391-etc-1",
+        "category": "etc",
+        "label": "레저",
+        "merchantScope": [
+          "레저"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.07,
+        "monthlyCap": 8000,
+        "previousMonthSpendRequired": 500000,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "50만원 이상",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.07,
-        "monthlyCap": 8000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.07,
         "monthlyCap": 8000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "레저",
+        "rate": 0.07,
+        "monthlyCap": 8000,
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -15707,16 +15389,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "뷰티",
-      "의료"
+      "의료",
+      "레저"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 뷰티, 의료 영역 혜택 정보가 수집되었습니다."
+      "뷰티, 의료, 레저 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -15846,7 +15528,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 8000,
     "previousSpend": 0,
     "advertisedBenefit": "버스, 지하철 10% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -15865,7 +15547,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -15889,7 +15571,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -15913,7 +15595,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -15937,7 +15619,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -15961,7 +15643,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -15982,35 +15664,35 @@ export const collectedCards: CreditCard[] = [
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -16062,31 +15744,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10376-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10376-coffee-1",
+        "id": "naver-card-10376-coffee-0",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -16110,7 +15768,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10376-convenience-2",
+        "id": "naver-card-10376-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -16134,7 +15792,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10376-transport-3",
+        "id": "naver-card-10376-transport-2",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
@@ -16158,7 +15816,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10376-telecom-4",
+        "id": "naver-card-10376-telecom-3",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -16180,16 +15838,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10376-shopping-4",
+        "category": "shopping",
+        "label": "쇼핑",
+        "merchantScope": [
+          "쇼핑"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "coffee",
         "label": "카페/베이커리",
@@ -16217,6 +15892,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "shopping",
+        "label": "쇼핑",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -16229,16 +15911,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "카페/베이커리",
-      "편의점"
+      "편의점",
+      "대중교통"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 카페/베이커리, 편의점 영역 혜택 정보가 수집되었습니다."
+      "카페/베이커리, 편의점, 대중교통 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -16256,7 +15938,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 0,
     "advertisedBenefit": "커피 55%, 대중교통 33%",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -16267,39 +15949,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10344-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10344-coffee-1",
+        "id": "naver-card-10344-coffee-0",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -16315,15 +15973,15 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10344-transport-2",
+        "id": "naver-card-10344-transport-1",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -16339,15 +15997,15 @@ export const collectedCards: CreditCard[] = [
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10344-convenience-3",
+        "id": "naver-card-10344-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -16361,36 +16019,60 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10344-etc-3",
+        "category": "etc",
+        "label": "영화",
+        "merchantScope": [
+          "영화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "영화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -16403,16 +16085,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "카페/베이커리",
-      "대중교통"
+      "대중교통",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 카페/베이커리, 대중교통 영역 혜택 정보가 수집되었습니다."
+      "카페/베이커리, 대중교통, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -16441,31 +16123,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10553-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "mileage",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10553-travel-1",
+        "id": "naver-card-10553-travel-0",
         "category": "travel",
         "label": "항공마일리지",
         "merchantScope": [
@@ -16487,22 +16145,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10553-etc-1",
+        "category": "etc",
+        "label": "관리비",
+        "merchantScope": [
+          "관리비"
+        ],
+        "rewardType": "mileage",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "travel",
         "label": "항공마일리지",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "관리비",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -16515,7 +16197,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "항공마일리지",
       "관리비"
     ],
@@ -16524,7 +16205,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 항공마일리지, 관리비 영역 혜택 정보가 수집되었습니다."
+      "항공마일리지, 관리비 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -16555,9 +16236,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10492-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
         "rate": 0.012,
@@ -16574,7 +16255,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10492-shopping-1",
@@ -16676,10 +16357,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.012,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -16720,16 +16401,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "쇼핑"
+      "쇼핑",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 쇼핑, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -16747,7 +16428,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "연간 30만원 경차 유류세 환급",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -16766,7 +16447,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -16790,7 +16471,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -16814,7 +16495,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -16838,7 +16519,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -16859,28 +16540,28 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "경차유류환급",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "경차유류환급 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -16921,7 +16602,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "놓칠 수 없는 온라인쇼핑 60% 할인",
-    "monthlyCap": 20000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -16932,31 +16613,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10107-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10107-shopping-1",
+        "id": "naver-card-10107-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -16980,7 +16637,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10107-medical-2",
+        "id": "naver-card-10107-medical-1",
         "category": "medical",
         "label": "뷰티",
         "merchantScope": [
@@ -17004,7 +16661,7 @@ export const collectedCards: CreditCard[] = [
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10107-convenience-3",
+        "id": "naver-card-10107-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -17029,13 +16686,6 @@ export const collectedCards: CreditCard[] = [
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "쇼핑",
@@ -17068,16 +16718,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "뷰티"
+      "뷰티",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 뷰티 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 뷰티, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -17095,7 +16745,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 0,
     "advertisedBenefit": "대중교통∙주유∙카페/베이커리",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -17108,13 +16758,13 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10348-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -17127,7 +16777,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10348-fuel-1",
@@ -17138,7 +16788,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -17162,7 +16812,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -17186,7 +16836,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -17205,30 +16855,30 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.03,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "monthlyCap": 5000,
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -17242,16 +16892,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "주유"
+      "주유",
+      "대중교통"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 주유 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 주유, 대중교통 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -17269,7 +16919,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "코웨이 최대 2.7만원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -17288,7 +16938,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -17309,7 +16959,7 @@ export const collectedCards: CreditCard[] = [
         "category": "ott",
         "label": "렌탈",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "렌탈 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -17564,31 +17214,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10338-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10338-shopping-1",
+        "id": "naver-card-10338-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -17612,7 +17238,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10338-convenience-2",
+        "id": "naver-card-10338-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -17636,7 +17262,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10338-coffee-3",
+        "id": "naver-card-10338-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -17660,7 +17286,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10338-transport-4",
+        "id": "naver-card-10338-transport-3",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
@@ -17682,16 +17308,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10338-etc-4",
+        "category": "etc",
+        "label": "문화",
+        "merchantScope": [
+          "문화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "쇼핑",
@@ -17719,6 +17362,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "문화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -17731,16 +17381,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "편의점"
+      "편의점",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 편의점 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 편의점, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -17771,9 +17421,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10403-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "discount",
         "rate": 0.02,
@@ -17790,7 +17440,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10403-shopping-1",
@@ -17892,10 +17542,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.02,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -17936,16 +17586,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "간편결제"
+      "간편결제",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 간편결제 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 간편결제, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -17974,31 +17624,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10514-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "mileage",
-        "rate": 0.03,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10514-shopping-1",
+        "id": "naver-card-10514-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -18006,7 +17632,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.03,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -18024,17 +17650,10 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.03,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.03,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -18048,7 +17667,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백"
     ],
     "cautions": [
@@ -18056,7 +17674,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -18074,7 +17692,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "국내 가맹점 한도 없이 1.2% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -18093,7 +17711,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -18117,7 +17735,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -18141,7 +17759,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -18165,7 +17783,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -18189,7 +17807,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -18210,35 +17828,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "언제나할인",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.02,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -18495,31 +18113,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10323-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.012,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10323-shopping-1",
+        "id": "naver-card-10323-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -18543,7 +18137,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10323-transport-2",
+        "id": "naver-card-10323-transport-1",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
@@ -18567,7 +18161,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10323-convenience-3",
+        "id": "naver-card-10323-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -18591,7 +18185,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10323-telecom-4",
+        "id": "naver-card-10323-telecom-3",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -18613,16 +18207,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10323-mart-4",
+        "category": "mart",
+        "label": "대형마트",
+        "merchantScope": [
+          "대형마트"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.012,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.012,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
@@ -18650,6 +18261,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.012,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "mart",
+        "label": "대형마트",
+        "rate": 0.012,
+        "monthlyCap": 5000,
+        "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -18662,16 +18280,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "대중교통"
+      "대중교통",
+      "간편결제"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 대중교통 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 대중교통, 간편결제 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -18700,31 +18318,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10347-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.008,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10347-shopping-1",
+        "id": "naver-card-10347-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -18748,7 +18342,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10347-coffee-2",
+        "id": "naver-card-10347-coffee-1",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -18772,7 +18366,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10347-dining-3",
+        "id": "naver-card-10347-dining-2",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -18796,7 +18390,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10347-medical-4",
+        "id": "naver-card-10347-medical-3",
         "category": "medical",
         "label": "뷰티",
         "merchantScope": [
@@ -18818,16 +18412,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10347-fuel-4",
+        "category": "fuel",
+        "label": "주유",
+        "merchantScope": [
+          "주유"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.008,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.008,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
@@ -18855,6 +18466,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.008,
         "monthlyCap": 5000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "fuel",
+        "label": "주유",
+        "rate": 0.008,
+        "monthlyCap": 5000,
+        "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -18867,16 +18485,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "쇼핑"
+      "쇼핑",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 쇼핑, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -19242,7 +18860,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "KT 알뜰폰통신비 최대1만3천원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -19261,7 +18879,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19285,7 +18903,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19306,14 +18924,14 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -19353,7 +18971,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "에코머니 포인트 최대 40% 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -19371,8 +18989,8 @@ export const collectedCards: CreditCard[] = [
           "주유"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19395,8 +19013,8 @@ export const collectedCards: CreditCard[] = [
           "레저"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19419,8 +19037,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19443,8 +19061,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19467,8 +19085,8 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19488,36 +19106,36 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "레저",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -19558,7 +19176,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 2000,
     "previousSpend": 0,
     "advertisedBenefit": "대중교통 최대 300원 할인",
-    "monthlyCap": 200000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -19569,31 +19187,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10354-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.05,
-        "monthlyCap": 50000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10354-fuel-1",
+        "id": "naver-card-10354-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -19601,7 +19195,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19617,7 +19211,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10354-telecom-2",
+        "id": "naver-card-10354-telecom-1",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -19625,7 +19219,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19641,7 +19235,7 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10354-dining-3",
+        "id": "naver-card-10354-dining-2",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -19649,7 +19243,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19665,6 +19259,30 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "id": "naver-card-10354-etc-3",
+        "category": "etc",
+        "label": "영화",
+        "merchantScope": [
+          "영화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "id": "naver-card-10354-transport-4",
         "category": "transport",
         "label": "대중교통",
@@ -19673,7 +19291,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -19691,38 +19309,38 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 50000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "영화",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -19736,16 +19354,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "통신"
+      "통신",
+      "외식"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 통신 영역 혜택 정보가 수집되었습니다."
+      "주유, 통신, 외식 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -19774,31 +19392,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10337-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10337-shopping-1",
+        "id": "naver-card-10337-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -19822,7 +19416,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10337-medical-2",
+        "id": "naver-card-10337-medical-1",
         "category": "medical",
         "label": "의료",
         "merchantScope": [
@@ -19846,7 +19440,7 @@ export const collectedCards: CreditCard[] = [
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10337-education-3",
+        "id": "naver-card-10337-education-2",
         "category": "education",
         "label": "교육",
         "merchantScope": [
@@ -19870,7 +19464,7 @@ export const collectedCards: CreditCard[] = [
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10337-fuel-4",
+        "id": "naver-card-10337-fuel-3",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -19892,16 +19486,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10337-telecom-4",
+        "category": "telecom",
+        "label": "통신",
+        "merchantScope": [
+          "통신"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "쇼핑",
@@ -19929,6 +19540,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "telecom",
+        "label": "통신",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -19941,16 +19559,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "의료"
+      "의료",
+      "교육"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 의료 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 의료, 교육 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -19968,7 +19586,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "넷플릭스,편의점등 일상 FLEX카드",
-    "monthlyCap": 150000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -19987,7 +19605,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -20011,7 +19629,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -20035,7 +19653,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -20059,7 +19677,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -20083,7 +19701,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -20104,35 +19722,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "문화",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.03,
-        "monthlyCap": 37500,
+        "monthlyCap": 5000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -20184,31 +19802,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10340-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "mileage",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10340-travel-1",
+        "id": "naver-card-10340-travel-0",
         "category": "travel",
         "label": "항공마일리지",
         "merchantScope": [
@@ -20230,6 +19824,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10340-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "mileage",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10340-coffee-2",
@@ -20258,18 +19876,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "travel",
         "label": "항공마일리지",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
@@ -20289,16 +19907,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "항공마일리지",
-      "프리미엄"
+      "프리미엄",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 항공마일리지, 프리미엄 영역 혜택 정보가 수집되었습니다."
+      "항공마일리지, 프리미엄, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -20327,38 +19945,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10485-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10485-dining-1",
+        "id": "naver-card-10485-dining-0",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
           "외식"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -20375,14 +19969,14 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10485-convenience-2",
+        "id": "naver-card-10485-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -20399,14 +19993,14 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10485-shopping-3",
+        "id": "naver-card-10485-shopping-2",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -20423,14 +20017,14 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10485-fuel-4",
+        "id": "naver-card-10485-fuel-3",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
           "주유"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -20445,43 +20039,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10485-transport-4",
+        "category": "transport",
+        "label": "대중교통",
+        "merchantScope": [
+          "대중교통"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "dining",
         "label": "외식",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "transport",
+        "label": "대중교통",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -20494,16 +20112,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "외식",
-      "편의점"
+      "편의점",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 외식, 편의점 영역 혜택 정보가 수집되었습니다."
+      "외식, 편의점, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -20532,31 +20150,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10334-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10334-shopping-1",
+        "id": "naver-card-10334-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -20580,7 +20174,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10334-dining-2",
+        "id": "naver-card-10334-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -20604,7 +20198,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10334-convenience-3",
+        "id": "naver-card-10334-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -20628,7 +20222,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10334-telecom-4",
+        "id": "naver-card-10334-telecom-3",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -20650,16 +20244,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10334-coffee-4",
+        "category": "coffee",
+        "label": "카페/베이커리",
+        "merchantScope": [
+          "카페/베이커리"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
@@ -20687,6 +20298,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "coffee",
+        "label": "카페/베이커리",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -20699,16 +20317,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "쇼핑"
+      "쇼핑",
+      "외식"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 쇼핑, 외식 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -20726,7 +20344,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "쿠쿠 최대 2.7만원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -20745,7 +20363,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -20766,7 +20384,7 @@ export const collectedCards: CreditCard[] = [
         "category": "ott",
         "label": "렌탈",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "렌탈 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -20818,9 +20436,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10534-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "discount",
         "rate": 0.02,
@@ -20837,7 +20455,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10534-shopping-1",
@@ -20939,10 +20557,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.02,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -20983,16 +20601,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "간편결제"
+      "간편결제",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 간편결제 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 간편결제, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -21021,31 +20639,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10497-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.016,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10497-shopping-1",
+        "id": "naver-card-10497-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -21067,6 +20661,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10497-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.016,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10497-mart-2",
@@ -21143,18 +20761,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.016,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.016,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.016,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
@@ -21188,16 +20806,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "프리미엄"
+      "프리미엄",
+      "대형마트"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 프리미엄, 대형마트 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -21226,31 +20844,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10580-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.03,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10580-shopping-1",
+        "id": "naver-card-10580-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -21272,22 +20866,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10580-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.03,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.03,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.03,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.03,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -21300,16 +20918,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "간편결제"
+      "간편결제",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 간편결제 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 간편결제, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -21327,7 +20945,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 300000,
     "advertisedBenefit": "국내 주유소에서 최대 10% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -21338,31 +20956,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10398-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 300000,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "30만원 이상",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10398-fuel-1",
+        "id": "naver-card-10398-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -21370,7 +20964,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -21386,7 +20980,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10398-shopping-2",
+        "id": "naver-card-10398-shopping-1",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -21394,7 +20988,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -21410,7 +21004,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10398-mart-3",
+        "id": "naver-card-10398-mart-2",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -21418,7 +21012,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -21432,36 +21026,60 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10398-etc-3",
+        "category": "etc",
+        "label": "언제나할인",
+        "merchantScope": [
+          "언제나할인"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 300000,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "30만원 이상",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "언제나할인",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -21474,16 +21092,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "쇼핑"
+      "쇼핑",
+      "대형마트"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "주유, 쇼핑, 대형마트 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -21501,7 +21119,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "국내 가맹점 한도 없이 0.5% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -21520,7 +21138,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -21544,7 +21162,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -21568,7 +21186,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -21592,7 +21210,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -21616,7 +21234,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -21637,35 +21255,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "언제나할인",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -21911,7 +21529,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "4대 생활 영역 최대 10% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -21930,7 +21548,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -21954,7 +21572,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -21978,7 +21596,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -22002,7 +21620,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -22023,28 +21641,28 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "간편결제",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "언제나할인",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -22085,7 +21703,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 0,
     "advertisedBenefit": "kt 통신요금 최대13,000원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -22104,7 +21722,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -22128,7 +21746,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -22149,14 +21767,14 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -22370,7 +21988,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 2000,
     "previousSpend": 0,
     "advertisedBenefit": "철도, 고속버스, 택시 5% 할인!",
-    "monthlyCap": 200000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -22389,7 +22007,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -22413,7 +22031,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -22437,7 +22055,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -22461,7 +22079,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -22485,7 +22103,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -22506,35 +22124,35 @@ export const collectedCards: CreditCard[] = [
         "category": "fuel",
         "label": "주유",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "레저",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.05,
-        "monthlyCap": 50000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -22697,31 +22315,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10353-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10353-shopping-1",
+        "id": "naver-card-10353-shopping-0",
         "category": "shopping",
         "label": "바우처",
         "merchantScope": [
@@ -22743,6 +22337,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10353-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10353-education-2",
@@ -22819,18 +22437,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "바우처",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
@@ -22864,16 +22482,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "바우처",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 바우처, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "바우처, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -23107,31 +22725,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10531-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10531-fuel-1",
+        "id": "naver-card-10531-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -23155,7 +22749,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10531-telecom-2",
+        "id": "naver-card-10531-telecom-1",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -23177,6 +22771,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10531-etc-2",
+        "category": "etc",
+        "label": "관리비",
+        "merchantScope": [
+          "관리비"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10531-shopping-3",
@@ -23205,13 +22823,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
@@ -23224,6 +22835,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "관리비",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -23243,16 +22861,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "오토"
+      "오토",
+      "통신"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 오토 영역 혜택 정보가 수집되었습니다."
+      "주유, 오토, 통신 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -23281,31 +22899,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10533-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10533-dining-1",
+        "id": "naver-card-10533-dining-0",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -23329,7 +22923,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10533-fuel-2",
+        "id": "naver-card-10533-fuel-1",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -23353,7 +22947,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10533-mart-3",
+        "id": "naver-card-10533-mart-2",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -23377,7 +22971,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10533-telecom-4",
+        "id": "naver-card-10533-telecom-3",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -23399,16 +22993,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10533-transport-4",
+        "category": "transport",
+        "label": "대중교통",
+        "merchantScope": [
+          "대중교통"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "dining",
         "label": "외식",
@@ -23436,6 +23047,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "transport",
+        "label": "대중교통",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -23448,16 +23066,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "외식",
-      "주유"
+      "주유",
+      "대형마트"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 외식, 주유 영역 혜택 정보가 수집되었습니다."
+      "외식, 주유, 대형마트 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -23475,7 +23093,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "SK인텔릭스구독료 최대2.7만원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -23494,7 +23112,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -23515,7 +23133,7 @@ export const collectedCards: CreditCard[] = [
         "category": "ott",
         "label": "렌탈",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "렌탈 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -23565,31 +23183,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10532-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10532-shopping-1",
+        "id": "naver-card-10532-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -23613,7 +23207,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10532-mart-2",
+        "id": "naver-card-10532-mart-1",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -23637,7 +23231,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10532-coffee-3",
+        "id": "naver-card-10532-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -23661,7 +23255,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10532-convenience-4",
+        "id": "naver-card-10532-convenience-3",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -23683,16 +23277,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10532-transport-4",
+        "category": "transport",
+        "label": "대중교통",
+        "merchantScope": [
+          "대중교통"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "쇼핑",
@@ -23720,6 +23331,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "transport",
+        "label": "대중교통",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -23732,16 +23350,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "대형마트"
+      "대형마트",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 대형마트 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 대형마트, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -23759,7 +23377,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 7000,
     "previousSpend": 0,
     "advertisedBenefit": "대중교통 15% 결제일 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -23777,8 +23395,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -23801,8 +23419,8 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -23825,8 +23443,8 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -23849,8 +23467,8 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -23873,8 +23491,8 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -23894,36 +23512,36 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.15,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -24180,31 +23798,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10413-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10413-shopping-1",
+        "id": "naver-card-10413-shopping-0",
         "category": "shopping",
         "label": "바우처",
         "merchantScope": [
@@ -24226,6 +23820,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10413-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10413-mart-2",
@@ -24302,18 +23920,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "바우처",
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
@@ -24347,16 +23965,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "바우처",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 바우처, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "바우처, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -24385,38 +24003,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10490-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10490-dining-1",
+        "id": "naver-card-10490-dining-0",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
           "외식"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -24433,14 +24027,14 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10490-convenience-2",
+        "id": "naver-card-10490-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -24457,14 +24051,14 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10490-shopping-3",
+        "id": "naver-card-10490-shopping-2",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -24481,14 +24075,14 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10490-fuel-4",
+        "id": "naver-card-10490-fuel-3",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
           "주유"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -24503,43 +24097,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10490-transport-4",
+        "category": "transport",
+        "label": "대중교통",
+        "merchantScope": [
+          "대중교통"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "dining",
         "label": "외식",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "transport",
+        "label": "대중교통",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -24552,16 +24170,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "외식",
-      "편의점"
+      "편의점",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 외식, 편의점 영역 혜택 정보가 수집되었습니다."
+      "외식, 편의점, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -24579,7 +24197,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "용인시 놀이공원 최대60% 현장할인!",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -24598,7 +24216,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -24622,7 +24240,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -24646,7 +24264,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -24670,7 +24288,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -24694,7 +24312,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -24715,35 +24333,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "레저",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -24795,38 +24413,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10291-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 2500,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10291-shopping-1",
+        "id": "naver-card-10291-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 2500,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -24843,14 +24437,14 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10291-coffee-2",
+        "id": "naver-card-10291-coffee-1",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 2500,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -24867,14 +24461,14 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10291-mart-3",
+        "id": "naver-card-10291-mart-2",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
           "대형마트"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 2500,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -24891,14 +24485,14 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10291-convenience-4",
+        "id": "naver-card-10291-convenience-3",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 2500,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -24913,43 +24507,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10291-etc-4",
+        "category": "etc",
+        "label": "반려동물",
+        "merchantScope": [
+          "반려동물"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 2500,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "반려동물 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
-        "monthlyCap": 2500,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 2500,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 2500,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 2500,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 2500,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "반려동물",
+        "rate": 0.1,
+        "monthlyCap": 2500,
+        "note": "반려동물 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -24962,16 +24580,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "카페/베이커리"
+      "카페/베이커리",
+      "대형마트"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 카페/베이커리, 대형마트 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -25205,38 +24823,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-1715-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-1715-shopping-1",
+        "id": "naver-card-1715-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -25253,14 +24847,14 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1715-convenience-2",
+        "id": "naver-card-1715-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -25277,14 +24871,14 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1715-mart-3",
+        "id": "naver-card-1715-mart-2",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
           "대형마트"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -25301,14 +24895,14 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1715-transport-4",
+        "id": "naver-card-1715-transport-3",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -25323,43 +24917,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-1715-fuel-4",
+        "category": "fuel",
+        "label": "주유",
+        "merchantScope": [
+          "주유"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "fuel",
+        "label": "주유",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -25372,16 +24990,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "편의점"
+      "편의점",
+      "대형마트"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 편의점 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 편의점, 대형마트 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -25399,7 +25017,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 0,
     "advertisedBenefit": "다이소매장 30% 할인, 멤버십 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -25417,8 +25035,8 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25441,8 +25059,8 @@ export const collectedCards: CreditCard[] = [
           "뷰티"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25465,8 +25083,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25489,8 +25107,8 @@ export const collectedCards: CreditCard[] = [
           "영화"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25513,8 +25131,8 @@ export const collectedCards: CreditCard[] = [
           "대형마트"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25534,36 +25152,36 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "영화",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -25604,7 +25222,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "케이티 위즈파크 입장권 3천원 할인!",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -25623,7 +25241,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25647,7 +25265,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25671,7 +25289,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25695,7 +25313,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25719,7 +25337,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -25740,35 +25358,35 @@ export const collectedCards: CreditCard[] = [
         "category": "mart",
         "label": "대형마트",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "영화",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -25820,31 +25438,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10389-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 8000,
-        "previousMonthSpendRequired": 500000,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "50만원 이상",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10389-fuel-1",
+        "id": "naver-card-10389-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -25866,22 +25460,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10389-etc-1",
+        "category": "etc",
+        "label": "납부 혜택",
+        "merchantScope": [
+          "납부 혜택"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 8000,
+        "previousMonthSpendRequired": 500000,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "50만원 이상",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "납부 혜택 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 8000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
         "monthlyCap": 8000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "납부 혜택",
+        "rate": 0.01,
+        "monthlyCap": 8000,
+        "note": "납부 혜택 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -25894,7 +25512,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
       "납부 혜택"
     ],
@@ -25903,7 +25520,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 납부 혜택 영역 혜택 정보가 수집되었습니다."
+      "주유, 납부 혜택 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -25932,31 +25549,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10232-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.005,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10232-shopping-1",
+        "id": "naver-card-10232-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -25980,7 +25573,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10232-dining-2",
+        "id": "naver-card-10232-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -26004,7 +25597,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10232-mart-3",
+        "id": "naver-card-10232-mart-2",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -26028,7 +25621,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10232-coffee-4",
+        "id": "naver-card-10232-coffee-3",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -26050,16 +25643,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10232-convenience-4",
+        "category": "convenience",
+        "label": "편의점",
+        "merchantScope": [
+          "편의점"
+        ],
+        "rewardType": "discount",
+        "rate": 0.005,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.005,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "쇼핑",
@@ -26087,6 +25697,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.005,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "convenience",
+        "label": "편의점",
+        "rate": 0.005,
+        "monthlyCap": 5000,
+        "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -26099,16 +25716,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "외식"
+      "외식",
+      "대형마트"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 외식 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 외식, 대형마트 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -26137,31 +25754,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10591-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10591-shopping-1",
+        "id": "naver-card-10591-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -26183,22 +25776,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10591-etc-1",
+        "category": "etc",
+        "label": "금융",
+        "merchantScope": [
+          "금융"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "금융",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -26211,16 +25828,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "금융"
+      "금융",
+      "레저"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 금융 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 금융, 레저 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -26238,7 +25855,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "임신,출산진료비 지원 100만원까지!",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -26257,7 +25874,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26281,7 +25898,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26305,7 +25922,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26329,7 +25946,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26353,7 +25970,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26374,35 +25991,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "국민행복카드",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "국민행복카드 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
         "label": "교육",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -26443,7 +26060,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 7000,
     "previousSpend": 0,
     "advertisedBenefit": "IBK와 Syrup이 만났다!",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -26462,7 +26079,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26483,7 +26100,7 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -26523,7 +26140,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "연회비 면제, 최대 0.8%적립",
-    "monthlyCap": 200000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -26542,7 +26159,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.008,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26566,7 +26183,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.008,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26590,7 +26207,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.008,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26611,21 +26228,21 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "언제나할인",
         "rate": 0.008,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.008,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.008,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -26666,7 +26283,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "유류세 리터당 250원! 주유 80원",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -26685,7 +26302,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26709,7 +26326,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26733,7 +26350,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26757,7 +26374,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26781,7 +26398,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -26802,35 +26419,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "경차유류환급",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "경차유류환급 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -27087,31 +26704,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10594-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10594-shopping-1",
+        "id": "naver-card-10594-shopping-0",
         "category": "shopping",
         "label": "바우처",
         "merchantScope": [
@@ -27133,6 +26726,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10594-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10594-dining-2",
@@ -27209,18 +26826,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "바우처",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
@@ -27254,16 +26871,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "바우처",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 바우처, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "바우처, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -27281,7 +26898,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "Apple Pay 전용 하이브리드카드",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -27300,7 +26917,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -27324,7 +26941,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -27348,7 +26965,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -27372,7 +26989,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -27396,7 +27013,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -27417,35 +27034,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "체크카드겸용",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "체크카드겸용 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -27486,7 +27103,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "해피포인트 적립",
-    "monthlyCap": 15000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -27497,31 +27114,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10557-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10557-shopping-1",
+        "id": "naver-card-10557-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -27545,7 +27138,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10557-coffee-2",
+        "id": "naver-card-10557-coffee-1",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -27571,13 +27164,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
@@ -27602,16 +27188,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "카페/베이커리"
+      "카페/베이커리",
+      "포인트/캐시백"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 카페/베이커리, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -27629,7 +27215,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 23000,
     "previousSpend": 0,
     "advertisedBenefit": "KT 통신비 최대 2만원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -27648,7 +27234,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -27669,7 +27255,7 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -27910,31 +27496,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10501-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10501-dining-1",
+        "id": "naver-card-10501-dining-0",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -27958,7 +27520,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10501-mart-2",
+        "id": "naver-card-10501-mart-1",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -27982,7 +27544,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10501-coffee-3",
+        "id": "naver-card-10501-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -28006,7 +27568,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10501-convenience-4",
+        "id": "naver-card-10501-convenience-3",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -28028,16 +27590,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10501-transport-4",
+        "category": "transport",
+        "label": "대중교통",
+        "merchantScope": [
+          "대중교통"
+        ],
+        "rewardType": "discount",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "dining",
         "label": "외식",
@@ -28065,6 +27644,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "transport",
+        "label": "대중교통",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -28077,16 +27663,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "외식",
-      "대형마트"
+      "대형마트",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 외식, 대형마트 영역 혜택 정보가 수집되었습니다."
+      "외식, 대형마트, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -28104,7 +27690,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "외식·배달앱 5% 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -28123,7 +27709,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28147,7 +27733,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28171,7 +27757,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28195,7 +27781,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28219,7 +27805,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28240,35 +27826,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "체크카드겸용",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "체크카드겸용 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -28309,7 +27895,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "친환경자동차 충전시 에코머니40%적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -28327,8 +27913,8 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28351,8 +27937,8 @@ export const collectedCards: CreditCard[] = [
           "언제나할인"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28375,8 +27961,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28399,8 +27985,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28420,29 +28006,29 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "언제나할인",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -28612,7 +28198,7 @@ export const collectedCards: CreditCard[] = [
           "하이패스"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -28633,7 +28219,7 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "etc",
         "label": "하이패스",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 10000,
         "note": "하이패스 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -28784,7 +28370,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "외식·배달앱 3% 캐시백",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -28803,7 +28389,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28827,7 +28413,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28851,7 +28437,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28875,7 +28461,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28899,7 +28485,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -28920,35 +28506,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "체크카드겸용",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "체크카드겸용 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -28989,7 +28575,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "청호나이스 렌탈료 최대2.5만원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -29008,7 +28594,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -29029,7 +28615,7 @@ export const collectedCards: CreditCard[] = [
         "category": "ott",
         "label": "렌탈",
         "rate": 0.01,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "렌탈 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -29068,7 +28654,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "병원/약국/산후조리원 5% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -29087,7 +28673,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -29111,7 +28697,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -29135,7 +28721,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -29159,7 +28745,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -29183,7 +28769,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -29204,35 +28790,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "국민행복카드",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "국민행복카드 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
         "label": "교육",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -29291,7 +28877,7 @@ export const collectedCards: CreditCard[] = [
           "바우처"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -29315,7 +28901,7 @@ export const collectedCards: CreditCard[] = [
           "프리미엄"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -29336,14 +28922,14 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "바우처",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -29396,31 +28982,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10558-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10558-fuel-1",
+        "id": "naver-card-10558-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -29444,7 +29006,7 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10558-dining-2",
+        "id": "naver-card-10558-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -29468,7 +29030,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10558-telecom-3",
+        "id": "naver-card-10558-telecom-2",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -29490,6 +29052,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10558-etc-3",
+        "category": "etc",
+        "label": "금융",
+        "merchantScope": [
+          "금융"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10558-shopping-4",
@@ -29518,13 +29104,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
@@ -29546,6 +29125,13 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "category": "etc",
+        "label": "금융",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.01,
@@ -29563,16 +29149,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "오토"
+      "오토",
+      "외식"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 오토 영역 혜택 정보가 수집되었습니다."
+      "주유, 오토, 외식 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -29601,31 +29187,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10530-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10530-education-1",
+        "id": "naver-card-10530-education-0",
         "category": "education",
         "label": "교육",
         "merchantScope": [
@@ -29649,7 +29211,7 @@ export const collectedCards: CreditCard[] = [
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10530-medical-2",
+        "id": "naver-card-10530-medical-1",
         "category": "medical",
         "label": "의료",
         "merchantScope": [
@@ -29673,7 +29235,7 @@ export const collectedCards: CreditCard[] = [
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10530-telecom-3",
+        "id": "naver-card-10530-telecom-2",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -29695,6 +29257,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10530-etc-3",
+        "category": "etc",
+        "label": "관리비",
+        "merchantScope": [
+          "관리비"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10530-shopping-4",
@@ -29723,13 +29309,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "education",
         "label": "교육",
         "rate": 0.1,
@@ -29751,6 +29330,13 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "category": "etc",
+        "label": "관리비",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "category": "shopping",
         "label": "간편결제",
         "rate": 0.1,
@@ -29768,16 +29354,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "교육",
-      "의료"
+      "의료",
+      "통신"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 교육, 의료 영역 혜택 정보가 수집되었습니다."
+      "교육, 의료, 통신 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -29806,31 +29392,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10359-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10359-shopping-1",
+        "id": "naver-card-10359-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -29852,6 +29414,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10359-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10359-coffee-2",
@@ -29928,18 +29514,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
@@ -29973,16 +29559,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "프리미엄"
+      "프리미엄",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 프리미엄, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -30111,7 +29697,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "연회비없음! 쇼핑 최대 3%",
-    "monthlyCap": 200000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -30129,8 +29715,8 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -30153,8 +29739,8 @@ export const collectedCards: CreditCard[] = [
           "언제나할인"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -30177,8 +29763,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -30201,8 +29787,8 @@ export const collectedCards: CreditCard[] = [
           "대형마트"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -30222,29 +29808,29 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "언제나할인",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -30508,7 +30094,7 @@ export const collectedCards: CreditCard[] = [
           "간편결제"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -30532,7 +30118,7 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -30556,7 +30142,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -30580,7 +30166,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -30604,7 +30190,7 @@ export const collectedCards: CreditCard[] = [
           "외식"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -30625,35 +30211,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "간편결제",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -31040,38 +30626,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10585-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10585-shopping-1",
+        "id": "naver-card-10585-shopping-0",
         "category": "shopping",
         "label": "간편결제",
         "merchantScope": [
           "간편결제"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -31088,14 +30650,14 @@ export const collectedCards: CreditCard[] = [
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10585-dining-2",
+        "id": "naver-card-10585-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
           "외식"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -31110,29 +30672,53 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10585-etc-2",
+        "category": "etc",
+        "label": "문화",
+        "merchantScope": [
+          "문화"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "간편결제",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "문화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -31145,16 +30731,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "간편결제",
-      "쇼핑"
+      "쇼핑",
+      "외식"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 간편결제, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "간편결제, 쇼핑, 외식 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -31172,7 +30758,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 25000,
     "previousSpend": 0,
     "advertisedBenefit": "KBPay 결제시 교육비 최대 10%",
-    "monthlyCap": 20000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -31183,31 +30769,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10566-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10566-education-1",
+        "id": "naver-card-10566-education-0",
         "category": "education",
         "label": "교육",
         "merchantScope": [
@@ -31231,7 +30793,7 @@ export const collectedCards: CreditCard[] = [
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10566-medical-2",
+        "id": "naver-card-10566-medical-1",
         "category": "medical",
         "label": "의료",
         "merchantScope": [
@@ -31255,7 +30817,7 @@ export const collectedCards: CreditCard[] = [
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10566-coffee-3",
+        "id": "naver-card-10566-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -31280,13 +30842,6 @@ export const collectedCards: CreditCard[] = [
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "education",
         "label": "교육",
@@ -31319,16 +30874,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "교육",
-      "의료"
+      "의료",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 교육, 의료 영역 혜택 정보가 수집되었습니다."
+      "교육, 의료, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -31357,31 +30912,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10411-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10411-shopping-1",
+        "id": "naver-card-10411-shopping-0",
         "category": "shopping",
         "label": "바우처",
         "merchantScope": [
@@ -31403,6 +30934,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10411-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10411-mart-2",
@@ -31479,18 +31034,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "바우처",
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
@@ -31524,16 +31079,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "바우처",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 바우처, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "바우처, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -31756,7 +31311,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "많이 쓴 곳 알아서 최대 5%적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -31775,7 +31330,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -31799,7 +31354,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -31823,7 +31378,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -31847,7 +31402,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -31871,7 +31426,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -31892,35 +31447,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
         "label": "교육",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -32177,31 +31732,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10529-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10529-dining-1",
+        "id": "naver-card-10529-dining-0",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -32225,7 +31756,7 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10529-coffee-2",
+        "id": "naver-card-10529-coffee-1",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -32249,7 +31780,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10529-convenience-3",
+        "id": "naver-card-10529-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -32273,7 +31804,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10529-transport-4",
+        "id": "naver-card-10529-transport-3",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
@@ -32295,16 +31826,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10529-shopping-4",
+        "category": "shopping",
+        "label": "간편결제",
+        "merchantScope": [
+          "간편결제"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "dining",
         "label": "외식",
@@ -32332,6 +31880,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "shopping",
+        "label": "간편결제",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -32344,16 +31899,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "외식",
-      "카페/베이커리"
+      "카페/베이커리",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 외식, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
+      "외식, 카페/베이커리, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -32382,31 +31937,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10339-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "discount",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10339-shopping-1",
+        "id": "naver-card-10339-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -32430,7 +31961,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10339-dining-2",
+        "id": "naver-card-10339-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -32452,16 +31983,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10339-etc-2",
+        "category": "etc",
+        "label": "영화",
+        "merchantScope": [
+          "영화"
+        ],
+        "rewardType": "discount",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "쇼핑",
@@ -32475,6 +32023,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "영화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -32487,16 +32042,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "외식"
+      "외식",
+      "영화"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 외식 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 외식, 영화 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -32719,7 +32274,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 19000,
     "previousSpend": 0,
     "advertisedBenefit": "OTT, 패밀리레스토랑 30% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -32730,39 +32285,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10302-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10302-shopping-1",
+        "id": "naver-card-10302-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
           "쇼핑"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -32778,15 +32309,15 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10302-fuel-2",
+        "id": "naver-card-10302-fuel-1",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
           "주유"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -32802,15 +32333,15 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10302-convenience-3",
+        "id": "naver-card-10302-convenience-2",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
           "편의점"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -32826,15 +32357,15 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10302-telecom-4",
+        "id": "naver-card-10302-telecom-3",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -32848,43 +32379,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10302-etc-4",
+        "category": "etc",
+        "label": "문화",
+        "merchantScope": [
+          "문화"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "문화",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -32897,16 +32452,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "주유"
+      "주유",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 주유 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 주유, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -33129,7 +32684,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "버거/패스트푸드 최대 30% 청구할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -33140,39 +32695,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-1692-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-1692-coffee-1",
+        "id": "naver-card-1692-coffee-0",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
           "카페/베이커리"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -33188,15 +32719,15 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1692-dining-2",
+        "id": "naver-card-1692-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
           "외식"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -33212,15 +32743,15 @@ export const collectedCards: CreditCard[] = [
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1692-shopping-3",
+        "id": "naver-card-1692-shopping-2",
         "category": "shopping",
         "label": "간편결제",
         "merchantScope": [
           "간편결제"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -33236,15 +32767,15 @@ export const collectedCards: CreditCard[] = [
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1692-transport-4",
+        "id": "naver-card-1692-transport-3",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
           "대중교통"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -33258,43 +32789,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-1692-telecom-4",
+        "category": "telecom",
+        "label": "통신",
+        "merchantScope": [
+          "통신"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "간편결제",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "telecom",
+        "label": "통신",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -33307,16 +32862,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "카페/베이커리",
-      "외식"
+      "외식",
+      "간편결제"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 카페/베이커리, 외식 영역 혜택 정보가 수집되었습니다."
+      "카페/베이커리, 외식, 간편결제 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -33334,7 +32889,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "외식·마트·주유·통신 등 생활영역",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -33353,7 +32908,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -33377,7 +32932,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -33401,7 +32956,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -33425,7 +32980,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -33449,7 +33004,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -33470,35 +33025,35 @@ export const collectedCards: CreditCard[] = [
         "category": "dining",
         "label": "외식",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.03,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -33550,31 +33105,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10499-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10499-shopping-1",
+        "id": "naver-card-10499-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -33596,6 +33127,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10499-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10499-education-2",
@@ -33672,18 +33227,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
@@ -33717,16 +33272,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "프리미엄"
+      "프리미엄",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 프리미엄, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -34154,7 +33709,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "생활, 교육, 직장인, 쇼핑, 레저",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -34173,7 +33728,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -34197,7 +33752,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -34221,7 +33776,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -34245,7 +33800,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -34269,7 +33824,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -34290,35 +33845,35 @@ export const collectedCards: CreditCard[] = [
         "category": "transport",
         "label": "대중교통",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "영화",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -34575,31 +34130,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10498-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10498-shopping-1",
+        "id": "naver-card-10498-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -34621,6 +34152,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10498-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10498-convenience-2",
@@ -34697,18 +34252,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
@@ -34742,16 +34297,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "프리미엄"
+      "프리미엄",
+      "편의점"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 프리미엄, 편의점 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -35258,7 +34813,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 19000,
     "previousSpend": 0,
     "advertisedBenefit": "KB Pay 결제시 최대 10% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -35277,7 +34832,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -35301,7 +34856,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -35325,7 +34880,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -35349,7 +34904,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -35373,7 +34928,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -35394,35 +34949,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "레저",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -35463,7 +35018,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "연회비없음! 쇼핑 최대 3%",
-    "monthlyCap": 200000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -35481,8 +35036,8 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -35505,8 +35060,8 @@ export const collectedCards: CreditCard[] = [
           "언제나할인"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -35529,8 +35084,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -35553,8 +35108,8 @@ export const collectedCards: CreditCard[] = [
           "대형마트"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -35574,29 +35129,29 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "언제나할인",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.2,
-        "monthlyCap": 50000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -35655,7 +35210,7 @@ export const collectedCards: CreditCard[] = [
           "언제나할인"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -35679,7 +35234,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -35703,7 +35258,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -35724,21 +35279,21 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "etc",
         "label": "언제나할인",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -36666,7 +36221,7 @@ export const collectedCards: CreditCard[] = [
           "간편결제"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -36690,7 +36245,7 @@ export const collectedCards: CreditCard[] = [
           "외식"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -36714,7 +36269,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -36738,7 +36293,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -36762,7 +36317,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -36783,35 +36338,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "간편결제",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -37375,7 +36930,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "스포츠용품점 5% 국방복지포인트 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -37394,7 +36949,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -37418,7 +36973,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -37442,7 +36997,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -37463,21 +37018,21 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "레저",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -37518,7 +37073,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "해외가맹점 최대 3% 포인트리 적립",
-    "monthlyCap": 200000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -37537,7 +37092,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -37561,7 +37116,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -37585,7 +37140,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -37606,21 +37161,21 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.05,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.05,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.05,
-        "monthlyCap": 66667,
+        "monthlyCap": 5000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -37866,7 +37421,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "경차 유류세 연간 최대 30만원 환급",
-    "monthlyCap": 300000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -37885,7 +37440,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -37909,7 +37464,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -37933,7 +37488,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -37954,21 +37509,21 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "경차유류환급",
         "rate": 0.01,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "경차유류환급 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.01,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -38022,12 +37577,12 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10574-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -38041,7 +37596,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10574-shopping-1",
@@ -38051,7 +37606,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -38075,7 +37630,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -38095,22 +37650,22 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
+        "label": "언제나할인",
+        "rate": 0.1,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -38125,16 +37680,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "쇼핑"
+      "쇼핑",
+      "문화"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 쇼핑, 문화 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -38621,31 +38176,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10569-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.02,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10569-coffee-1",
+        "id": "naver-card-10569-coffee-0",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -38669,7 +38200,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10569-convenience-2",
+        "id": "naver-card-10569-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -38693,7 +38224,7 @@ export const collectedCards: CreditCard[] = [
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10569-mart-3",
+        "id": "naver-card-10569-mart-2",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -38717,7 +38248,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10569-shopping-4",
+        "id": "naver-card-10569-shopping-3",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -38739,16 +38270,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10569-medical-4",
+        "category": "medical",
+        "label": "뷰티",
+        "merchantScope": [
+          "뷰티"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.02,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.02,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "coffee",
         "label": "카페/베이커리",
@@ -38776,6 +38324,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.02,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "medical",
+        "label": "뷰티",
+        "rate": 0.02,
+        "monthlyCap": 5000,
+        "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -38788,16 +38343,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "카페/베이커리",
-      "편의점"
+      "편의점",
+      "대형마트"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 카페/베이커리, 편의점 영역 혜택 정보가 수집되었습니다."
+      "카페/베이커리, 편의점, 대형마트 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -38833,7 +38388,7 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -38857,7 +38412,7 @@ export const collectedCards: CreditCard[] = [
           "주유"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -38881,7 +38436,7 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -38905,7 +38460,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -38926,28 +38481,28 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -39007,7 +38562,7 @@ export const collectedCards: CreditCard[] = [
           "간편결제"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -39031,7 +38586,7 @@ export const collectedCards: CreditCard[] = [
           "외식"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -39055,7 +38610,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -39079,7 +38634,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -39103,7 +38658,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -39124,35 +38679,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "간편결제",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -39385,7 +38940,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 30000,
     "previousSpend": 0,
     "advertisedBenefit": "온라인 간편결제 최대 20% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -39403,8 +38958,8 @@ export const collectedCards: CreditCard[] = [
           "간편결제"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -39427,8 +38982,8 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -39451,8 +39006,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -39475,8 +39030,8 @@ export const collectedCards: CreditCard[] = [
           "프리미엄"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -39496,29 +39051,29 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "간편결제",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "간편결제 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -39559,7 +39114,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 264000,
     "previousSpend": 0,
     "advertisedBenefit": "메리어트 호텔 무료 숙박권 제공",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -39578,7 +39133,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -39602,7 +39157,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -39623,14 +39178,14 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "바우처",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.01,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -39894,7 +39449,7 @@ export const collectedCards: CreditCard[] = [
           "대형마트"
         ],
         "rewardType": "point",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -39918,7 +39473,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "point",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -39942,7 +39497,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "point",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -39966,7 +39521,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "point",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -39990,7 +39545,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "point",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -40011,35 +39566,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -40192,7 +39747,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "음식점, 카페, 편의점 5% 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -40203,39 +39758,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10416-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10416-shopping-1",
+        "id": "naver-card-10416-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -40251,15 +39782,15 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10416-telecom-2",
+        "id": "naver-card-10416-telecom-1",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -40275,15 +39806,15 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10416-coffee-3",
+        "id": "naver-card-10416-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
           "카페/베이커리"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -40299,15 +39830,15 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10416-dining-4",
+        "id": "naver-card-10416-dining-3",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
           "외식"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -40321,43 +39852,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10416-convenience-4",
+        "category": "convenience",
+        "label": "편의점",
+        "merchantScope": [
+          "편의점"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.2,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "convenience",
+        "label": "편의점",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -40370,16 +39925,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "통신"
+      "통신",
+      "카페/베이커리"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 통신 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 통신, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -40397,7 +39952,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "YOLOⓘ 할인율 선택 서비스",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -40415,8 +39970,8 @@ export const collectedCards: CreditCard[] = [
           "언제나할인"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -40439,8 +39994,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -40463,8 +40018,8 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -40487,8 +40042,8 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -40511,8 +40066,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -40532,36 +40087,36 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "etc",
         "label": "언제나할인",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -40613,31 +40168,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-3756-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-3756-fuel-1",
+        "id": "naver-card-3756-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
@@ -40659,6 +40190,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-3756-etc-1",
+        "category": "etc",
+        "label": "하이패스",
+        "merchantScope": [
+          "하이패스"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "하이패스 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-3756-coffee-2",
@@ -40687,18 +40242,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "하이패스",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "하이패스 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
@@ -40718,16 +40273,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "오토"
+      "오토",
+      "하이패스"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 오토 영역 혜택 정보가 수집되었습니다."
+      "주유, 오토, 하이패스 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -40868,31 +40423,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10402-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.03,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10402-shopping-1",
+        "id": "naver-card-10402-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -40916,7 +40447,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10402-dining-2",
+        "id": "naver-card-10402-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
@@ -40938,6 +40469,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10402-etc-2",
+        "category": "etc",
+        "label": "관리비",
+        "merchantScope": [
+          "관리비"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.03,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10402-telecom-3",
@@ -40966,13 +40521,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.03,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.03,
@@ -40985,6 +40533,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.03,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "관리비",
+        "rate": 0.03,
+        "monthlyCap": 5000,
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
@@ -41004,16 +40559,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "외식"
+      "외식",
+      "관리비"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 외식 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 외식, 관리비 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -41031,7 +40586,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 27000,
     "previousSpend": 0,
     "advertisedBenefit": "간편결제 이용 시 5% 포인트 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -41050,7 +40605,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -41071,7 +40626,7 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.05,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -41517,38 +41072,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10313-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.15,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10313-fuel-1",
+        "id": "naver-card-10313-fuel-0",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
           "주유"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -41565,6 +41096,30 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "id": "naver-card-10313-etc-1",
+        "category": "etc",
+        "label": "관리비",
+        "merchantScope": [
+          "관리비"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "id": "naver-card-10313-education-2",
         "category": "education",
         "label": "교육",
@@ -41572,7 +41127,7 @@ export const collectedCards: CreditCard[] = [
           "교육"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -41596,7 +41151,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -41620,7 +41175,7 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -41639,37 +41194,37 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.15,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "category": "etc",
+        "label": "관리비",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "category": "education",
         "label": "교육",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -41684,16 +41239,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "주유",
-      "관리비"
+      "관리비",
+      "교육"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 주유, 관리비 영역 혜택 정보가 수집되었습니다."
+      "주유, 관리비, 교육 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -41722,31 +41277,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10327-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10327-shopping-1",
+        "id": "naver-card-10327-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -41754,7 +41285,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -41772,17 +41303,10 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -41796,7 +41320,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백"
     ],
     "cautions": [
@@ -41804,7 +41327,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -41822,7 +41345,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 22000,
     "previousSpend": 0,
     "advertisedBenefit": "해외 이용금액 1.7% 포인트 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -41841,7 +41364,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.017,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -41865,7 +41388,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.017,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -41886,14 +41409,14 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "언제나할인",
         "rate": 0.017,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.017,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -41946,9 +41469,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10187-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
         "rate": 0.017,
@@ -41965,7 +41488,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10187-shopping-1",
@@ -41995,10 +41518,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.017,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -42018,7 +41541,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
       "간편결제"
     ],
@@ -42027,7 +41549,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 간편결제 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 간편결제 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -42261,31 +41783,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10409-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10409-education-1",
+        "id": "naver-card-10409-education-0",
         "category": "education",
         "label": "교육",
         "merchantScope": [
@@ -42309,7 +41807,7 @@ export const collectedCards: CreditCard[] = [
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10409-mart-2",
+        "id": "naver-card-10409-mart-1",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -42333,7 +41831,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10409-medical-3",
+        "id": "naver-card-10409-medical-2",
         "category": "medical",
         "label": "의료",
         "merchantScope": [
@@ -42355,6 +41853,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10409-etc-3",
+        "category": "etc",
+        "label": "관리비",
+        "merchantScope": [
+          "관리비"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10409-telecom-4",
@@ -42383,13 +41905,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "education",
         "label": "교육",
         "rate": 0.1,
@@ -42411,6 +41926,13 @@ export const collectedCards: CreditCard[] = [
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
+        "category": "etc",
+        "label": "관리비",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
@@ -42428,16 +41950,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "교육",
-      "대형마트"
+      "대형마트",
+      "의료"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 교육, 대형마트 영역 혜택 정보가 수집되었습니다."
+      "교육, 대형마트, 의료 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -42455,7 +41977,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "버스, 지하철 일 최대 600원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -42474,7 +41996,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42498,7 +42020,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42522,7 +42044,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42546,7 +42068,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42570,7 +42092,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42591,35 +42113,35 @@ export const collectedCards: CreditCard[] = [
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "영화",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -42660,7 +42182,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "버스, 지하철 30% 결제일 할인카드",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -42678,8 +42200,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42702,8 +42224,8 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42726,8 +42248,8 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42750,8 +42272,8 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42774,8 +42296,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -42795,36 +42317,36 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -42963,7 +42485,7 @@ export const collectedCards: CreditCard[] = [
           "반려동물"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -42987,7 +42509,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -43008,14 +42530,14 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "etc",
         "label": "반려동물",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "반려동물 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -43337,31 +42859,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10346-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10346-shopping-1",
+        "id": "naver-card-10346-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -43369,7 +42867,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -43387,17 +42885,10 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.05,
-        "monthlyCap": 5000,
+        "monthlyCap": 10000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -43411,7 +42902,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백"
     ],
     "cautions": [
@@ -43419,7 +42909,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -43548,7 +43038,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 0,
     "advertisedBenefit": "국내 온라인 가맹점 7% 청구할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -43567,7 +43057,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -43591,7 +43081,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -43615,7 +43105,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -43639,7 +43129,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -43663,7 +43153,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -43684,35 +43174,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "언제나할인",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.07,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -43766,9 +43256,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10491-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
         "rate": 0.012,
@@ -43785,7 +43275,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10491-shopping-1",
@@ -43815,10 +43305,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.012,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -43838,16 +43328,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -43987,38 +43477,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10479-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10479-shopping-1",
+        "id": "naver-card-10479-shopping-0",
         "category": "shopping",
         "label": "바우처",
         "merchantScope": [
           "바우처"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -44035,14 +43501,14 @@ export const collectedCards: CreditCard[] = [
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10479-dining-2",
+        "id": "naver-card-10479-dining-1",
         "category": "dining",
         "label": "외식",
         "merchantScope": [
           "외식"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -44057,29 +43523,53 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10479-etc-2",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "바우처",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -44092,16 +43582,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "바우처",
-      "외식"
+      "외식",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 바우처, 외식 영역 혜택 정보가 수집되었습니다."
+      "바우처, 외식, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -44130,38 +43620,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10314-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.15,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10314-shopping-1",
+        "id": "naver-card-10314-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
           "쇼핑"
         ],
         "rewardType": "cashback",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -44176,22 +43642,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10314-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.15,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.15,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -44204,16 +43694,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -44231,7 +43721,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "임신, 출산, 유아학비와 보육료 지원",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -44249,8 +43739,8 @@ export const collectedCards: CreditCard[] = [
           "국민행복카드"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -44273,8 +43763,8 @@ export const collectedCards: CreditCard[] = [
           "의료"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -44297,8 +43787,8 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -44321,8 +43811,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -44345,8 +43835,8 @@ export const collectedCards: CreditCard[] = [
           "외식"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -44366,36 +43856,36 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "etc",
         "label": "국민행복카드",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "국민행복카드 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -44764,38 +44254,14 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10219-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10219-shopping-1",
+        "id": "naver-card-10219-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -44810,22 +44276,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10219-etc-1",
+        "category": "etc",
+        "label": "레저",
+        "merchantScope": [
+          "레저"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.2,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "레저",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -44838,16 +44328,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "레저"
+      "레저",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 레저 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 레저, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -44976,7 +44466,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "KT 통신요금 최대 1만5천원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -44995,7 +44485,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -45016,7 +44506,7 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -45420,7 +44910,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 22000,
     "previousSpend": 0,
     "advertisedBenefit": "SKT 통신요금 최대 1만5천원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -45439,7 +44929,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -45460,7 +44950,7 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.03,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -45499,7 +44989,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "온라인쇼핑+선택업종 7~20%청구할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -45510,39 +45000,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-1614-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-1614-shopping-1",
+        "id": "naver-card-1614-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
           "쇼핑"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -45558,15 +45024,15 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1614-fuel-2",
+        "id": "naver-card-1614-fuel-1",
         "category": "fuel",
         "label": "주유",
         "merchantScope": [
           "주유"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -45582,15 +45048,15 @@ export const collectedCards: CreditCard[] = [
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1614-telecom-3",
+        "id": "naver-card-1614-telecom-2",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -45606,15 +45072,15 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-1614-mart-4",
+        "id": "naver-card-1614-mart-3",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
           "대형마트"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -45628,43 +45094,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-1614-medical-4",
+        "category": "medical",
+        "label": "의료",
+        "merchantScope": [
+          "의료"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.2,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.2,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "medical",
+        "label": "의료",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -45677,16 +45167,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "주유"
+      "주유",
+      "통신"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 주유 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 주유, 통신 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -46017,31 +45507,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10350-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10350-transport-1",
+        "id": "naver-card-10350-transport-0",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
@@ -46063,6 +45529,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10350-etc-1",
+        "category": "etc",
+        "label": "레저",
+        "merchantScope": [
+          "레저"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10350-shopping-2",
@@ -46139,18 +45629,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.1,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "레저",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -46184,16 +45674,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "대중교통",
-      "레저"
+      "레저",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 대중교통, 레저 영역 혜택 정보가 수집되었습니다."
+      "대중교통, 레저, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -46211,7 +45701,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 1000,
     "previousSpend": 0,
     "advertisedBenefit": "미성년 자녀 가족카드",
-    "monthlyCap": 100000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -46230,7 +45720,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46254,7 +45744,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46278,7 +45768,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46302,7 +45792,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46326,7 +45816,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46347,35 +45837,35 @@ export const collectedCards: CreditCard[] = [
         "category": "convenience",
         "label": "편의점",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.02,
-        "monthlyCap": 25000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -46702,7 +46192,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 120000,
     "previousSpend": 0,
     "advertisedBenefit": "1500원당 대한항공 1마일 적립",
-    "monthlyCap": 3000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -46721,7 +46211,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46745,7 +46235,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46769,7 +46259,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46793,7 +46283,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46817,7 +46307,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -46838,35 +46328,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "바우처",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "travel",
         "label": "항공마일리지",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.01,
-        "monthlyCap": 1000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -47179,7 +46669,7 @@ export const collectedCards: CreditCard[] = [
           "주유"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -47203,7 +46693,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -47227,7 +46717,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -47248,21 +46738,21 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -47395,31 +46885,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10362-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10362-shopping-1",
+        "id": "naver-card-10362-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -47441,6 +46907,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10362-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10362-dining-2",
@@ -47493,18 +46983,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
@@ -47531,16 +47021,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "바우처"
+      "바우처",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 바우처 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 바우처, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -47558,7 +47048,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "최대 10% 무신사 머니리워드 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -47577,7 +47067,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -47598,7 +47088,7 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -47649,31 +47139,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-1243-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.02,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-1243-shopping-1",
+        "id": "naver-card-1243-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -47695,22 +47161,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-1243-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.02,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.02,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.02,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.02,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -47723,16 +47213,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "프리미엄"
+      "프리미엄",
+      "금융"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 프리미엄 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 프리미엄, 금융 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -48146,7 +47636,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 5000,
     "previousSpend": 0,
     "advertisedBenefit": "국내외 가맹점 0.5% 캐시백",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -48165,7 +47655,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.005,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48189,7 +47679,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.005,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48210,14 +47700,14 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "국민내일배움카드",
         "rate": 0.005,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "국민내일배움카드 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.005,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -48463,7 +47953,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "최대 2% 스마일캐시 적립 혜택",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -48482,7 +47972,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.02,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48506,7 +47996,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.02,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48527,14 +48017,14 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.02,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.02,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -48593,7 +48083,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -48617,7 +48107,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -48641,7 +48131,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -48662,21 +48152,21 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -48718,7 +48208,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 0,
     "advertisedBenefit": "전기차/수소차 충전 최대 40% 적립",
-    "monthlyCap": 40000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -48736,8 +48226,8 @@ export const collectedCards: CreditCard[] = [
           "그린카드"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48760,8 +48250,8 @@ export const collectedCards: CreditCard[] = [
           "주유"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48784,8 +48274,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48808,8 +48298,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48832,8 +48322,8 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "point",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48853,36 +48343,36 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "etc",
         "label": "그린카드",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "그린카드 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.3,
-        "monthlyCap": 10000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -48923,7 +48413,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "매월 코웨이 렌탈료1~3만원 청구할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -48942,7 +48432,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48966,7 +48456,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -48987,14 +48477,14 @@ export const collectedCards: CreditCard[] = [
         "category": "ott",
         "label": "렌탈",
         "rate": 0.03,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "렌탈 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "레저",
         "rate": 0.03,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -49195,7 +48685,7 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -49219,7 +48709,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -49243,7 +48733,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -49267,7 +48757,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -49288,28 +48778,28 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -49362,31 +48852,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-652-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "mileage",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-652-travel-1",
+        "id": "naver-card-652-travel-0",
         "category": "travel",
         "label": "항공마일리지",
         "merchantScope": [
@@ -49408,6 +48874,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-652-etc-1",
+        "category": "etc",
+        "label": "영화",
+        "merchantScope": [
+          "영화"
+        ],
+        "rewardType": "mileage",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-652-shopping-2",
@@ -49484,18 +48974,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "travel",
         "label": "항공마일리지",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "영화",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -49529,16 +49019,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "항공마일리지",
-      "영화"
+      "영화",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 항공마일리지, 영화 영역 혜택 정보가 수집되었습니다."
+      "항공마일리지, 영화, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -49761,7 +49251,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "스타벅스 50%,스트리밍 20% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -49779,8 +49269,8 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -49803,8 +49293,8 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -49827,8 +49317,8 @@ export const collectedCards: CreditCard[] = [
           "외식"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -49851,8 +49341,8 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -49875,8 +49365,8 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -49896,36 +49386,36 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -49966,7 +49456,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "5%할인, 무이자 할부",
-    "monthlyCap": 1,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -49985,7 +49475,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.05,
-        "monthlyCap": 1,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -50006,7 +49496,7 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.05,
-        "monthlyCap": 1,
+        "monthlyCap": 10000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -50135,31 +49625,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10361-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10361-shopping-1",
+        "id": "naver-card-10361-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -50181,6 +49647,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10361-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10361-dining-2",
@@ -50233,18 +49723,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
@@ -50271,16 +49761,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "바우처"
+      "바우처",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 바우처 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 바우처, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -50726,7 +50216,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 0,
     "advertisedBenefit": "SKT통신 요금 최대 1만5천원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -50745,7 +50235,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -50769,7 +50259,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -50793,7 +50283,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -50817,7 +50307,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -50838,28 +50328,28 @@ export const collectedCards: CreditCard[] = [
         "category": "telecom",
         "label": "통신",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "영화",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.01,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -51090,7 +50580,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "LG전자 최대 10% 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -51109,7 +50599,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -51133,7 +50623,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -51154,14 +50644,14 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "영화",
         "rate": 0.1,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -51418,31 +50908,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-3776-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.021,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-3776-shopping-1",
+        "id": "naver-card-3776-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -51466,7 +50932,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-3776-telecom-2",
+        "id": "naver-card-3776-telecom-1",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
@@ -51490,7 +50956,7 @@ export const collectedCards: CreditCard[] = [
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-3776-transport-3",
+        "id": "naver-card-3776-transport-2",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
@@ -51514,7 +50980,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-3776-coffee-4",
+        "id": "naver-card-3776-coffee-3",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -51536,16 +51002,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-3776-dining-4",
+        "category": "dining",
+        "label": "외식",
+        "merchantScope": [
+          "외식"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.021,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.021,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
@@ -51573,6 +51056,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.021,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "dining",
+        "label": "외식",
+        "rate": 0.021,
+        "monthlyCap": 5000,
+        "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -51585,16 +51075,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "쇼핑"
+      "쇼핑",
+      "통신"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 쇼핑, 통신 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -51723,7 +51213,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 1000,
     "previousSpend": 0,
     "advertisedBenefit": "만 12세 이상 미성년 가족 신용카드",
-    "monthlyCap": 200000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -51742,7 +51232,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.03,
-        "monthlyCap": 200000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -51763,7 +51253,7 @@ export const collectedCards: CreditCard[] = [
         "category": "convenience",
         "label": "편의점",
         "rate": 0.03,
-        "monthlyCap": 200000,
+        "monthlyCap": 10000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -51802,7 +51292,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "쇼핑/도서/어학/배달앱 10%청구할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -51821,7 +51311,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -51845,7 +51335,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -51869,7 +51359,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -51893,7 +51383,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -51917,7 +51407,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -51938,35 +51428,35 @@ export const collectedCards: CreditCard[] = [
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -52130,31 +51620,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10363-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10363-shopping-1",
+        "id": "naver-card-10363-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -52176,6 +51642,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10363-etc-1",
+        "category": "etc",
+        "label": "프리미엄",
+        "merchantScope": [
+          "프리미엄"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10363-dining-2",
@@ -52228,18 +51718,18 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.01,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.01,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "프리미엄",
+        "rate": 0.01,
+        "monthlyCap": 5000,
+        "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
@@ -52266,16 +51756,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "바우처"
+      "바우처",
+      "프리미엄"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 바우처 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 바우처, 프리미엄 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -52293,7 +51783,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "10개 렌탈사 자동이체 포인트 적립",
-    "monthlyCap": 20000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -52312,7 +51802,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.01,
-        "monthlyCap": 10000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -52336,7 +51826,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.01,
-        "monthlyCap": 10000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -52357,14 +51847,14 @@ export const collectedCards: CreditCard[] = [
         "category": "ott",
         "label": "렌탈",
         "rate": 0.01,
-        "monthlyCap": 10000,
+        "monthlyCap": 5000,
         "note": "렌탈 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "관리비",
         "rate": 0.01,
-        "monthlyCap": 10000,
+        "monthlyCap": 5000,
         "note": "관리비 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -52405,7 +51895,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 10000,
     "previousSpend": 0,
     "advertisedBenefit": "커피 30%, 쇼핑 10% 청구할인!",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -52416,39 +51906,15 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-2206-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-2206-shopping-1",
+        "id": "naver-card-2206-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
           "쇼핑"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -52464,15 +51930,15 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-2206-coffee-2",
+        "id": "naver-card-2206-coffee-1",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
           "카페/베이커리"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -52488,15 +51954,15 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-2206-transport-3",
+        "id": "naver-card-2206-transport-2",
         "category": "transport",
         "label": "대중교통",
         "merchantScope": [
           "대중교통"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -52512,15 +51978,15 @@ export const collectedCards: CreditCard[] = [
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-2206-telecom-4",
+        "id": "naver-card-2206-telecom-3",
         "category": "telecom",
         "label": "통신",
         "merchantScope": [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -52534,43 +52000,67 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-2206-dining-4",
+        "category": "dining",
+        "label": "외식",
+        "merchantScope": [
+          "외식"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.3,
-        "monthlyCap": 75000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
-        "monthlyCap": 75000,
+        "rate": 0.1,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "dining",
+        "label": "외식",
+        "rate": 0.1,
+        "monthlyCap": 5000,
+        "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -52583,16 +52073,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "카페/베이커리"
+      "카페/베이커리",
+      "대중교통"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 카페/베이커리 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 카페/베이커리, 대중교통 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -52940,9 +52430,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10388-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "레저",
         "merchantScope": [
-          "연회비지원"
+          "레저"
         ],
         "rewardType": "cashback",
         "rate": 0.07,
@@ -52959,16 +52449,16 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "레저",
         "rate": 0.07,
         "monthlyCap": 10000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -52981,7 +52471,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "레저",
       "납부 혜택"
     ],
@@ -52990,7 +52479,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 레저, 납부 혜택 영역 혜택 정보가 수집되었습니다."
+      "레저, 납부 혜택 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -53101,9 +52590,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10308-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "문화",
         "merchantScope": [
-          "연회비지원"
+          "문화"
         ],
         "rewardType": "cashback",
         "rate": 0.01,
@@ -53120,7 +52609,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10308-education-1",
@@ -53198,10 +52687,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "문화",
         "rate": 0.01,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
@@ -53235,16 +52724,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "문화",
-      "교육"
+      "교육",
+      "통신"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 문화, 교육 영역 혜택 정보가 수집되었습니다."
+      "문화, 교육, 통신 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -53280,7 +52769,7 @@ export const collectedCards: CreditCard[] = [
           "대형마트"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53304,7 +52793,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53328,7 +52817,7 @@ export const collectedCards: CreditCard[] = [
           "교육"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53352,7 +52841,7 @@ export const collectedCards: CreditCard[] = [
           "의료"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53376,7 +52865,7 @@ export const collectedCards: CreditCard[] = [
           "외식"
         ],
         "rewardType": "discount",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53397,35 +52886,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "education",
         "label": "교육",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "의료",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -53485,7 +52974,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "point",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53509,7 +52998,7 @@ export const collectedCards: CreditCard[] = [
           "주유"
         ],
         "rewardType": "point",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53533,7 +53022,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "point",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53557,7 +53046,7 @@ export const collectedCards: CreditCard[] = [
           "대형마트"
         ],
         "rewardType": "point",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53581,7 +53070,7 @@ export const collectedCards: CreditCard[] = [
           "대중교통"
         ],
         "rewardType": "point",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -53602,35 +53091,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -53672,7 +53161,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 222000,
     "previousSpend": 0,
     "advertisedBenefit": "연1회 쇼핑/레스토랑 기프트옵션 제공",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -53691,7 +53180,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -53715,7 +53204,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -53739,7 +53228,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -53763,7 +53252,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -53787,7 +53276,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "mileage",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -53808,35 +53297,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "travel",
         "label": "항공마일리지",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "항공마일리지 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -53957,7 +53446,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 30000,
     "previousSpend": 0,
     "advertisedBenefit": "해외 이용 거래 2% 포인트 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -53968,31 +53457,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10517-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.035,
-        "monthlyCap": 150000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10517-shopping-1",
+        "id": "naver-card-10517-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -54000,7 +53465,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.035,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -54014,22 +53479,46 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10517-etc-1",
+        "category": "etc",
+        "label": "레저",
+        "merchantScope": [
+          "레저"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.035,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.035,
-        "monthlyCap": 150000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.035,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "레저",
+        "rate": 0.035,
+        "monthlyCap": 5000,
+        "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -54042,7 +53531,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
       "레저"
     ],
@@ -54051,7 +53539,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 레저 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 레저 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -54082,9 +53570,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10390-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "반려동물",
         "merchantScope": [
-          "연회비지원"
+          "반려동물"
         ],
         "rewardType": "cashback",
         "rate": 0.07,
@@ -54101,16 +53589,16 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "반려동물 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "반려동물",
         "rate": 0.07,
         "monthlyCap": 10000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "반려동물 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -54123,7 +53611,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "반려동물",
       "납부 혜택"
     ],
@@ -54132,7 +53619,7 @@ export const collectedCards: CreditCard[] = [
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 반려동물, 납부 혜택 영역 혜택 정보가 수집되었습니다."
+      "반려동물, 납부 혜택 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -54168,7 +53655,7 @@ export const collectedCards: CreditCard[] = [
           "바우처"
         ],
         "rewardType": "point",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -54192,7 +53679,7 @@ export const collectedCards: CreditCard[] = [
           "레저"
         ],
         "rewardType": "point",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -54216,7 +53703,7 @@ export const collectedCards: CreditCard[] = [
           "주유"
         ],
         "rewardType": "point",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -54237,21 +53724,21 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "바우처",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "레저",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -54293,7 +53780,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 0,
     "advertisedBenefit": "PC게임/피트니스업종/통신/교통 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -54312,7 +53799,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -54336,7 +53823,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -54360,7 +53847,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -54384,7 +53871,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -54408,7 +53895,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -54429,35 +53916,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -54843,31 +54330,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-2886-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-2886-shopping-1",
+        "id": "naver-card-2886-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -54891,7 +54354,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-2886-mart-2",
+        "id": "naver-card-2886-mart-1",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -54915,7 +54378,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-2886-coffee-3",
+        "id": "naver-card-2886-coffee-2",
         "category": "coffee",
         "label": "카페/베이커리",
         "merchantScope": [
@@ -54939,7 +54402,7 @@ export const collectedCards: CreditCard[] = [
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-2886-convenience-4",
+        "id": "naver-card-2886-convenience-3",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -54961,16 +54424,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-2886-dining-4",
+        "category": "dining",
+        "label": "외식",
+        "merchantScope": [
+          "외식"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
@@ -54998,6 +54478,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "dining",
+        "label": "외식",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -55010,16 +54497,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "쇼핑"
+      "쇼핑",
+      "대형마트"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 쇼핑, 대형마트 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -55037,7 +54524,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 23000,
     "previousSpend": 0,
     "advertisedBenefit": "해외수수료 면제,일본 10%적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -55056,7 +54543,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -55080,7 +54567,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -55101,14 +54588,14 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "금융",
         "rate": 0.1,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "금융 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
-        "monthlyCap": 150000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -55721,7 +55208,7 @@ export const collectedCards: CreditCard[] = [
           "쇼핑"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -55745,7 +55232,7 @@ export const collectedCards: CreditCard[] = [
           "영화"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -55769,7 +55256,7 @@ export const collectedCards: CreditCard[] = [
           "외식"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -55793,7 +55280,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -55814,28 +55301,28 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "쇼핑",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "영화",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -55888,31 +55375,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10325-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.03,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10325-shopping-1",
+        "id": "naver-card-10325-shopping-0",
         "category": "shopping",
         "label": "쇼핑",
         "merchantScope": [
@@ -55936,7 +55399,7 @@ export const collectedCards: CreditCard[] = [
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10325-convenience-2",
+        "id": "naver-card-10325-convenience-1",
         "category": "convenience",
         "label": "편의점",
         "merchantScope": [
@@ -55958,6 +55421,30 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10325-etc-2",
+        "category": "etc",
+        "label": "영화",
+        "merchantScope": [
+          "영화"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.03,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10325-transport-3",
@@ -56010,13 +55497,6 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefits": [
       {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.03,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.03,
@@ -56029,6 +55509,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.03,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "etc",
+        "label": "영화",
+        "rate": 0.03,
+        "monthlyCap": 5000,
+        "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
@@ -56055,16 +55542,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "쇼핑",
-      "포인트/캐시백"
+      "포인트/캐시백",
+      "바우처"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 쇼핑, 포인트/캐시백 영역 혜택 정보가 수집되었습니다."
+      "쇼핑, 포인트/캐시백, 바우처 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -57962,9 +57449,9 @@ export const collectedCards: CreditCard[] = [
       {
         "id": "naver-card-10305-etc-0",
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "merchantScope": [
-          "연회비지원"
+          "언제나할인"
         ],
         "rewardType": "cashback",
         "rate": 0.05,
@@ -57981,7 +57468,7 @@ export const collectedCards: CreditCard[] = [
           "수수료"
         ],
         "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "id": "naver-card-10305-shopping-1",
@@ -58083,10 +57570,10 @@ export const collectedCards: CreditCard[] = [
     "benefits": [
       {
         "category": "etc",
-        "label": "연회비지원",
+        "label": "언제나할인",
         "rate": 0.05,
         "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+        "note": "언제나할인 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
@@ -58127,16 +57614,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "언제나할인",
-      "쇼핑"
+      "쇼핑",
+      "간편결제"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 언제나할인, 쇼핑 영역 혜택 정보가 수집되었습니다."
+      "언제나할인, 쇼핑, 간편결제 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -58154,7 +57641,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 202000,
     "previousSpend": 0,
     "advertisedBenefit": "연1회 쇼핑/레스토랑 기프트옵션 제공",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -58173,7 +57660,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -58197,7 +57684,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -58221,7 +57708,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -58245,7 +57732,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -58266,28 +57753,28 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "바우처",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.005,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -58786,7 +58273,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 20000,
     "previousSpend": 0,
     "advertisedBenefit": "한화 이글스 정규시즌 티켓 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -58805,7 +58292,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -58829,7 +58316,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -58853,7 +58340,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -58877,7 +58364,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -58901,7 +58388,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -58922,35 +58409,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "레저",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.006999999999999999,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -59070,7 +58557,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "현대백화점카드혜택+현대오일뱅크멤버십",
-    "monthlyCap": 1,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -59089,7 +58576,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.05,
-        "monthlyCap": 1,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -59110,7 +58597,7 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.05,
-        "monthlyCap": 1,
+        "monthlyCap": 10000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -59354,7 +58841,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 105000,
     "previousSpend": 0,
     "advertisedBenefit": "마이신한포인트 최대 5% 적립",
-    "monthlyCap": 300000,
+    "monthlyCap": 20000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -59373,7 +58860,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -59397,7 +58884,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -59421,7 +58908,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -59445,7 +58932,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -59469,7 +58956,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -59490,35 +58977,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "바우처",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "바우처 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.05,
-        "monthlyCap": 75000,
+        "monthlyCap": 5000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -59681,31 +59168,7 @@ export const collectedCards: CreditCard[] = [
     ],
     "benefitRules": [
       {
-        "id": "naver-card-10458-etc-0",
-        "category": "etc",
-        "label": "연회비지원",
-        "merchantScope": [
-          "연회비지원"
-        ],
-        "rewardType": "cashback",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "previousMonthSpendRequired": 0,
-        "discountedSpendCountsForPerformance": "unknown",
-        "performanceBand": "실적 조건 없음",
-        "excludedItems": [
-          "상품권",
-          "선불카드 충전",
-          "세금",
-          "공과금",
-          "연회비",
-          "수수료"
-        ],
-        "sourceRef": "naver-card-search",
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
-      {
-        "id": "naver-card-10458-shopping-1",
+        "id": "naver-card-10458-shopping-0",
         "category": "shopping",
         "label": "포인트/캐시백",
         "merchantScope": [
@@ -59729,7 +59192,7 @@ export const collectedCards: CreditCard[] = [
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10458-mart-2",
+        "id": "naver-card-10458-mart-1",
         "category": "mart",
         "label": "대형마트",
         "merchantScope": [
@@ -59753,7 +59216,7 @@ export const collectedCards: CreditCard[] = [
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10458-medical-3",
+        "id": "naver-card-10458-medical-2",
         "category": "medical",
         "label": "의료",
         "merchantScope": [
@@ -59777,7 +59240,7 @@ export const collectedCards: CreditCard[] = [
         "note": "의료 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
-        "id": "naver-card-10458-education-4",
+        "id": "naver-card-10458-education-3",
         "category": "education",
         "label": "교육",
         "merchantScope": [
@@ -59799,16 +59262,33 @@ export const collectedCards: CreditCard[] = [
         ],
         "sourceRef": "naver-card-search",
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "id": "naver-card-10458-coffee-4",
+        "category": "coffee",
+        "label": "카페/베이커리",
+        "merchantScope": [
+          "카페/베이커리"
+        ],
+        "rewardType": "cashback",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "previousMonthSpendRequired": 0,
+        "discountedSpendCountsForPerformance": "unknown",
+        "performanceBand": "실적 조건 없음",
+        "excludedItems": [
+          "상품권",
+          "선불카드 충전",
+          "세금",
+          "공과금",
+          "연회비",
+          "수수료"
+        ],
+        "sourceRef": "naver-card-search",
+        "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "benefits": [
-      {
-        "category": "etc",
-        "label": "연회비지원",
-        "rate": 0.05,
-        "monthlyCap": 5000,
-        "note": "연회비지원 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
-      },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
@@ -59836,6 +59316,13 @@ export const collectedCards: CreditCard[] = [
         "rate": 0.05,
         "monthlyCap": 5000,
         "note": "교육 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
+      },
+      {
+        "category": "coffee",
+        "label": "카페/베이커리",
+        "rate": 0.05,
+        "monthlyCap": 5000,
+        "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
     "sourceUrls": [
@@ -59848,16 +59335,16 @@ export const collectedCards: CreditCard[] = [
     ],
     "lastVerifiedAt": "2026-06-10",
     "bestFor": [
-      "연회비지원",
       "포인트/캐시백",
-      "대형마트"
+      "대형마트",
+      "쇼핑"
     ],
     "cautions": [
       "네이버 카드 검색 원본을 기준으로 만든 임시 랭킹 데이터입니다.",
       "통합 할인한도, 실적 제외, 할인받은 매출의 실적 포함 여부는 공식 상품설명서로 추가 검증이 필요합니다."
     ],
     "strengths": [
-      "연회비지원, 포인트/캐시백, 대형마트 영역 혜택 정보가 수집되었습니다."
+      "포인트/캐시백, 대형마트, 쇼핑 영역 혜택 정보가 수집되었습니다."
     ],
     "weaknesses": [
       "상세 한도와 제외 조건은 아직 검증 전입니다."
@@ -60210,7 +59697,7 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -60234,7 +59721,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -60258,7 +59745,7 @@ export const collectedCards: CreditCard[] = [
           "카페/베이커리"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -60282,7 +59769,7 @@ export const collectedCards: CreditCard[] = [
           "대형마트"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -60306,7 +59793,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "cashback",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -60327,35 +59814,35 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -60890,7 +60377,7 @@ export const collectedCards: CreditCard[] = [
           "편의점"
         ],
         "rewardType": "point",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -60914,7 +60401,7 @@ export const collectedCards: CreditCard[] = [
           "문화"
         ],
         "rewardType": "point",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -60938,7 +60425,7 @@ export const collectedCards: CreditCard[] = [
           "통신"
         ],
         "rewardType": "point",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -60959,21 +60446,21 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "convenience",
         "label": "편의점",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "문화",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "문화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
-        "rate": 0.3,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -61540,7 +61027,7 @@ export const collectedCards: CreditCard[] = [
           "포인트/캐시백"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -61564,7 +61051,7 @@ export const collectedCards: CreditCard[] = [
           "오토"
         ],
         "rewardType": "cashback",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
@@ -61585,14 +61072,14 @@ export const collectedCards: CreditCard[] = [
       {
         "category": "shopping",
         "label": "포인트/캐시백",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "오토",
-        "rate": 0.2,
+        "rate": 0.1,
         "monthlyCap": 5000,
         "note": "오토 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
@@ -61712,7 +61199,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 13000,
     "previousSpend": 0,
     "advertisedBenefit": "3년 장기할부 시 최대 72만원 할인",
-    "monthlyCap": 300000,
+    "monthlyCap": 15000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -61731,7 +61218,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -61755,7 +61242,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -61779,7 +61266,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -61800,21 +61287,21 @@ export const collectedCards: CreditCard[] = [
         "category": "ott",
         "label": "렌탈",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "렌탈 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "레저",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "레저 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 100000,
+        "monthlyCap": 5000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -61855,7 +61342,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "현대백화점카드 혜택+해피포인트 멤버십",
-    "monthlyCap": 1,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -61874,7 +61361,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.05,
-        "monthlyCap": 1,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -61895,7 +61382,7 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.05,
-        "monthlyCap": 1,
+        "monthlyCap": 10000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -62396,7 +61883,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 0,
     "previousSpend": 0,
     "advertisedBenefit": "혜택요약 온·오프라인 쇼핑 10% 할인 간편결제 이용 시 5% 추가 할인 온라인 신청 주요혜택 연회비지원 쇼핑 간편결제 주유 카페/베이커리 다른 우리 추천카드 카드의정석2 SUPER 신규 회원 최대 100% 지급 카드의정석",
-    "monthlyCap": 300000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -62415,7 +61902,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -62436,7 +61923,7 @@ export const collectedCards: CreditCard[] = [
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 300000,
+        "monthlyCap": 10000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
