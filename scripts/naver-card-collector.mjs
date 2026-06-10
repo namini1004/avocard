@@ -5,6 +5,7 @@ import path from "node:path";
 const root = process.cwd();
 const dbRoot = path.join(root, "data", "raw", "naver-cards");
 const snapshotDir = path.join(dbRoot, "snapshots");
+const parsedCardDir = path.join(dbRoot, "parsed-cards");
 const queuePath = path.join(dbRoot, "queue.json");
 const statePath = path.join(dbRoot, "state.json");
 const cardsPath = path.join(dbRoot, "cards.jsonl");
@@ -19,10 +20,10 @@ const seedUrl = getArg("url", defaultSeedUrl);
 const maxPages = Number(getArg("max", process.env.NAVER_COLLECT_MAX ?? "1"));
 const delayMs = Number(getArg("delay", process.env.NAVER_COLLECT_DELAY_MS ?? "90000"));
 const jitterMs = Number(getArg("jitter", process.env.NAVER_COLLECT_JITTER_MS ?? "30000"));
-const daemonDelayMs = Number(getArg("daemon-delay", process.env.NAVER_COLLECT_DAEMON_DELAY_MS ?? "600000"));
-const daemonJitterMs = Number(getArg("daemon-jitter", process.env.NAVER_COLLECT_DAEMON_JITTER_MS ?? "900000"));
-const idleDelayMs = Number(getArg("idle-delay", process.env.NAVER_COLLECT_IDLE_DELAY_MS ?? "1800000"));
-const idleJitterMs = Number(getArg("idle-jitter", process.env.NAVER_COLLECT_IDLE_JITTER_MS ?? "1800000"));
+const daemonDelayMs = Number(getArg("daemon-delay", process.env.NAVER_COLLECT_DAEMON_DELAY_MS ?? "1000"));
+const daemonJitterMs = Number(getArg("daemon-jitter", process.env.NAVER_COLLECT_DAEMON_JITTER_MS ?? "9000"));
+const idleDelayMs = Number(getArg("idle-delay", process.env.NAVER_COLLECT_IDLE_DELAY_MS ?? "10000"));
+const idleJitterMs = Number(getArg("idle-jitter", process.env.NAVER_COLLECT_IDLE_JITTER_MS ?? "50000"));
 const daemonCyclesArg = getArg("cycles", process.env.NAVER_COLLECT_DAEMON_CYCLES ?? "0");
 const daemonCycles = Number(daemonCyclesArg);
 const timeoutMs = Number(getArg("timeout", process.env.NAVER_COLLECT_TIMEOUT_MS ?? "20000"));
@@ -39,6 +40,7 @@ function getArg(name, fallback) {
 
 async function ensureDb() {
   await mkdir(snapshotDir, { recursive: true });
+  await mkdir(parsedCardDir, { recursive: true });
   await ensureJson(queuePath, []);
   await ensureJson(statePath, { visited: [], discovered: [], updatedAt: null });
   await ensureJson(robotsCachePath, {});
@@ -78,12 +80,12 @@ function normalizeUrl(href, baseUrl) {
   }
 }
 
-function isLikelyCardUrl(url) {
+function isLikelyCardUrl(url, options = {}) {
   try {
     const parsed = new URL(url);
     if (parsed.hostname !== "m-card-search.naver.com") return false;
-    if (parsed.pathname.includes("/list")) return true;
-    if (parsed.pathname.includes("/card")) return true;
+    if (options.includeList && parsed.pathname === "/list") return true;
+    if (parsed.pathname === "/item" && parsed.searchParams.has("cardAdId")) return true;
     if (parsed.searchParams.has("cardId")) return true;
     if (parsed.searchParams.has("cardNo")) return true;
     return false;
@@ -108,6 +110,40 @@ function extractLinks(html, baseUrl) {
   }
 
   return [...links];
+}
+
+function extractListCards(html, baseUrl) {
+  const cards = new Map();
+  const itemPattern =
+    /cardAdId["']?\s*:\s*(\d+)[\s\S]{0,1200}?cardName["']?\s*:\s*["']([^"']+)["'][\s\S]{0,1200}?companyCode["']?\s*:\s*["']([^"']+)["'][\s\S]{0,1200}?titleDescription["']?\s*:\s*["']([^"']*)["']/g;
+  const anchorPattern =
+    /href=["']\/item\?cardAdId=(\d+)["'][\s\S]{0,800}?<b class=["']name["']>([^<]+)<\/b>[\s\S]{0,400}?<p class=["']desc["']>([^<]*)<\/p>/g;
+
+  for (const match of html.matchAll(itemPattern)) {
+    const [, cardAdId, cardName, companyCode, titleDescription] = match;
+    cards.set(cardAdId, {
+      cardAdId,
+      cardName,
+      companyCode,
+      titleDescription,
+      url: normalizeUrl(`/item?cardAdId=${cardAdId}`, baseUrl)
+    });
+  }
+
+  for (const match of html.matchAll(anchorPattern)) {
+    const [, cardAdId, cardName, titleDescription] = match;
+    if (!cards.has(cardAdId)) {
+      cards.set(cardAdId, {
+        cardAdId,
+        cardName,
+        companyCode: null,
+        titleDescription,
+        url: normalizeUrl(`/item?cardAdId=${cardAdId}`, baseUrl)
+      });
+    }
+  }
+
+  return [...cards.values()].filter((card) => card.url);
 }
 
 function stripTags(value) {
@@ -170,6 +206,178 @@ function parseCardPage(html, url) {
     ]),
     jsonLd,
     textLength: text.length
+  };
+}
+
+function parseNaverPage(html, url) {
+  const parsedUrl = new URL(url);
+  const base = parseCardPage(html, url);
+  const listCards = parsedUrl.pathname.includes("/list") ? extractListCards(html, url) : [];
+  const itemCard = parsedUrl.pathname.includes("/item") ? extractItemCard(html, url) : null;
+
+  return {
+    ...base,
+    pageType: parsedUrl.pathname.includes("/item") ? "item" : parsedUrl.pathname.includes("/list") ? "list" : "unknown",
+    listCards,
+    itemCard
+  };
+}
+
+function cleanText(value) {
+  return String(value ?? "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function extractMeta(html, name) {
+  const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(`<meta[^>]+(?:property|name)=["']${escaped}["'][^>]+content=["']([^"']*)["'][^>]*>`, "i");
+  return html.match(pattern)?.[1]?.trim() ?? null;
+}
+
+function extractNextDataObject(html) {
+  const match =
+    html.match(/<script[^>]+id=["']__NEXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/i) ??
+    html.match(/window\.__INITIAL_STATE__\s*=\s*({[\s\S]*?});/);
+  if (!match) return null;
+  try {
+    return JSON.parse(match[1]);
+  } catch {
+    return null;
+  }
+}
+
+function findObjectsByKey(value, keyName, results = []) {
+  if (!value || typeof value !== "object") return results;
+  if (Array.isArray(value)) {
+    value.forEach((item) => findObjectsByKey(item, keyName, results));
+    return results;
+  }
+  if (Object.prototype.hasOwnProperty.call(value, keyName)) results.push(value);
+  Object.values(value).forEach((item) => findObjectsByKey(item, keyName, results));
+  return results;
+}
+
+function firstJsonObject(html, keyName) {
+  const direct = extractNextDataObject(html);
+  const fromNext = findObjectsByKey(direct, keyName)[0];
+  if (fromNext) return fromNext;
+
+  const keyIndex = html.indexOf(`"${keyName}"`);
+  if (keyIndex < 0) return null;
+  const start = html.lastIndexOf("{", keyIndex);
+  const end = html.indexOf("}", keyIndex + keyName.length);
+  if (start < 0 || end < 0) return null;
+  try {
+    return JSON.parse(html.slice(start, end + 1));
+  } catch {
+    return null;
+  }
+}
+
+function moneyValue(value) {
+  if (value === null || value === undefined || value === "") return null;
+  const number = Number(String(value).replace(/[^\d]/g, ""));
+  return Number.isFinite(number) ? number : null;
+}
+
+function parseBenefitCategories(benefits) {
+  if (!Array.isArray(benefits)) return [];
+  return benefits
+    .map((benefit) => {
+      const raw = benefit.rootBenefitCategoryIdName ?? benefit.name ?? benefit.label ?? "";
+      const [, label = raw] = String(raw).split("|");
+      return {
+        order: benefit.order ?? null,
+        idName: raw || null,
+        label: cleanText(label),
+        iconUrl: benefit.iconFileNameUrl ?? null
+      };
+    })
+    .filter((benefit) => benefit.label);
+}
+
+function extractItemCard(html, url) {
+  const parsedUrl = new URL(url);
+  const cardAdId = parsedUrl.searchParams.get("cardAdId");
+  const jsonCard = firstJsonObject(html, "cardAdId") ?? {};
+  const text = stripTags(html);
+  const cardName =
+    jsonCard.cardName ??
+    cleanText(html.match(/<h[12][^>]*>([\s\S]*?)<\/h[12]>/i)?.[1]) ??
+    extractMeta(html, "og:title");
+
+  return {
+    source: "naver-card-search",
+    sourceUrl: url,
+    capturedAt: new Date().toISOString(),
+    cardAdId,
+    cardName: cardName || null,
+    companyCode: jsonCard.companyCode ?? null,
+    titleDescription: jsonCard.titleDescription ?? firstMatch(text, [/혜택요약.{0,120}/, /[^.]{0,60}(할인|적립|캐시백)[^.]{0,80}/]),
+    cardImageUrl: jsonCard.cardImageUrl ?? extractMeta(html, "og:image"),
+    domesticAnnualFee: moneyValue(jsonCard.domesticAnnualFee),
+    foreignAnnualFee: moneyValue(jsonCard.foreignAnnualFee),
+    familyAnnualFee: moneyValue(jsonCard.familyAnnualFee),
+    annualFeeText: firstMatch(text, [/연회비.{0,100}/, /국내\s*\d+만?원.{0,60}/, /해외\s*\d+만?원.{0,60}/]),
+    previousSpendText: firstMatch(text, [/기준실적.{0,120}/, /전월.{0,80}실적.{0,120}/, /조건없음/]),
+    summaryBenefitText: firstMatch(text, [/혜택요약.{0,160}/, /주요혜택.{0,160}/]),
+    benefitCategories: parseBenefitCategories(jsonCard.benefits),
+    releaseAt: jsonCard.releaseAt ?? null,
+    annualBenefitText: jsonCard.annualBenefitStr ?? null,
+    applyUrlPresent: Boolean(jsonCard.registerUrl || html.includes("온라인 신청") || html.includes("카드신청")),
+    rawJsonKeys: Object.keys(jsonCard).sort(),
+    evidenceSnippets: snippets(text, [
+      "연회비",
+      "기준실적",
+      "혜택요약",
+      "주요혜택",
+      "최대",
+      "한도",
+      "적립",
+      "할인",
+      "캐시백",
+      "전월"
+    ])
+  };
+}
+
+function mergeSourceCard(itemCard, sourceCard) {
+  if (!itemCard || !sourceCard) return itemCard;
+  return {
+    ...itemCard,
+    cardName: sourceCard.cardName || itemCard.cardName,
+    companyCode: sourceCard.companyCode || itemCard.companyCode,
+    titleDescription: sourceCard.titleDescription || itemCard.titleDescription,
+    listSourceCard: sourceCard
+  };
+}
+
+async function saveParsedCard(card) {
+  if (!card?.cardAdId) return null;
+  const filePath = path.join(parsedCardDir, `${card.cardAdId}.json`);
+  await writeFile(filePath, `${JSON.stringify(card, null, 2)}\n`, "utf8");
+  return filePath;
+}
+
+function fieldSummary(card) {
+  if (!card) return null;
+  return {
+    cardAdId: card.cardAdId,
+    cardName: card.cardName,
+    companyCode: card.companyCode,
+    titleDescription: card.titleDescription,
+    cardImageUrl: Boolean(card.cardImageUrl),
+    domesticAnnualFee: card.domesticAnnualFee,
+    foreignAnnualFee: card.foreignAnnualFee,
+    annualFeeText: card.annualFeeText,
+    previousSpendText: card.previousSpendText,
+    summaryBenefitText: card.summaryBenefitText,
+    benefitCategories: card.benefitCategories?.map((item) => item.label) ?? [],
+    releaseAt: card.releaseAt,
+    annualBenefitText: card.annualBenefitText,
+    applyUrlPresent: card.applyUrlPresent
   };
 }
 
@@ -248,16 +456,24 @@ function parseRobots(body) {
   return disallow;
 }
 
-async function addToQueue(urls) {
-  const queue = await readJson(queuePath, []);
+async function addToQueue(urls, options = {}) {
+  let queue = await readJson(queuePath, []);
   const state = await readJson(statePath, { visited: [], discovered: [] });
   const queued = new Set(queue.map((item) => item.url));
   const visited = new Set(state.visited);
   let added = 0;
 
   for (const url of urls) {
-    if (queued.has(url) || visited.has(url)) continue;
-    queue.push({ url, addedAt: new Date().toISOString(), attempts: 0 });
+    if (queued.has(url)) {
+      if (options.allowVisited) {
+        const item = queue.find((entry) => entry.url === url);
+        if (item) item.force = true;
+      }
+      continue;
+    }
+    if (!options.allowVisited && visited.has(url)) continue;
+    const sourceCard = options.cardsByUrl?.get(url) ?? null;
+    queue.push({ url, addedAt: new Date().toISOString(), attempts: 0, force: Boolean(options.allowVisited), sourceCard });
     queued.add(url);
     added += 1;
   }
@@ -270,12 +486,12 @@ async function addToQueue(urls) {
 }
 
 async function seed() {
-  const added = await addToQueue([seedUrl]);
+  const added = await addToQueue([seedUrl], { allowVisited: getArg("force", "0") === "1" });
   console.log(JSON.stringify({ mode: "seed", added, url: seedUrl }, null, 2));
 }
 
 async function status() {
-  const queue = await readJson(queuePath, []);
+  let queue = await readJson(queuePath, []);
   const state = await readJson(statePath, { visited: [], discovered: [] });
   console.log(
     JSON.stringify(
@@ -295,12 +511,12 @@ async function status() {
 async function collect(limit = maxPages) {
   const state = await readJson(statePath, { visited: [], discovered: [] });
   const visited = new Set(state.visited);
-  const queue = await readJson(queuePath, []);
+  let queue = await readJson(queuePath, []);
   let processed = 0;
 
   while (queue.length > 0 && processed < limit) {
     const item = queue.shift();
-    if (!item?.url || visited.has(item.url)) continue;
+    if (!item?.url || (visited.has(item.url) && !item.force)) continue;
 
     const allowed = await isAllowedByRobots(item.url);
     if (!allowed) {
@@ -317,13 +533,31 @@ async function collect(limit = maxPages) {
       await writeFile(htmlPath, result.body, "utf8");
 
       const links = extractLinks(result.body, item.url);
-      const parsed = parseCardPage(result.body, item.url);
+      const parsed = parseNaverPage(result.body, item.url);
+      parsed.itemCard = mergeSourceCard(parsed.itemCard, item.sourceCard);
+      const parsedCardPath = await saveParsedCard(parsed.itemCard);
       await appendFile(cardsPath, `${JSON.stringify({ ...parsed, status: result.status, snapshot: htmlPath })}\n`, "utf8");
-      await addToQueue(links);
+      await addToQueue([...links, ...parsed.listCards.map((card) => card.url)], {
+        cardsByUrl: new Map(parsed.listCards.map((card) => [card.url, card]))
+      });
+      queue = (await readJson(queuePath, queue)).filter((entry) => entry.url !== item.url);
 
       visited.add(item.url);
       processed += 1;
-      console.log(JSON.stringify({ collected: item.url, status: result.status, links: links.length, snapshot: htmlPath }, null, 2));
+      console.log(
+        JSON.stringify(
+          {
+            collected: item.url,
+            status: result.status,
+            links: links.length,
+            snapshot: htmlPath,
+            parsedCardPath,
+            fields: fieldSummary(parsed.itemCard)
+          },
+          null,
+          2
+        )
+      );
     } catch (error) {
       await appendFile(failuresPath, `${JSON.stringify({ url: item.url, reason: String(error), at: new Date().toISOString() })}\n`, "utf8");
       item.attempts = (item.attempts ?? 0) + 1;
@@ -370,7 +604,7 @@ async function daemon() {
   while (daemonCycles === 0 || cycle < daemonCycles) {
     const queue = await readJson(queuePath, []);
     if (queue.length === 0) {
-      const added = await addToQueue([seedUrl]);
+      const added = await addToQueue([seedUrl], { allowVisited: true });
       const wait = randomWait(idleDelayMs, idleJitterMs);
       console.log(JSON.stringify({ event: "idle", addedSeed: added, waitingMs: wait }, null, 2));
       await sleep(wait);

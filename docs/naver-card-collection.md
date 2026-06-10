@@ -29,7 +29,7 @@
 
 ## 랜덤 딜레이 상시 수집기
 
-수동으로 매번 실행하지 않으려면 daemon 모드를 켜둔다. 기본값은 URL 1개 처리 후 10~25분 사이 랜덤 대기다. 큐가 비어 있으면 seed URL을 다시 넣고 30~60분 사이 랜덤 대기한다.
+수동으로 매번 실행하지 않으려면 daemon 모드를 켜둔다. 기본값은 상세 URL 1개 처리 후 1~10초 사이 랜덤 대기다. 큐가 비어 있으면 리스트 URL을 다시 넣고 10~60초 사이 랜덤 대기한다.
 
 ```powershell
 .\.tools\node-v22.11.0-win-x64\npm.cmd run collect:naver:daemon:portable
