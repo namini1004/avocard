@@ -6,6 +6,7 @@ const root = process.cwd();
 const dbRoot = path.join(root, "data", "raw", "naver-cards");
 const snapshotDir = path.join(dbRoot, "snapshots");
 const parsedCardDir = path.join(dbRoot, "parsed-cards");
+const listPageDir = path.join(dbRoot, "list-pages");
 const queuePath = path.join(dbRoot, "queue.json");
 const statePath = path.join(dbRoot, "state.json");
 const cardsPath = path.join(dbRoot, "cards.jsonl");
@@ -27,10 +28,96 @@ const idleJitterMs = Number(getArg("idle-jitter", process.env.NAVER_COLLECT_IDLE
 const daemonCyclesArg = getArg("cycles", process.env.NAVER_COLLECT_DAEMON_CYCLES ?? "0");
 const daemonCycles = Number(daemonCyclesArg);
 const timeoutMs = Number(getArg("timeout", process.env.NAVER_COLLECT_TIMEOUT_MS ?? "20000"));
+const listPageSize = Number(getArg("page-size", process.env.NAVER_COLLECT_LIST_PAGE_SIZE ?? "10"));
+const listPageNoArg = getArg("page-no", process.env.NAVER_COLLECT_LIST_PAGE_NO ?? "");
+const maxListPages = Number(getArg("list-pages", process.env.NAVER_COLLECT_LIST_PAGES ?? "1"));
 
 const userAgent =
   process.env.NAVER_COLLECT_USER_AGENT ??
   "AvocardResearch/0.1 (+local slow collection; randomized delay; contact owner)";
+
+const smartSearchQuery = `query smartSearch(
+  $cardAdIds: [Int]
+  $companyCode: [String]
+  $brandNames: [String]
+  $benefitCategoryIds: [Int]
+  $subBenefitCategoryIds: [Int]
+  $affiliateIds: [Int]
+  $maxAnnualFee: Int
+  $minAnnualFee: Int
+  $basePayment: Int
+  $pageNo: Int = 1
+  $pageSize: Int = 10
+  $device: AdDeviceType
+  $sortMethod: SortMethod
+  $where: String
+  $isRefetch: Boolean
+  $bizType: BizType
+  $searchedAgeGroup: Int
+  $searchedGender: String
+) {
+  cardAdList(
+    cardAdIds: $cardAdIds
+    companyCode: $companyCode
+    brandNames: $brandNames
+    benefitCategoryIds: $benefitCategoryIds
+    subBenefitCategoryIds: $subBenefitCategoryIds
+    affiliateIds: $affiliateIds
+    maxAnnualFee: $maxAnnualFee
+    minAnnualFee: $minAnnualFee
+    basePayment: $basePayment
+    pageNo: $pageNo
+    pageSize: $pageSize
+    device: $device
+    sortMethod: $sortMethod
+    where: $where
+    isRefetch: $isRefetch
+    bizType: $bizType
+    searchedAgeGroup: $searchedAgeGroup
+    searchedGender: $searchedGender
+  ) {
+    cardAds {
+      cardAdId
+      cardName
+      companyCode
+      titleDescription
+      cardImage
+      cardImageUrl
+      registerUrl
+      registerUrlForNoCharge
+      domesticAnnualFee
+      foreignAnnualFee
+      familyAnnualFee
+      enableNpayMO
+      enableNpayPC
+      impBeacon
+      benefits {
+        order
+        rootBenefitCategoryIdName
+        iconFileName
+        iconFileNameUrl
+      }
+      releaseAt
+      annualBenefitStr
+      eventData {
+        rewardRate
+        maxLimitPrice
+      }
+      bizType
+      isMinCPC
+      isVisibleLimitCheckBanner
+    }
+    totalSize
+    totalMaxLimitPrice
+    customReportKeyword
+    nvkwd
+    bt
+    limitCheckBanner {
+      impBeacon
+      clkBeacon
+    }
+  }
+}`;
 
 function getArg(name, fallback) {
   const prefix = `--${name}=`;
@@ -41,8 +128,9 @@ function getArg(name, fallback) {
 async function ensureDb() {
   await mkdir(snapshotDir, { recursive: true });
   await mkdir(parsedCardDir, { recursive: true });
+  await mkdir(listPageDir, { recursive: true });
   await ensureJson(queuePath, []);
-  await ensureJson(statePath, { visited: [], discovered: [], updatedAt: null });
+  await ensureJson(statePath, { visited: [], discovered: [], list: { nextPageNo: 1, totalSize: null, completed: false }, updatedAt: null });
   await ensureJson(robotsCachePath, {});
 }
 
@@ -64,6 +152,15 @@ async function readJson(filePath, fallback) {
 
 async function writeJson(filePath, value) {
   await writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+}
+
+function getListState(state) {
+  return {
+    nextPageNo: Number(state.list?.nextPageNo ?? 1),
+    totalSize: state.list?.totalSize ?? null,
+    completed: Boolean(state.list?.completed),
+    updatedAt: state.list?.updatedAt ?? null
+  };
 }
 
 function hashUrl(url) {
@@ -298,6 +395,29 @@ function parseBenefitCategories(benefits) {
     .filter((benefit) => benefit.label);
 }
 
+function listCardToSourceCard(card) {
+  if (!card?.cardAdId) return null;
+  const cardAdId = String(card.cardAdId);
+  return {
+    source: "naver-card-search",
+    sourceType: "graphql-list",
+    cardAdId,
+    cardName: card.cardName ?? null,
+    companyCode: card.companyCode ?? null,
+    titleDescription: card.titleDescription ?? null,
+    cardImageUrl: card.cardImageUrl ?? null,
+    domesticAnnualFee: moneyValue(card.domesticAnnualFee),
+    foreignAnnualFee: moneyValue(card.foreignAnnualFee),
+    familyAnnualFee: moneyValue(card.familyAnnualFee),
+    benefitCategories: parseBenefitCategories(card.benefits),
+    releaseAt: card.releaseAt ?? null,
+    annualBenefitText: card.annualBenefitStr ?? null,
+    eventData: card.eventData ?? null,
+    bizType: card.bizType ?? null,
+    url: normalizeUrl(`/item?cardAdId=${cardAdId}`, defaultSeedUrl)
+  };
+}
+
 function extractItemCard(html, url) {
   const parsedUrl = new URL(url);
   const cardAdId = parsedUrl.searchParams.get("cardAdId");
@@ -404,6 +524,35 @@ async function fetchWithTimeout(url) {
   }
 }
 
+async function fetchJsonWithTimeout(url, body) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      signal: controller.signal,
+      headers: {
+        "user-agent": userAgent,
+        accept: "application/json",
+        "content-type": "application/json",
+        "accept-language": "ko-KR,ko;q=0.9,en-US;q=0.6,en;q=0.5",
+        referer: defaultSeedUrl
+      },
+      body: JSON.stringify(body)
+    });
+    const text = await response.text();
+    let json = null;
+    try {
+      json = JSON.parse(text);
+    } catch {
+      // Keep the raw response below for debugging.
+    }
+    return { status: response.status, ok: response.ok, text, json };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function isAllowedByRobots(url) {
   const parsed = new URL(url);
   const robots = await readJson(robotsCachePath, {});
@@ -493,6 +642,8 @@ async function seed() {
 async function status() {
   let queue = await readJson(queuePath, []);
   const state = await readJson(statePath, { visited: [], discovered: [] });
+  const parsedCards = await countFiles(parsedCardDir, ".json");
+  const listPages = await countFiles(listPageDir, ".json");
   console.log(
     JSON.stringify(
       {
@@ -500,12 +651,141 @@ async function status() {
         queued: queue.length,
         visited: state.visited?.length ?? 0,
         discovered: state.discovered?.length ?? 0,
+        parsedCards,
+        listPages,
+        list: getListState(state),
         dbRoot
       },
       null,
       2
     )
   );
+}
+
+async function countFiles(dir, suffix) {
+  try {
+    const { readdir } = await import("node:fs/promises");
+    return (await readdir(dir)).filter((name) => name.endsWith(suffix)).length;
+  } catch {
+    return 0;
+  }
+}
+
+async function collectListPages(limit = maxListPages) {
+  let state = await readJson(statePath, { visited: [], discovered: [], list: { nextPageNo: 1, totalSize: null, completed: false } });
+  let listState = getListState(state);
+  let processed = 0;
+
+  while (!listState.completed && processed < limit) {
+    const pageNo = listPageNoArg ? Number(listPageNoArg) + processed : listState.nextPageNo;
+    const allowed = await isAllowedByRobots("https://m-card-search.naver.com/graphql");
+    if (!allowed) {
+      await appendFile(
+        failuresPath,
+        `${JSON.stringify({ url: "https://m-card-search.naver.com/graphql", reason: "robots_disallow", at: new Date().toISOString() })}\n`,
+        "utf8"
+      );
+      throw new Error("robots.txt disallows /graphql");
+    }
+
+    const result = await fetchJsonWithTimeout("https://m-card-search.naver.com/graphql", {
+      operationName: "smartSearch",
+      variables: {
+        pageNo,
+        pageSize: listPageSize,
+        device: "mobile",
+        sortMethod: "ri",
+        bizType: "CPC",
+        companyCode: [],
+        brandNames: [],
+        benefitCategoryIds: [],
+        subBenefitCategoryIds: [],
+        affiliateIds: [],
+        minAnnualFee: 0,
+        maxAnnualFee: 0,
+        basePayment: 0
+      },
+      query: smartSearchQuery
+    });
+
+    const pagePath = path.join(listPageDir, `page-${String(pageNo).padStart(4, "0")}.json`);
+    await writeJson(pagePath, {
+      source: "naver-card-search",
+      sourceUrl: "https://m-card-search.naver.com/graphql",
+      capturedAt: new Date().toISOString(),
+      request: { pageNo, pageSize: listPageSize, sortMethod: "ri", bizType: "CPC" },
+      status: result.status,
+      response: result.json ?? result.text
+    });
+
+    if (!result.ok || !result.json?.data?.cardAdList) {
+      await appendFile(
+        failuresPath,
+        `${JSON.stringify({ url: "https://m-card-search.naver.com/graphql", pageNo, status: result.status, reason: result.text.slice(0, 500), at: new Date().toISOString() })}\n`,
+        "utf8"
+      );
+      throw new Error(`list page ${pageNo} failed with status ${result.status}`);
+    }
+
+    const cardAdList = result.json.data.cardAdList;
+    const cards = (cardAdList.cardAds ?? []).map(listCardToSourceCard).filter(Boolean);
+    const cardsByUrl = new Map(cards.map((card) => [card.url, card]));
+    const added = await addToQueue(cards.map((card) => card.url), { cardsByUrl });
+    const totalSize = Number(cardAdList.totalSize ?? 0);
+    const loadedUntil = pageNo * listPageSize;
+    const completed = cards.length === 0 || (totalSize > 0 && loadedUntil >= totalSize);
+
+    state = await readJson(statePath, state);
+    state.list = {
+      nextPageNo: listPageNoArg ? pageNo + 1 : pageNo + 1,
+      totalSize,
+      completed,
+      updatedAt: new Date().toISOString()
+    };
+    state.updatedAt = new Date().toISOString();
+    await writeJson(statePath, state);
+
+    console.log(
+      JSON.stringify(
+        {
+          mode: "list-page",
+          pageNo,
+          pageSize: listPageSize,
+          cards: cards.length,
+          addedToQueue: added,
+          totalSize,
+          completed,
+          pagePath,
+          sampleFields: cards[0]
+            ? {
+                cardAdId: cards[0].cardAdId,
+                cardName: cards[0].cardName,
+                companyCode: cards[0].companyCode,
+                titleDescription: cards[0].titleDescription,
+                domesticAnnualFee: cards[0].domesticAnnualFee,
+                foreignAnnualFee: cards[0].foreignAnnualFee,
+                benefitCategories: cards[0].benefitCategories?.map((item) => item.label) ?? [],
+                annualBenefitText: cards[0].annualBenefitText
+              }
+            : null
+        },
+        null,
+        2
+      )
+    );
+
+    processed += 1;
+    listState = getListState(state);
+
+    if (!listState.completed && processed < limit) {
+      const wait = randomWait(idleDelayMs, idleJitterMs);
+      console.log(JSON.stringify({ event: "list_page_wait", waitingMs: wait }, null, 2));
+      await sleep(wait);
+    }
+  }
+
+  await status();
+  return processed;
 }
 
 async function collect(limit = maxPages) {
@@ -604,9 +884,15 @@ async function daemon() {
   while (daemonCycles === 0 || cycle < daemonCycles) {
     const queue = await readJson(queuePath, []);
     if (queue.length === 0) {
-      const added = await addToQueue([seedUrl], { allowVisited: true });
+      const state = await readJson(statePath, { list: { completed: false } });
+      if (!getListState(state).completed) {
+        await collectListPages(1);
+      } else {
+        const added = await addToQueue([seedUrl], { allowVisited: true });
+        console.log(JSON.stringify({ event: "list_complete_seed_detail_links", addedSeed: added }, null, 2));
+      }
       const wait = randomWait(idleDelayMs, idleJitterMs);
-      console.log(JSON.stringify({ event: "idle", addedSeed: added, waitingMs: wait }, null, 2));
+      console.log(JSON.stringify({ event: "idle", waitingMs: wait }, null, 2));
       await sleep(wait);
       cycle += 1;
       continue;
@@ -628,6 +914,8 @@ await ensureDb();
 
 if (mode === "seed") {
   await seed();
+} else if (mode === "list-page") {
+  await collectListPages();
 } else if (mode === "collect") {
   await collect();
 } else if (mode === "daemon") {
