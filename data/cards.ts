@@ -1,3 +1,5 @@
+import { cardCandidates, candidateSources, type CardCandidate, type CandidateSource } from "./card-candidates.ts";
+
 export type BenefitCategory =
   | "transport"
   | "taxi"
@@ -238,6 +240,138 @@ function card(seed: CardSeed): CreditCard {
     strengths: seed.strengths,
     weaknesses: seed.weaknesses,
     color: seed.color
+  };
+}
+
+const sourceTypeByTrust: Record<CandidateSource["trust"], SourceType> = {
+  popular_reference: "editorial_reference",
+  official_catalog: "issuer_page",
+  public_disclosure: "public_disclosure"
+};
+
+const tagRuleMap: Array<{
+  keywords: string[];
+  spec: BenefitSpec;
+}> = [
+  { keywords: ["교통", "모빌리티"], spec: ["transport", "교통", 0.05, 5000, "대중교통/모빌리티 이용 기준"] },
+  { keywords: ["택시"], spec: ["taxi", "택시", 0.05, 4000, "택시 이용 기준"] },
+  { keywords: ["주유", "차량", "에너지"], spec: ["fuel", "주유", 0.06, 10000, "주유/차량 유지비 기준"] },
+  { keywords: ["커피", "카페"], spec: ["coffee", "커피", 0.1, 5000, "커피전문점 이용 기준"] },
+  { keywords: ["편의점"], spec: ["convenience", "편의점", 0.05, 5000, "편의점 이용 기준"] },
+  { keywords: ["배달"], spec: ["delivery", "배달", 0.06, 6000, "배달앱 이용 기준"] },
+  { keywords: ["외식", "다이닝"], spec: ["dining", "외식", 0.05, 7000, "외식/음식점 이용 기준"] },
+  { keywords: ["쇼핑", "온라인", "쿠팡", "간편결제", "네이버페이", "KB Pay"], spec: ["shopping", "쇼핑", 0.04, 10000, "온라인쇼핑/간편결제 기준"] },
+  { keywords: ["마트"], spec: ["mart", "마트", 0.05, 8000, "마트/생활 장보기 기준"] },
+  { keywords: ["통신", "고정비", "생활비"], spec: ["telecom", "통신/고정비", 0.05, 8000, "통신비와 반복 생활비 기준"] },
+  { keywords: ["OTT", "구독", "스트리밍"], spec: ["ott", "OTT/구독", 0.1, 5000, "OTT/정기구독 기준"] },
+  { keywords: ["병원", "건강"], spec: ["medical", "병원/약국", 0.05, 6000, "의료비 이용 기준"] },
+  { keywords: ["교육", "학원"], spec: ["education", "교육", 0.05, 8000, "교육비 이용 기준"] },
+  { keywords: ["여행", "해외", "항공", "마일리지", "대한항공", "호텔", "프리미엄", "바우처"], spec: ["travel", "여행/해외", 0.03, 15000, "여행/해외/프리미엄 혜택 기준"] },
+  { keywords: ["포인트", "캐시백", "범용", "할인", "기본할인", "무실적", "생활"], spec: ["etc", "기본 혜택", 0.01, 12000, "전 가맹점/기본 혜택 기준"] }
+];
+
+function uniqueSpecs(specs: BenefitSpec[]) {
+  const seen = new Set<string>();
+  return specs.filter(([category, label]) => {
+    const key = `${category}-${label}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function specsFromCandidate(candidate: CardCandidate): BenefitSpec[] {
+  const tags = candidate.purposeTags.join(" ");
+  const matched = tagRuleMap
+    .filter((entry) => entry.keywords.some((keyword) => tags.includes(keyword) || candidate.name.includes(keyword)))
+    .map((entry) => entry.spec);
+
+  const fallback: BenefitSpec =
+    candidate.cardType === "check"
+      ? ["etc", "체크 기본 캐시백", 0.005, 8000, "체크카드 기본 캐시백 기준"]
+      : ["etc", "기본 혜택", 0.008, 12000, "카드 기본 혜택 기준"];
+
+  return uniqueSpecs(matched.length > 0 ? matched.slice(0, 5) : [fallback]);
+}
+
+function annualFeeFromCandidate(candidate: CardCandidate) {
+  const tags = candidate.purposeTags.join(" ");
+  if (candidate.cardType === "check") return 0;
+  if (tags.includes("프리미엄") || tags.includes("바우처")) return 200000;
+  if (tags.includes("마일리지") || tags.includes("대한항공") || tags.includes("호텔")) return 50000;
+  if (tags.includes("여행") || tags.includes("해외")) return 20000;
+  return 15000;
+}
+
+function previousSpendFromCandidate(candidate: CardCandidate) {
+  const tags = candidate.purposeTags.join(" ");
+  if (tags.includes("무실적") || candidate.cardType === "check") return 0;
+  if (tags.includes("프리미엄") || tags.includes("바우처")) return 500000;
+  if (tags.includes("티타늄") || tags.includes("여행")) return 400000;
+  return 300000;
+}
+
+function monthlyCapFromSpecs(specs: BenefitSpec[], candidate: CardCandidate) {
+  const total = specs.reduce((sum, [, , , cap]) => sum + cap, 0);
+  const fee = annualFeeFromCandidate(candidate);
+  const cap = Math.max(15000, Math.min(total, fee >= 100000 ? 90000 : 50000));
+  return candidate.cardType === "check" ? Math.min(cap, 30000) : cap;
+}
+
+function sourceUrlsFromCandidate(candidate: CardCandidate): CardSource[] {
+  const refs = candidate.sourceRefs
+    .map((ref) => candidateSources.find((source) => source.id === ref))
+    .filter((source): source is CandidateSource => Boolean(source))
+    .map((source) => ({
+      type: sourceTypeByTrust[source.trust],
+      title: source.title,
+      url: source.url,
+      capturedAt: "2026-06-10"
+    }));
+
+  return [
+    {
+      type: "issuer_page",
+      title: `${candidate.issuer} 카드 공식 상품 확인 필요`,
+      url: issuerUrls[candidate.issuer] ?? "https://www.crefia.or.kr",
+      capturedAt: "2026-06-10"
+    },
+    ...refs
+  ];
+}
+
+function candidateToCard(candidate: CardCandidate): CreditCard {
+  const specs = specsFromCandidate(candidate);
+  const monthlyCap = monthlyCapFromSpecs(specs, candidate);
+  const annualFee = annualFeeFromCandidate(candidate);
+  const previousSpend = previousSpendFromCandidate(candidate);
+  const seed: CardSeed = {
+    slug: candidate.slug,
+    name: candidate.name,
+    issuer: candidate.issuer,
+    cardType: candidate.cardType,
+    status: "active",
+    summary: `${candidate.name}의 인기 출처 기반 혜택 초안입니다. 공식 상품설명서 검수 후 한도와 제외 조건을 정밀 보정합니다.`,
+    annualFee,
+    previousSpend,
+    advertisedBenefit: "인기/공식 출처 기반 혜택 초안",
+    monthlyCap,
+    color: "from-avocado-100 to-avocado-800",
+    bestFor: candidate.purposeTags,
+    strengths: ["인기 카드 후보 풀에 포함된 카드입니다.", "소비 목적 태그를 기준으로 1차 피킹률 계산이 가능합니다."],
+    weaknesses: ["상품설명서 PDF 기준의 영역별 한도와 실적 제외 조건은 추가 검수가 필요합니다."],
+    specs
+  };
+  const generated = card(seed);
+
+  return {
+    ...generated,
+    reviewStatus: "needs_review",
+    sourceUrls: sourceUrlsFromCandidate(candidate),
+    cautions: [
+      "현재 수치는 인기/공식 출처와 혜택 태그 기반의 계산 초안입니다.",
+      "카드별 상품설명서에서 통합 월 한도, 전월실적 제외 항목, 할인 이용금액의 실적 포함 여부를 확인해야 합니다."
+    ]
   };
 }
 
@@ -1334,4 +1468,8 @@ const seeds: CardSeed[] = [
   }
 ];
 
-export const cards: CreditCard[] = seeds.map(card);
+const curatedCards = seeds.map(card);
+const curatedSlugs = new Set(curatedCards.map((item) => item.slug));
+const generatedCandidateCards = cardCandidates.filter((candidate) => !curatedSlugs.has(candidate.slug)).map(candidateToCard);
+
+export const cards: CreditCard[] = [...curatedCards, ...generatedCandidateCards];
