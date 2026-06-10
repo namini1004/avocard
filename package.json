@@ -18,11 +18,13 @@
     "collect:naver:list-page": "node scripts/naver-card-collector.mjs --mode=list-page --list-pages=1 --page-size=10",
     "collect:naver:slow": "node scripts/naver-card-collector.mjs --mode=collect --max=1 --delay=90000 --jitter=30000",
     "collect:naver:daemon": "node scripts/naver-card-collector.mjs --mode=daemon --daemon-delay=1000 --daemon-jitter=9000 --idle-delay=10000 --idle-jitter=50000",
+    "export:naver:csv": "node scripts/export-naver-card-csv.mjs",
     "collect:naver:status:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/naver-card-collector.mjs --mode=status",
     "collect:naver:seed:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/naver-card-collector.mjs --mode=seed",
     "collect:naver:list-page:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/naver-card-collector.mjs --mode=list-page --list-pages=1 --page-size=10",
     "collect:naver:slow:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/naver-card-collector.mjs --mode=collect --max=1 --delay=90000 --jitter=30000",
-    "collect:naver:daemon:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/naver-card-collector.mjs --mode=daemon --daemon-delay=1000 --daemon-jitter=9000 --idle-delay=10000 --idle-jitter=50000"
+    "collect:naver:daemon:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/naver-card-collector.mjs --mode=daemon --daemon-delay=1000 --daemon-jitter=9000 --idle-delay=10000 --idle-jitter=50000",
+    "export:naver:csv:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/export-naver-card-csv.mjs"
   },
   "dependencies": {
     "next": "^16.2.7",
