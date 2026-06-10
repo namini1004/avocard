@@ -19,6 +19,7 @@ export type CardStatus = "active" | "discontinued" | "unknown";
 export type ReviewStatus = "draft" | "needs_review" | "verified";
 export type RewardType = "discount" | "cashback" | "point" | "mileage";
 export type SourceType = "issuer_page" | "issuer_pdf" | "public_disclosure" | "editorial_reference" | "user_report";
+export type PerformanceInclusion = "included" | "excluded" | "unknown";
 
 export type CardSource = {
   type: SourceType;
@@ -39,6 +40,7 @@ export type BenefitRule = {
   perTransactionCap?: number;
   minTransactionAmount?: number;
   previousMonthSpendRequired: number;
+  discountedSpendCountsForPerformance: PerformanceInclusion;
   performanceBand?: string;
   excludedItems: string[];
   sourceRef: string;
@@ -193,6 +195,7 @@ function makeRules(seed: CardSeed): BenefitRule[] {
     rate,
     monthlyCap,
     previousMonthSpendRequired: seed.previousSpend,
+    discountedSpendCountsForPerformance: "unknown",
     performanceBand: seed.previousSpend > 0 ? `${Math.round(seed.previousSpend / 10000)}만원 이상` : "실적 부담 낮음",
     excludedItems: commonExcluded,
     sourceRef: "issuer_page",

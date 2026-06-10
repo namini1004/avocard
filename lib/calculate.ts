@@ -1,4 +1,4 @@
-import { BenefitCategory, CreditCard } from "@/data/cards";
+import type { BenefitCategory, CreditCard } from "../data/cards";
 
 export type SpendingProfile = Record<BenefitCategory, number> & {
   total: number;
@@ -26,6 +26,7 @@ export const defaultProfile: SpendingProfile = {
 export type CardAnalysis = {
   card: CreditCard;
   grossMonthlySaving: number;
+  netMonthlySavingBeforeFloor: number;
   monthlySaving: number;
   annualSaving: number;
   pickingRate: number;
@@ -58,9 +59,10 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
     return {
       card,
       grossMonthlySaving: 0,
-      monthlySaving: -monthlyFee,
-      annualSaving: -card.annualFee,
-      pickingRate: profile.total > 0 ? (-monthlyFee / profile.total) * 100 : 0,
+      netMonthlySavingBeforeFloor: -monthlyFee,
+      monthlySaving: 0,
+      annualSaving: 0,
+      pickingRate: 0,
       matchedBenefit: 0,
       effectiveMonthlyCap,
       monthlyFee,
@@ -109,7 +111,8 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
 
   const matchedBenefit = ruleSavings.reduce((sum, rule) => sum + rule.saving, 0);
   const grossMonthlySaving = Math.min(matchedBenefit, effectiveMonthlyCap);
-  const monthlySaving = grossMonthlySaving - monthlyFee;
+  const netMonthlySavingBeforeFloor = grossMonthlySaving - monthlyFee;
+  const monthlySaving = Math.max(0, netMonthlySavingBeforeFloor);
   const pickingRate = profile.total > 0 ? (monthlySaving / profile.total) * 100 : 0;
   const topBenefits = [...ruleSavings]
     .sort((a, b) => b.saving - a.saving)
@@ -120,6 +123,7 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
   return {
     card,
     grossMonthlySaving,
+    netMonthlySavingBeforeFloor,
     monthlySaving,
     annualSaving: monthlySaving * 12,
     pickingRate,

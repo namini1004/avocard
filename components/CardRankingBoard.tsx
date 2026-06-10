@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { BenefitCategory, cards, categoryLabels } from "@/data/cards";
+import { cardCandidates, candidateSources, type CardCandidate } from "@/data/card-candidates";
 import { CardAnalysis, analyzeCard, defaultProfile, formatWon, SpendingProfile } from "@/lib/calculate";
 
 const totalOptions = [
@@ -26,6 +27,9 @@ const focusOptions: Array<{ label: string; value: "balanced" | BenefitCategory }
 ];
 
 const activeCards = cards.filter((card) => card.status === "active");
+const activeCardSlugs = new Set(activeCards.map((card) => card.slug));
+const pendingCandidates = cardCandidates.filter((candidate) => !activeCardSlugs.has(candidate.slug));
+const candidateSourceMap = new Map(candidateSources.map((source) => [source.id, source]));
 
 function buildProfile(total: number, focus: "balanced" | BenefitCategory): SpendingProfile {
   const profile: SpendingProfile = { ...defaultProfile, total };
@@ -56,6 +60,62 @@ function buildProfile(total: number, focus: "balanced" | BenefitCategory): Spend
   profile.etc += total - normalizedTotal;
 
   return profile;
+}
+
+function CandidateDetail({ candidate }: { candidate: CardCandidate }) {
+  const sources = candidate.sourceRefs.map((ref) => candidateSourceMap.get(ref)).filter(Boolean);
+
+  return (
+    <article className="h-full overflow-auto rounded-[1.75rem] border border-avocado-900/10 bg-white p-5 md:p-6">
+      <p className="whitespace-nowrap text-sm font-black text-avocado-700">검수 대기 카드</p>
+      <h3 className="mt-2 text-3xl font-black leading-tight text-ink">{candidate.name}</h3>
+      <p className="mt-3 keep-all text-sm leading-6 text-ink/62">
+        이 카드는 후보 풀에 등록되어 있지만, 아직 상품설명서 기준의 연회비, 전월실적, 통합 월 한도,
+        실적 제외 항목 검수가 끝나지 않았습니다. 피킹률은 확정 데이터가 들어간 뒤 공개합니다.
+      </p>
+
+      <div className="mt-5 grid gap-3 sm:grid-cols-3">
+        <div className="rounded-2xl bg-cream p-4">
+          <p className="whitespace-nowrap text-xs font-bold text-ink/50">카드사</p>
+          <p className="mt-1 text-lg font-black text-ink">{candidate.issuer}</p>
+        </div>
+        <div className="rounded-2xl bg-cream p-4">
+          <p className="whitespace-nowrap text-xs font-bold text-ink/50">카드 유형</p>
+          <p className="mt-1 text-lg font-black text-ink">{candidate.cardType === "credit" ? "신용" : "체크"}</p>
+        </div>
+        <div className="rounded-2xl bg-avocado-100 p-4">
+          <p className="whitespace-nowrap text-xs font-bold text-ink/50">피킹률</p>
+          <p className="mt-1 text-lg font-black text-avocado-800">계산 대기</p>
+        </div>
+      </div>
+
+      <div className="mt-5 rounded-3xl bg-ink p-5 text-white">
+        <h4 className="whitespace-nowrap text-lg font-black">검수해야 할 핵심 조건</h4>
+        <p className="mt-3 keep-all text-sm leading-7 text-white/74">
+          통합 할인한도, 영역별 한도, 전월실적 제외 항목, 할인받은 이용금액의 다음 달 실적 포함 여부를 확인한 뒤
+          랭킹 계산에 반영합니다.
+        </p>
+      </div>
+
+      <div className="mt-5">
+        <h4 className="whitespace-nowrap text-lg font-black text-ink">연결된 출처</h4>
+        <div className="mt-3 grid gap-3">
+          {sources.map((source) =>
+            source ? (
+              <a
+                key={source.id}
+                href={source.url}
+                className="rounded-3xl border border-avocado-900/10 p-4 transition hover:border-avocado-500"
+              >
+                <p className="font-black text-ink">{source.title}</p>
+                <p className="mt-2 break-all text-xs font-bold text-avocado-700">{source.url}</p>
+              </a>
+            ) : null
+          )}
+        </div>
+      </div>
+    </article>
+  );
 }
 
 function RankingDetail({
@@ -130,7 +190,7 @@ function RankingDetail({
                       최소 조건 {rule.performanceBand} · 적용처 {rule.merchantScope.join(", ")}
                     </p>
                   </div>
-                  <div className="grid grid-cols-3 gap-2 text-center md:min-w-[250px]">
+                  <div className="grid grid-cols-4 gap-2 text-center md:min-w-[320px]">
                     <div className="rounded-2xl bg-cream px-3 py-2">
                       <p className="whitespace-nowrap text-[11px] font-black text-ink/45">할인율</p>
                       <p className="whitespace-nowrap text-sm font-black text-ink">
@@ -145,6 +205,16 @@ function RankingDetail({
                       <p className="whitespace-nowrap text-[11px] font-black text-ink/45">예상</p>
                       <p className="whitespace-nowrap text-sm font-black text-avocado-800">
                         {formatWon(applied?.saving ?? 0)}
+                      </p>
+                    </div>
+                    <div className="rounded-2xl bg-cream px-3 py-2">
+                      <p className="whitespace-nowrap text-[11px] font-black text-ink/45">실적반영</p>
+                      <p className="whitespace-nowrap text-sm font-black text-ink">
+                        {rule.discountedSpendCountsForPerformance === "included"
+                          ? "포함"
+                          : rule.discountedSpendCountsForPerformance === "excluded"
+                            ? "제외"
+                            : "확인중"}
                       </p>
                     </div>
                   </div>
@@ -177,6 +247,7 @@ export function CardRankingBoard() {
   const [total, setTotal] = useState(700000);
   const [focus, setFocus] = useState<"balanced" | BenefitCategory>("balanced");
   const [selectedSlug, setSelectedSlug] = useState(activeCards[0]?.slug ?? "");
+  const [selectedCandidateSlug, setSelectedCandidateSlug] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const profile = useMemo(() => buildProfile(total, focus), [total, focus]);
@@ -188,9 +259,16 @@ export function CardRankingBoard() {
 
   const selected = rankings.find((analysis) => analysis.card.slug === selectedSlug) ?? rankings[0];
   const selectedRank = rankings.findIndex((analysis) => analysis.card.slug === selected?.card.slug) + 1;
+  const selectedCandidate = pendingCandidates.find((candidate) => candidate.slug === selectedCandidateSlug);
 
   function selectCard(slug: string) {
     setSelectedSlug(slug);
+    setSelectedCandidateSlug("");
+    setIsModalOpen(true);
+  }
+
+  function selectCandidate(slug: string) {
+    setSelectedCandidateSlug(slug);
     setIsModalOpen(true);
   }
 
@@ -268,10 +346,35 @@ export function CardRankingBoard() {
                 </span>
               </button>
             ))}
+            {pendingCandidates.map((candidate, index) => (
+              <button
+                key={candidate.slug}
+                type="button"
+                onClick={() => selectCandidate(candidate.slug)}
+                className={`grid w-full grid-cols-[58px_1fr_84px] items-center gap-2 px-3 py-4 text-left transition ${
+                  selectedCandidateSlug === candidate.slug ? "bg-avocado-50" : "hover:bg-cream"
+                }`}
+              >
+                <span className="w-fit rounded-full bg-cream px-2.5 py-1 text-xs font-black text-ink">
+                  #{rankings.length + index + 1}
+                </span>
+                <span className="min-w-0">
+                  <span className="block truncate text-sm font-black text-ink md:text-base">{candidate.name}</span>
+                  <span className="mt-1 block truncate text-xs font-bold text-ink/48">
+                    {candidate.issuer} · {candidate.cardType === "credit" ? "신용" : "체크"} · 검수 대기
+                  </span>
+                </span>
+                <span className="text-right text-xs font-black text-ink/45">계산 대기</span>
+              </button>
+            ))}
           </div>
         </div>
 
-        {selected ? (
+        {selectedCandidate ? (
+          <div className="hidden lg:block">
+            <CandidateDetail candidate={selectedCandidate} />
+          </div>
+        ) : selected ? (
           <div className="hidden lg:block">
             <RankingDetail selected={selected} selectedRank={selectedRank} />
           </div>
@@ -282,9 +385,23 @@ export function CardRankingBoard() {
         )}
       </div>
 
-      {selected && isModalOpen ? (
+      {isModalOpen && (selectedCandidate || selected) ? (
         <div className="fixed inset-0 z-[80] bg-ink/62 p-3 backdrop-blur-sm lg:hidden" role="dialog" aria-modal="true">
-          <RankingDetail selected={selected} selectedRank={selectedRank} onClose={() => setIsModalOpen(false)} />
+          <button
+            type="button"
+            onClick={() => setIsModalOpen(false)}
+            className="focus-ring fixed right-4 top-4 z-[90] grid h-11 w-11 place-items-center rounded-full bg-white text-2xl font-black text-ink shadow-lift"
+            aria-label="닫기"
+          >
+            ×
+          </button>
+          <div className="h-full pt-12">
+            {selectedCandidate ? (
+              <CandidateDetail candidate={selectedCandidate} />
+            ) : (
+              <RankingDetail selected={selected} selectedRank={selectedRank} />
+            )}
+          </div>
         </div>
       ) : null}
     </section>
