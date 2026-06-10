@@ -19,3 +19,6 @@ Thumbs.db
 pat.txt
 .vercel-config/
 .vercel-cache/
+
+# Local, slow web-collection cache. Keep raw third-party snapshots out of git.
+data/raw/
