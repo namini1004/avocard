@@ -27,6 +27,30 @@
 .\.tools\node-v22.11.0-win-x64\npm.cmd run collect:naver:slow:portable
 ```
 
+## 랜덤 딜레이 상시 수집기
+
+수동으로 매번 실행하지 않으려면 daemon 모드를 켜둔다. 기본값은 URL 1개 처리 후 10~25분 사이 랜덤 대기다. 큐가 비어 있으면 seed URL을 다시 넣고 30~60분 사이 랜덤 대기한다.
+
+```powershell
+.\.tools\node-v22.11.0-win-x64\npm.cmd run collect:naver:daemon:portable
+```
+
+더 느리게 돌리고 싶으면 환경변수로 조절한다.
+
+```powershell
+$env:NAVER_COLLECT_DAEMON_DELAY_MS='1800000'
+$env:NAVER_COLLECT_DAEMON_JITTER_MS='1800000'
+$env:NAVER_COLLECT_IDLE_DELAY_MS='3600000'
+$env:NAVER_COLLECT_IDLE_JITTER_MS='3600000'
+.\.tools\node-v22.11.0-win-x64\npm.cmd run collect:naver:daemon:portable
+```
+
+테스트할 때만 제한된 사이클로 실행한다.
+
+```powershell
+.\.tools\node-v22.11.0-win-x64\node.exe scripts/naver-card-collector.mjs --mode=daemon --cycles=1
+```
+
 ## 긴 수집을 할 때
 
 한 번에 많이 가져오지 않는다. 필요하면 Windows 작업 스케줄러나 수동 반복으로 하루에 소량만 처리한다.

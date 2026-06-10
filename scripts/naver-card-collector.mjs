@@ -19,11 +19,17 @@ const seedUrl = getArg("url", defaultSeedUrl);
 const maxPages = Number(getArg("max", process.env.NAVER_COLLECT_MAX ?? "1"));
 const delayMs = Number(getArg("delay", process.env.NAVER_COLLECT_DELAY_MS ?? "90000"));
 const jitterMs = Number(getArg("jitter", process.env.NAVER_COLLECT_JITTER_MS ?? "30000"));
+const daemonDelayMs = Number(getArg("daemon-delay", process.env.NAVER_COLLECT_DAEMON_DELAY_MS ?? "600000"));
+const daemonJitterMs = Number(getArg("daemon-jitter", process.env.NAVER_COLLECT_DAEMON_JITTER_MS ?? "900000"));
+const idleDelayMs = Number(getArg("idle-delay", process.env.NAVER_COLLECT_IDLE_DELAY_MS ?? "1800000"));
+const idleJitterMs = Number(getArg("idle-jitter", process.env.NAVER_COLLECT_IDLE_JITTER_MS ?? "1800000"));
+const daemonCyclesArg = getArg("cycles", process.env.NAVER_COLLECT_DAEMON_CYCLES ?? "0");
+const daemonCycles = Number(daemonCyclesArg);
 const timeoutMs = Number(getArg("timeout", process.env.NAVER_COLLECT_TIMEOUT_MS ?? "20000"));
 
 const userAgent =
   process.env.NAVER_COLLECT_USER_AGENT ??
-  "AvocardResearch/0.1 (+local manual collection; slow rate; contact owner)";
+  "AvocardResearch/0.1 (+local slow collection; randomized delay; contact owner)";
 
 function getArg(name, fallback) {
   const prefix = `--${name}=`;
@@ -286,13 +292,13 @@ async function status() {
   );
 }
 
-async function collect() {
+async function collect(limit = maxPages) {
   const state = await readJson(statePath, { visited: [], discovered: [] });
   const visited = new Set(state.visited);
   const queue = await readJson(queuePath, []);
   let processed = 0;
 
-  while (queue.length > 0 && processed < maxPages) {
+  while (queue.length > 0 && processed < limit) {
     const item = queue.shift();
     if (!item?.url || visited.has(item.url)) continue;
 
@@ -328,7 +334,7 @@ async function collect() {
     await writeJson(queuePath, queue);
     await writeJson(statePath, { ...state, visited: [...visited], updatedAt: new Date().toISOString() });
 
-    if (queue.length > 0 && processed < maxPages) {
+    if (queue.length > 0 && processed < limit) {
       const wait = delayMs + Math.floor(Math.random() * jitterMs);
       console.log(JSON.stringify({ waitingMs: wait }, null, 2));
       await sleep(wait);
@@ -336,6 +342,52 @@ async function collect() {
   }
 
   await status();
+  return processed;
+}
+
+function randomWait(baseMs, jitter) {
+  return baseMs + Math.floor(Math.random() * Math.max(0, jitter));
+}
+
+async function daemon() {
+  let cycle = 0;
+
+  console.log(
+    JSON.stringify(
+      {
+        mode: "daemon",
+        daemonDelayMs,
+        daemonJitterMs,
+        idleDelayMs,
+        idleJitterMs,
+        cycles: daemonCycles === 0 ? "infinite" : daemonCycles
+      },
+      null,
+      2
+    )
+  );
+
+  while (daemonCycles === 0 || cycle < daemonCycles) {
+    const queue = await readJson(queuePath, []);
+    if (queue.length === 0) {
+      const added = await addToQueue([seedUrl]);
+      const wait = randomWait(idleDelayMs, idleJitterMs);
+      console.log(JSON.stringify({ event: "idle", addedSeed: added, waitingMs: wait }, null, 2));
+      await sleep(wait);
+      cycle += 1;
+      continue;
+    }
+
+    await collectOneForDaemon();
+    const wait = randomWait(daemonDelayMs, daemonJitterMs);
+    console.log(JSON.stringify({ event: "daemon_wait", waitingMs: wait }, null, 2));
+    await sleep(wait);
+    cycle += 1;
+  }
+}
+
+async function collectOneForDaemon() {
+  await collect(1);
 }
 
 await ensureDb();
@@ -344,6 +396,8 @@ if (mode === "seed") {
   await seed();
 } else if (mode === "collect") {
   await collect();
+} else if (mode === "daemon") {
+  await daemon();
 } else {
   await status();
 }
