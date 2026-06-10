@@ -132,6 +132,62 @@ function parsePercent(text, fallback) {
   return Math.min(Math.max(...valid) / 100, 0.3);
 }
 
+function parsePreviousSpendRobust(text) {
+  const target = cleanText(text);
+  if (
+    !target ||
+    /조건\s*없음|실적\s*없음|실적[·\s]*한도\s*없이|조건없이|조건\s*없이/.test(target)
+  ) {
+    return 0;
+  }
+
+  const keywordIndex = target.search(/기준\s*실적|전월\s*실적|전월|직전\s*\d+\s*개월|이용\s*실적/);
+  const scoped = keywordIndex >= 0 ? target.slice(keywordIndex, keywordIndex + 160) : target;
+  const values = [...scoped.matchAll(/(\d+(?:\.\d+)?)\s*(백만|십만|만원|만|천원|천|원)\s*(?:이상|부터)?/g)]
+    .map((match) => parseKoreanMoneyRobust(match[0]))
+    .filter((value) => value >= 100000 && value <= 3000000);
+
+  if (values.length > 0) return Math.min(...values);
+  return parsePreviousSpend(target);
+}
+
+function parseKoreanMoneyRobust(value) {
+  const text = String(value ?? "").replace(/,/g, "").replace(/\s+/g, " ").trim();
+  const composite = text.match(/(\d+(?:\.\d+)?)\s*만\s*(\d+(?:\.\d+)?)\s*천\s*원?/);
+  if (composite) return Number(composite[1]) * 10000 + Number(composite[2]) * 1000;
+  const match = text.match(/(\d+(?:\.\d+)?)\s*(백만|십만|만원|만|천원|천|원)/);
+  if (!match) return parseKoreanMoney(text);
+  const amount = Number(match[1]);
+  const unit = match[2];
+  if (unit === "백만") return amount * 1000000;
+  if (unit === "십만") return amount * 100000;
+  if (unit === "만원" || unit === "만") return amount * 10000;
+  if (unit === "천원" || unit === "천") return amount * 1000;
+  return amount;
+}
+
+function parseMonthlyCapRobust(text, fallback) {
+  const target = cleanText(text);
+  const money = String.raw`((?:\d+(?:\.\d+)?\s*만\s*\d+(?:\.\d+)?\s*천\s*원?)|(?:\d+(?:\.\d+)?\s*(?:백만|십만|만원|만|천원|천|원)))`;
+  const patterns = [
+    new RegExp(String.raw`총\s*(?:할인|적립)?\s*한도[^0-9]{0,25}${money}`, "g"),
+    new RegExp(String.raw`(?:월|매월)\s*(?:최대|통합|할인한도|적립한도|한도)[^0-9]{0,25}${money}`, "g"),
+    new RegExp(String.raw`(?:통합|합산)\s*(?:월\s*)?(?:할인|적립)?\s*한도[^0-9]{0,25}${money}`, "g")
+  ];
+  const values = [];
+  for (const pattern of patterns) {
+    for (const match of target.matchAll(pattern)) {
+      const amountText = match[1];
+      const after = target.slice((match.index ?? 0) + match[0].length, (match.index ?? 0) + match[0].length + 12);
+      if (/이상|미만|부터|~/.test(after)) continue;
+      const value = parseKoreanMoneyRobust(amountText);
+      if (value >= 1000 && value <= 200000) values.push(value);
+    }
+  }
+  if (values.length > 0) return Math.max(...values);
+  return fallback;
+}
+
 function parseMonthlyCap(text, fallback) {
   const target = cleanText(text);
   const match = target.match(
@@ -187,14 +243,16 @@ function makeSlug(card) {
 
 function makeRules(card, parsed, index) {
   const labels = extractBenefitLabels(card);
+  const evidenceText = Array.isArray(parsed?.evidenceSnippets) ? parsed.evidenceSnippets.join(" ") : "";
   const text = cleanText(`${card.titleDescription ?? ""} ${parsed?.summaryBenefitText ?? ""} ${parsed?.annualFeeText ?? ""}`);
-  const previousSpend = parsePreviousSpend(`${parsed?.previousSpendText ?? ""} ${text}`);
+  const sourceText = cleanText(`${parsed?.previousSpendText ?? ""} ${text} ${evidenceText}`);
+  const previousSpend = parsePreviousSpendRobust(sourceText);
   const categories = [...new Set(labels.map(categoryFromLabel))];
   if (categories.length === 0) categories.push(categoryFromLabel(text));
 
   const baseRate = Math.min(parsePercent(text, /캐시백|포인트|적립/i.test(text) ? 0.01 : 0.03), 0.1);
   const defaultRuleCap = previousSpend >= 1000000 ? 12000 : previousSpend >= 500000 ? 8000 : 5000;
-  const monthlyCap = parseMonthlyCap(text, Math.max(defaultRuleCap * Math.min(categories.length, 4), 10000));
+  const monthlyCap = parseMonthlyCapRobust(sourceText, Math.max(defaultRuleCap * Math.min(categories.length, 4), 10000));
   const perRuleCap = Math.min(monthlyCap, Math.max(1000, Math.round(monthlyCap / Math.max(1, Math.min(categories.length, 4)))));
 
   return {
