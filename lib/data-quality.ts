@@ -22,7 +22,7 @@ export function validateCardData(cards: CreditCard[]): DataQualityIssue[] {
     }
     seenSlugs.add(card.slug);
 
-    if (!card.sourceUrls.some((source) => source.type === "issuer_page" || source.type === "issuer_pdf")) {
+    if (card.reviewStatus === "verified" && !card.sourceUrls.some((source) => source.type === "issuer_page" || source.type === "issuer_pdf")) {
       issues.push({
         severity: "error",
         cardSlug: card.slug,

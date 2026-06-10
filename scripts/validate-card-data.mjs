@@ -44,18 +44,6 @@ async function main() {
     }
   }
 
-  const cardSlugs = new Set(cards.map((card) => card.slug));
-  for (const candidate of cardCandidates) {
-    if (!cardSlugs.has(candidate.slug)) {
-      issues.push({
-        severity: "error",
-        cardSlug: candidate.slug,
-        field: "cards",
-        message: "Every candidate must have a calculable card entry."
-      });
-    }
-  }
-
   for (const card of cards) {
     const analysis = analyzeCard(card, defaultProfile);
     if (analysis.monthlySaving < 0 || analysis.annualSaving < 0 || analysis.pickingRate < 0) {

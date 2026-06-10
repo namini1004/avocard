@@ -28,7 +28,7 @@ const focusOptions: Array<{ label: string; value: "balanced" | BenefitCategory }
 
 const activeCards = cards.filter((card) => card.status !== "unknown");
 const activeCardSlugs = new Set(activeCards.map((card) => card.slug));
-const pendingCandidates = cardCandidates.filter((candidate) => !activeCardSlugs.has(candidate.slug));
+const pendingCandidates: CardCandidate[] = [];
 const candidateSourceMap = new Map(candidateSources.map((source) => [source.id, source]));
 
 function buildProfile(total: number, focus: "balanced" | BenefitCategory): SpendingProfile {

@@ -1,4 +1,5 @@
 import { cardCandidates, candidateSources, type CardCandidate, type CandidateSource } from "./card-candidates.ts";
+import { collectedCards } from "./collected-cards.ts";
 
 export type BenefitCategory =
   | "transport"
@@ -1472,4 +1473,5 @@ const curatedCards = seeds.map(card);
 const curatedSlugs = new Set(curatedCards.map((item) => item.slug));
 const generatedCandidateCards = cardCandidates.filter((candidate) => !curatedSlugs.has(candidate.slug)).map(candidateToCard);
 
-export const cards: CreditCard[] = [...curatedCards, ...generatedCandidateCards];
+export const legacyCards: CreditCard[] = [...curatedCards, ...generatedCandidateCards];
+export const cards: CreditCard[] = collectedCards;
