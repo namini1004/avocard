@@ -4,6 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const listPageDir = path.join(root, "data", "raw", "naver-cards", "list-pages");
 const parsedCardDir = path.join(root, "data", "raw", "naver-cards", "parsed-cards");
+const rawCardsJsonlPath = path.join(root, "data", "raw", "naver-cards", "cards.jsonl");
 const exportDir = path.join(root, "data", "raw", "naver-cards", "exports");
 const outputPath = path.join(root, "data", "collected-cards.ts");
 const candidatesPath = path.join(root, "data", "card-candidates.ts");
@@ -89,6 +90,14 @@ function normalizeName(value) {
 function csvCell(value) {
   if (value === null || value === undefined) return "";
   return `"${String(value).replaceAll('"', '""').replace(/\r?\n/g, " ").trim()}"`;
+}
+
+function flattenText(value) {
+  if (value === null || value === undefined) return "";
+  if (typeof value === "string" || typeof value === "number") return String(value);
+  if (Array.isArray(value)) return value.map(flattenText).filter(Boolean).join(" ");
+  if (typeof value === "object") return Object.values(value).map(flattenText).filter(Boolean).join(" ");
+  return "";
 }
 
 function cleanText(value) {
@@ -188,6 +197,133 @@ function parseMonthlyCapRobust(text, fallback) {
   return fallback;
 }
 
+function parseMonthlyCapTiersRobust(text, fallbackCap, fallbackMinSpend) {
+  const target = cleanText(text);
+  const money = String.raw`(?:\d+(?:\.\d+)?\s*만\s*\d+(?:\.\d+)?\s*천\s*원?|\d+(?:\.\d+)?\s*(?:백만|십만|만원|만|천원|천|원))`;
+  const tiers = [];
+  const seen = new Set();
+
+  function addTier(minText, maxText, capText, rawSegment) {
+    const minSpend = parseKoreanMoneyRobust(minText);
+    const maxSpend = maxText ? parseKoreanMoneyRobust(maxText) : undefined;
+    const totalCap = parseKoreanMoneyRobust(capText);
+    if (minSpend < 100000 || minSpend > 3000000 || totalCap < 1000 || totalCap > 200000) return;
+    if (maxSpend !== undefined && maxSpend <= minSpend) return;
+
+    const key = `${minSpend}-${maxSpend ?? ""}-${totalCap}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+
+    const channelCaps = [];
+    const channelPattern = new RegExp(String.raw`(${money})\s*\(([^)]+)\)`, "g");
+    for (const match of rawSegment.matchAll(channelPattern)) {
+      const cap = parseKoreanMoneyRobust(match[1]);
+      const label = cleanText(match[2]);
+      if (cap >= 1000 && cap <= totalCap && label) {
+        channelCaps.push({ label, cap });
+      }
+    }
+
+    tiers.push({
+      minSpend,
+      ...(maxSpend ? { maxSpend } : {}),
+      totalCap,
+      label: maxSpend
+        ? `${Math.round(minSpend / 10000)}만원~${Math.round(maxSpend / 10000)}만원`
+        : `${Math.round(minSpend / 10000)}만원 이상`,
+      ...(channelCaps.length > 0 ? { channelCaps } : {})
+    });
+  }
+
+  const rangedPattern = new RegExp(
+    String.raw`(${money})\s*(?:이상|부터)?\s*(?:~|-|–)\s*(${money})\s*(?:미만|이하)?[\s\S]{0,420}?총\s*(?:할인|적립)?\s*한도\s*(${money})`,
+    "g"
+  );
+  for (const match of target.matchAll(rangedPattern)) {
+    addTier(match[1], match[2], match[3], match[0]);
+  }
+
+  const rangeOnlyPattern = new RegExp(
+    String.raw`(${money})\s*(?:이상|부터)?\s*(?:~|-|–)\s*(${money})\s*(?:미만|이하)?`,
+    "g"
+  );
+  const capOnlyPattern = new RegExp(String.raw`총\s*(?:할인|적립)?\s*한도\s*(${money})`);
+  for (const match of target.matchAll(rangeOnlyPattern)) {
+    const segment = target.slice(match.index ?? 0, (match.index ?? 0) + 320);
+    const capMatch = segment.match(capOnlyPattern);
+    if (capMatch) addTier(match[1], match[2], capMatch[1], segment);
+  }
+
+  const openPattern = new RegExp(
+    String.raw`(${money})\s*(?:이상|부터)(?!\s*(?:~|-|–))[\s\S]{0,420}?총\s*(?:할인|적립)?\s*한도\s*(${money})`,
+    "g"
+  );
+  for (const match of target.matchAll(openPattern)) {
+    if (match[0].includes("~")) continue;
+    addTier(match[1], undefined, match[2], match[0]);
+  }
+
+  if (tiers.length > 0) {
+    return tiers.sort((a, b) => a.minSpend - b.minSpend);
+  }
+
+  return [
+    {
+      minSpend: fallbackMinSpend,
+      totalCap: fallbackCap,
+      label: fallbackMinSpend > 0 ? `${Math.round(fallbackMinSpend / 10000)}만원 이상` : "실적 조건 없음"
+    }
+  ];
+}
+
+function applyKnownMonthlyCapTierCorrections(card, tiers) {
+  if (String(card.cardAdId) !== "2206") return tiers;
+
+  const corrected = [
+    {
+      minSpend: 300000,
+      maxSpend: 500000,
+      totalCap: 10000,
+      label: "30만원~50만원",
+      channelCaps: [
+        { label: "On-Line", cap: 6000 },
+        { label: "Off-Line", cap: 4000 }
+      ]
+    },
+    {
+      minSpend: 500000,
+      maxSpend: 700000,
+      totalCap: 15000,
+      label: "50만원~70만원",
+      channelCaps: [
+        { label: "On-Line", cap: 9000 },
+        { label: "Off-Line", cap: 6000 }
+      ]
+    },
+    {
+      minSpend: 700000,
+      maxSpend: 1200000,
+      totalCap: 25000,
+      label: "70만원~120만원",
+      channelCaps: [
+        { label: "On-Line", cap: 15000 },
+        { label: "Off-Line", cap: 10000 }
+      ]
+    },
+    {
+      minSpend: 1200000,
+      totalCap: 40000,
+      label: "120만원 이상",
+      channelCaps: [
+        { label: "On-Line", cap: 25000 },
+        { label: "Off-Line", cap: 15000 }
+      ]
+    }
+  ];
+
+  return corrected;
+}
+
 function parseMonthlyCap(text, fallback) {
   const target = cleanText(text);
   const match = target.match(
@@ -245,19 +381,25 @@ function makeRules(card, parsed, index) {
   const labels = extractBenefitLabels(card);
   const evidenceText = Array.isArray(parsed?.evidenceSnippets) ? parsed.evidenceSnippets.join(" ") : "";
   const text = cleanText(`${card.titleDescription ?? ""} ${parsed?.summaryBenefitText ?? ""} ${parsed?.annualFeeText ?? ""}`);
-  const sourceText = cleanText(`${parsed?.previousSpendText ?? ""} ${text} ${evidenceText}`);
+  const sourceText = cleanText(`${parsed?.previousSpendText ?? ""} ${text} ${evidenceText} ${parsed?.__rawText ?? ""}`);
   const previousSpend = parsePreviousSpendRobust(sourceText);
   const categories = [...new Set(labels.map(categoryFromLabel))];
   if (categories.length === 0) categories.push(categoryFromLabel(text));
 
   const baseRate = Math.min(parsePercent(text, /캐시백|포인트|적립/i.test(text) ? 0.01 : 0.03), 0.1);
   const defaultRuleCap = previousSpend >= 1000000 ? 12000 : previousSpend >= 500000 ? 8000 : 5000;
-  const monthlyCap = parseMonthlyCapRobust(sourceText, Math.max(defaultRuleCap * Math.min(categories.length, 4), 10000));
+  const parsedMonthlyCap = parseMonthlyCapRobust(sourceText, Math.max(defaultRuleCap * Math.min(categories.length, 4), 10000));
+  const monthlyCapTiers = applyKnownMonthlyCapTierCorrections(
+    card,
+    parseMonthlyCapTiersRobust(sourceText, parsedMonthlyCap, previousSpend)
+  );
+  const monthlyCap = Math.max(parsedMonthlyCap, ...monthlyCapTiers.map((tier) => tier.totalCap));
   const perRuleCap = Math.min(monthlyCap, Math.max(1000, Math.round(monthlyCap / Math.max(1, Math.min(categories.length, 4)))));
 
   return {
     previousSpend,
     monthlyCap,
+    monthlyCapTiers,
     rules: categories.slice(0, 5).map((category, ruleIndex) => {
       const label = labels.find((item) => categoryFromLabel(item) === category) ?? categoryLabelMap[category] ?? "기타";
       return {
@@ -312,10 +454,37 @@ async function loadParsedCards() {
   return cards;
 }
 
+async function loadRawDetailTexts() {
+  const source = await readFile(rawCardsJsonlPath, "utf8");
+  const cards = new Map();
+  for (const line of source.split(/\r?\n/)) {
+    if (!line.trim()) continue;
+    try {
+      const entry = JSON.parse(line);
+      const cardAdId = entry?.itemCard?.cardAdId ?? entry?.url?.match(/cardAdId=(\d+)/)?.[1];
+      if (!cardAdId) continue;
+      const rawText = cleanText(
+        [
+          entry.annualFeeText,
+          entry.previousSpendText,
+          ...(entry.benefitSnippets ?? []),
+          flattenText(entry.itemCard?.benefits ?? []),
+          flattenText(entry.itemCard?.baseRecord ?? {}),
+          flattenText(entry.itemCard?.annualBrandFees ?? [])
+        ].join(" ")
+      );
+      if (rawText) cards.set(String(cardAdId), cleanText(`${cards.get(String(cardAdId)) ?? ""} ${rawText}`));
+    } catch {
+      // Ignore malformed historical collector lines.
+    }
+  }
+  return cards;
+}
+
 function toCreditCard(card, parsed, index) {
   const annualFee = moneyValue(card.domesticAnnualFee || card.foreignAnnualFee || parsed?.domesticAnnualFee || parsed?.foreignAnnualFee);
   const labels = extractBenefitLabels(card);
-  const { previousSpend, monthlyCap, rules } = makeRules(card, parsed, index);
+  const { previousSpend, monthlyCap, monthlyCapTiers, rules } = makeRules(card, parsed, index);
   const issuer = issuerMap[card.companyCode] ?? card.companyName ?? card.companyCode ?? "기타";
   const summary = cleanText(card.titleDescription || parsed?.summaryBenefitText || `${card.cardName} 혜택 분석`);
   const bestFor = labels.slice(0, 3).length > 0 ? labels.slice(0, 3) : ["혜택 분석 대기"];
@@ -333,6 +502,7 @@ function toCreditCard(card, parsed, index) {
     advertisedBenefit: summary,
     monthlyCap,
     excluded: ["상품권", "선불카드 충전", "세금", "공과금", "연회비", "수수료"],
+    monthlyCapTiers,
     benefitRules: rules,
     benefits: makeBenefits(rules),
     sourceUrls: [
@@ -393,6 +563,7 @@ await mkdir(exportDir, { recursive: true });
 
 const listCards = await loadListCards();
 const parsedCards = await loadParsedCards();
+const rawDetailTexts = await loadRawDetailTexts();
 const cardsById = new Map(listCards.map((card) => [String(card.cardAdId), card]));
 for (const [cardAdId, parsed] of parsedCards.entries()) {
   if (!cardsById.has(cardAdId)) cardsById.set(cardAdId, parsedToListLikeCard(parsed));
@@ -400,7 +571,11 @@ for (const [cardAdId, parsed] of parsedCards.entries()) {
 
 const collectedCards = [...cardsById.values()]
   .filter((card) => card.cardName && card.cardAdId)
-  .map((card, index) => toCreditCard(card, parsedCards.get(String(card.cardAdId)), index));
+  .map((card, index) => {
+    const cardAdId = String(card.cardAdId);
+    const parsed = parsedCards.get(cardAdId);
+    return toCreditCard(card, parsed ? { ...parsed, __rawText: rawDetailTexts.get(cardAdId) ?? "" } : parsed, index);
+  });
 
 await writeFile(outputPath, buildTs(collectedCards), "utf8");
 

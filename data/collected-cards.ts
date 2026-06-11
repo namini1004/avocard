@@ -21,6 +21,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10304-shopping-0",
@@ -226,6 +233,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10623-etc-0",
@@ -306,6 +320,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -512,6 +533,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10333-etc-0",
@@ -716,6 +744,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -922,6 +957,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10615-etc-0",
@@ -1126,6 +1168,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -1332,6 +1381,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10176-etc-0",
@@ -1410,6 +1466,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -1616,6 +1679,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10157-fuel-0",
@@ -1821,6 +1891,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10307-telecom-0",
@@ -1931,6 +2008,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -2137,6 +2221,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10309-telecom-0",
@@ -2215,6 +2306,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 20000,
+        "label": "20만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -2421,6 +2519,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10522-fuel-0",
@@ -2625,6 +2730,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -2831,6 +2943,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10102-dining-0",
@@ -3035,6 +3154,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -3241,6 +3367,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10343-etc-0",
@@ -3446,6 +3579,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-1684-shopping-0",
@@ -3525,6 +3665,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10310-telecom-0",
@@ -3603,6 +3750,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -3809,6 +3963,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-115-fuel-0",
@@ -4013,6 +4174,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -4219,6 +4387,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10611-shopping-0",
@@ -4415,7 +4590,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 28000,
     "previousSpend": 500000,
     "advertisedBenefit": "쇼핑 업종 최대 15% 청구할인",
-    "monthlyCap": 16000,
+    "monthlyCap": 28000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -4423,6 +4598,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 28000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -4434,7 +4616,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 8000,
+        "monthlyCap": 14000,
         "previousMonthSpendRequired": 500000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "50만원 이상",
@@ -4458,7 +4640,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "discount",
         "rate": 0.1,
-        "monthlyCap": 8000,
+        "monthlyCap": 14000,
         "previousMonthSpendRequired": 500000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "50만원 이상",
@@ -4479,14 +4661,14 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.1,
-        "monthlyCap": 8000,
+        "monthlyCap": 14000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 8000,
+        "monthlyCap": 14000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -4534,6 +4716,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -4708,6 +4897,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -4914,6 +5110,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10286-travel-0",
@@ -5024,6 +5227,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -5230,6 +5440,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10303-shopping-0",
@@ -5434,6 +5651,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -5640,6 +5864,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10218-fuel-0",
@@ -5844,6 +6075,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -6050,6 +6288,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10108-fuel-0",
@@ -6192,6 +6437,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -6366,6 +6618,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -6572,6 +6831,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-2776-shopping-0",
@@ -6746,6 +7012,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10126-fuel-0",
@@ -6919,6 +7192,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -7125,6 +7405,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-2676-mart-0",
@@ -7329,6 +7616,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -7535,6 +7829,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10103-fuel-0",
@@ -7740,6 +8041,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3881-fuel-0",
@@ -7914,6 +8222,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10328-fuel-0",
@@ -8056,6 +8371,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -8262,6 +8584,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10355-transport-0",
@@ -8466,6 +8795,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -8672,6 +9008,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10589-etc-0",
@@ -8752,6 +9095,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 10000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10451-shopping-0",
@@ -8830,6 +9180,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -9036,6 +9393,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10463-fuel-0",
@@ -9210,6 +9574,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10236-shopping-0",
@@ -9352,6 +9723,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -9527,6 +9905,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 15000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3896-shopping-0",
@@ -9669,6 +10054,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 48000,
+        "label": "100만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -9844,6 +10236,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10590-etc-0",
@@ -9956,6 +10355,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 10000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10450-shopping-0",
@@ -10034,6 +10440,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -10146,6 +10559,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -10352,6 +10772,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10579-telecom-0",
@@ -10430,6 +10857,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -10636,6 +11070,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3878-mart-0",
@@ -10841,6 +11282,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10349-transport-0",
@@ -11014,6 +11462,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -11220,6 +11675,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 240000,
+        "totalCap": 20000,
+        "label": "24만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3857-shopping-0",
@@ -11393,6 +11855,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 150000,
+        "totalCap": 20000,
+        "label": "15만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -11599,6 +12068,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10315-shopping-0",
@@ -11710,6 +12186,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -11916,6 +12399,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10237-shopping-0",
@@ -12058,6 +12548,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -12264,6 +12761,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10462-fuel-0",
@@ -12437,6 +12941,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -12643,6 +13154,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-4047-etc-0",
@@ -12848,6 +13366,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10596-fuel-0",
@@ -13021,6 +13546,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -13227,6 +13759,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 30000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10284-fuel-0",
@@ -13401,6 +13940,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 10000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10552-travel-0",
@@ -13479,6 +14025,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -13685,6 +14238,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 100000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3959-shopping-0",
@@ -13890,6 +14450,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 15000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10593-fuel-0",
@@ -14032,6 +14599,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -14238,6 +14812,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10511-shopping-0",
@@ -14443,6 +15024,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10554-dining-0",
@@ -14616,6 +15204,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -14822,6 +15417,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3856-etc-0",
@@ -15027,6 +15629,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10536-travel-0",
@@ -15169,6 +15778,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -15313,6 +15929,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10391-medical-0",
@@ -15425,6 +16048,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10600-shopping-0",
@@ -15536,6 +16166,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -15742,6 +16379,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10376-coffee-0",
@@ -15947,6 +16591,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10344-coffee-0",
@@ -16121,6 +16772,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10553-travel-0",
@@ -16231,6 +16889,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -16437,6 +17102,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-2226-etc-0",
@@ -16611,6 +17283,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10107-shopping-0",
@@ -16753,6 +17432,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -16928,6 +17614,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10504-ott-0",
@@ -17006,6 +17699,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -17212,6 +17912,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10338-shopping-0",
@@ -17416,6 +18123,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -17622,6 +18336,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10514-shopping-0",
@@ -17700,6 +18421,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -17906,6 +18634,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10130-etc-0",
@@ -18110,6 +18845,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -18316,6 +19058,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10347-shopping-0",
@@ -18521,6 +19270,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10601-travel-0",
@@ -18663,6 +19419,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -18869,6 +19632,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10357-telecom-0",
@@ -18979,6 +19749,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 40000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -19185,6 +19962,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 20000,
+        "label": "20만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10354-fuel-0",
@@ -19389,6 +20173,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -19595,6 +20386,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 150000,
+        "totalCap": 20000,
+        "label": "15만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10169-etc-0",
@@ -19800,6 +20598,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10340-travel-0",
@@ -19942,6 +20747,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -20148,6 +20960,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10334-shopping-0",
@@ -20353,6 +21172,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10502-ott-0",
@@ -20431,6 +21257,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -20637,6 +21470,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10497-shopping-0",
@@ -20842,6 +21682,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10580-shopping-0",
@@ -20953,6 +21800,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -21127,6 +21981,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -21333,6 +22194,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10447-transport-0",
@@ -21538,6 +22406,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 2000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10540-shopping-0",
@@ -21712,6 +22587,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10321-telecom-0",
@@ -21822,6 +22704,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 130000,
+        "totalCap": 20000,
+        "label": "13만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -21996,6 +22885,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 20000,
+        "label": "20만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -22202,6 +23098,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10424-etc-0",
@@ -22312,6 +23215,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 150000,
+        "totalCap": 20000,
+        "label": "15만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -22518,6 +23428,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10335-shopping-0",
@@ -22723,6 +23640,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10531-fuel-0",
@@ -22896,6 +23820,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -23102,6 +24033,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10503-ott-0",
@@ -23180,6 +24118,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -23386,6 +24331,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10440-transport-0",
@@ -23590,6 +24542,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -23796,6 +24755,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 48000,
+        "label": "100만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10413-shopping-0",
@@ -24000,6 +24966,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -24206,6 +25179,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-1573-etc-0",
@@ -24410,6 +25390,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -24616,6 +25603,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10444-shopping-0",
@@ -24821,6 +25815,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-1715-shopping-0",
@@ -25017,7 +26018,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 300000,
     "advertisedBenefit": "다이소매장 30% 할인, 멤버십 적립",
-    "monthlyCap": 10000,
+    "monthlyCap": 12000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -25025,6 +26026,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 12000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -25036,7 +26044,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -25060,7 +26068,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -25084,7 +26092,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -25108,7 +26116,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -25132,7 +26140,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -25153,35 +26161,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "영화",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "note": "영화 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.1,
-        "monthlyCap": 2500,
+        "monthlyCap": 3000,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -25230,6 +26238,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 40000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -25436,6 +26451,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10389-fuel-0",
@@ -25546,6 +26568,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -25752,6 +26781,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10591-shopping-0",
@@ -25863,6 +26899,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -26069,6 +27112,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-1337-shopping-0",
@@ -26148,6 +27198,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 15000,
+        "label": "20만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -26291,6 +27348,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -26497,6 +27561,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10265-shopping-0",
@@ -26701,6 +27772,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -26907,6 +27985,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10614-shopping-0",
@@ -27112,6 +28197,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10557-shopping-0",
@@ -27224,6 +28316,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10524-telecom-0",
@@ -27302,6 +28401,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -27415,6 +28521,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 700000,
+        "totalCap": 42000,
+        "label": "70만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10639-telecom-0",
@@ -27493,6 +28606,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -27699,6 +28819,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10613-shopping-0",
@@ -27904,6 +29031,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10299-shopping-0",
@@ -28078,6 +29212,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 50000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10597-shopping-0",
@@ -28189,6 +29330,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10486-etc-0",
@@ -28267,6 +29415,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -28378,6 +29533,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -28584,6 +29746,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10516-ott-0",
@@ -28662,6 +29831,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -28868,6 +30044,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10320-shopping-0",
@@ -28979,6 +30162,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -29185,6 +30375,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10530-education-0",
@@ -29389,6 +30586,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 48000,
+        "label": "100만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -29595,6 +30799,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10395-travel-0",
@@ -29705,6 +30916,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 20000,
+        "label": "20만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -29879,6 +31097,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -30085,6 +31310,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-2332-shopping-0",
@@ -30290,6 +31522,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10642-ott-0",
@@ -30400,6 +31639,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -30512,6 +31758,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10544-shopping-0",
@@ -30623,6 +31876,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 360000,
+        "totalCap": 15000,
+        "label": "36만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -30767,6 +32027,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10566-education-0",
@@ -30909,6 +32176,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 48000,
+        "label": "100만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -31115,6 +32389,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 240000,
+        "totalCap": 20000,
+        "label": "24만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-2612-shopping-0",
@@ -31319,6 +32600,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -31525,6 +32813,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10412-shopping-0",
@@ -31729,6 +33024,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -31935,6 +33237,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10339-shopping-0",
@@ -32077,6 +33386,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -32283,6 +33599,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10302-shopping-0",
@@ -32487,6 +33810,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -32693,6 +34023,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-1692-coffee-0",
@@ -32897,6 +34234,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -33103,6 +34447,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10499-shopping-0",
@@ -33307,6 +34658,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -33513,6 +34871,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-2857-mart-0",
@@ -33717,6 +35082,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -33923,6 +35295,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10336-shopping-0",
@@ -34127,6 +35506,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -34333,6 +35719,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 54000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10058-shopping-0",
@@ -34411,6 +35804,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -34617,6 +36017,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10448-shopping-0",
@@ -34821,6 +36228,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -35027,6 +36441,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 20000,
+        "label": "20만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3076-shopping-0",
@@ -35201,6 +36622,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10475-etc-0",
@@ -35344,6 +36772,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10620-etc-0",
@@ -35422,6 +36857,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 110000,
+        "totalCap": 20000,
+        "label": "11만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -35596,6 +37038,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -35802,6 +37251,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10460-shopping-0",
@@ -36006,6 +37462,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -36212,6 +37675,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10481-shopping-0",
@@ -36416,6 +37886,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -36622,6 +38099,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10461-shopping-0",
@@ -36827,6 +38311,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10510-etc-0",
@@ -36938,6 +38429,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 15000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -37082,6 +38580,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 15000,
+        "label": "20만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-1470-shopping-0",
@@ -37224,6 +38729,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -37430,6 +38942,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 15000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10489-etc-0",
@@ -37573,6 +39092,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10574-etc-0",
@@ -37715,6 +39241,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -37890,6 +39423,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10627-etc-0",
@@ -37968,6 +39508,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -38165,7 +39712,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 30000,
     "previousSpend": 0,
     "advertisedBenefit": "가족 합산시 국내외가맹점 최대2%할인",
-    "monthlyCap": 1000,
+    "monthlyCap": 10000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -38173,6 +39720,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -38184,7 +39738,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -38208,7 +39762,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -38232,7 +39786,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -38256,7 +39810,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -38280,7 +39834,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "previousMonthSpendRequired": 0,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "실적 조건 없음",
@@ -38301,35 +39855,35 @@ export const collectedCards: CreditCard[] = [
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "convenience",
         "label": "편의점",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "note": "편의점 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "mart",
         "label": "대형마트",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "note": "대형마트 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "medical",
         "label": "뷰티",
         "rate": 0.02,
-        "monthlyCap": 1000,
+        "monthlyCap": 2500,
         "note": "뷰티 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -38378,6 +39932,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -38552,6 +40113,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -38758,6 +40326,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 10000,
+        "label": "20만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10371-shopping-0",
@@ -38870,6 +40445,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10628-etc-0",
@@ -38948,6 +40530,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -39123,6 +40712,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10053-shopping-0",
@@ -39234,6 +40830,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -39440,6 +41043,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10609-mart-0",
@@ -39645,6 +41255,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10469-shopping-0",
@@ -39755,6 +41372,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -39961,6 +41585,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-1570-etc-0",
@@ -40157,7 +41788,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 27000,
     "previousSpend": 400000,
     "advertisedBenefit": "전국 주유소 리터당 80원 결제일할인",
-    "monthlyCap": 15000,
+    "monthlyCap": 2000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -40165,6 +41796,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 2000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -40176,7 +41814,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 1000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -40200,7 +41838,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 1000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -40224,7 +41862,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 1000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -40245,21 +41883,21 @@ export const collectedCards: CreditCard[] = [
         "category": "fuel",
         "label": "주유",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 1000,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "하이패스",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 1000,
         "note": "하이패스 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.01,
-        "monthlyCap": 5000,
+        "monthlyCap": 1000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -40308,6 +41946,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -40420,6 +42065,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -40595,6 +42247,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10080-shopping-0",
@@ -40673,6 +42332,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -40879,6 +42545,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 6000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10151-etc-0",
@@ -40991,6 +42664,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10207-telecom-0",
@@ -41069,6 +42749,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -41275,6 +42962,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10327-shopping-0",
@@ -41353,6 +43047,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -41465,6 +43166,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10187-etc-0",
@@ -41575,6 +43283,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -41781,6 +43496,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10409-education-0",
@@ -41985,6 +43707,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -42191,6 +43920,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10201-transport-0",
@@ -42396,6 +44132,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10617-etc-0",
@@ -42475,6 +44218,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -42586,6 +44336,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -42699,6 +44456,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10506-telecom-0",
@@ -42777,6 +44541,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 30000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -42857,6 +44628,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10346-shopping-0",
@@ -42935,6 +44713,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -43046,6 +44831,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -43252,6 +45044,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10491-etc-0",
@@ -43364,6 +45163,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10385-telecom-0",
@@ -43474,6 +45280,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -43609,7 +45422,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 50000,
     "previousSpend": 500000,
     "advertisedBenefit": "쇼핑 최대 15% NH포인트 적립",
-    "monthlyCap": 16000,
+    "monthlyCap": 30000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -43617,6 +45430,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 30000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -43628,7 +45448,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 8000,
+        "monthlyCap": 15000,
         "previousMonthSpendRequired": 500000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "50만원 이상",
@@ -43652,7 +45472,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 8000,
+        "monthlyCap": 15000,
         "previousMonthSpendRequired": 500000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "50만원 이상",
@@ -43673,14 +45493,14 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "쇼핑",
         "rate": 0.1,
-        "monthlyCap": 8000,
+        "monthlyCap": 15000,
         "note": "쇼핑 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.1,
-        "monthlyCap": 8000,
+        "monthlyCap": 15000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -43729,6 +45549,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -43935,6 +45762,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10465-shopping-0",
@@ -44109,6 +45943,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10373-shopping-0",
@@ -44252,6 +46093,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10219-shopping-0",
@@ -44364,6 +46212,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10076-travel-0",
@@ -44475,6 +46330,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10507-telecom-0",
@@ -44554,6 +46416,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10455-shopping-0",
@@ -44632,6 +46501,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -44776,6 +46652,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10394-travel-0",
@@ -44919,6 +46802,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10500-telecom-0",
@@ -44997,6 +46887,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -45203,6 +47100,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10400-travel-0",
@@ -45346,6 +47250,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10573-fuel-0",
@@ -45426,6 +47337,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 17000,
+        "label": "20만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10441-ott-0",
@@ -45504,6 +47422,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -45710,6 +47635,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 100000,
+        "totalCap": 20000,
+        "label": "10만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10528-convenience-0",
@@ -45915,6 +47847,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10401-travel-0",
@@ -46058,6 +47997,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 100000,
+        "totalCap": 20000,
+        "label": "10만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-2487-ott-0",
@@ -46200,6 +48146,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -46406,6 +48359,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10189-travel-0",
@@ -46516,6 +48476,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -46660,6 +48627,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10420-fuel-0",
@@ -46803,6 +48777,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10565-etc-0",
@@ -46882,6 +48863,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 250000,
+        "totalCap": 20000,
+        "label": "25만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -47057,6 +49045,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10608-shopping-0",
@@ -47128,7 +49123,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 14000,
     "previousSpend": 400000,
     "advertisedBenefit": "적립한도없이 최대 2% NH포인트적립",
-    "monthlyCap": 10000,
+    "monthlyCap": 14000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -47136,6 +49131,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 14000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -47147,7 +49149,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.02,
-        "monthlyCap": 5000,
+        "monthlyCap": 7000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -47171,7 +49173,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.02,
-        "monthlyCap": 5000,
+        "monthlyCap": 7000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -47192,14 +49194,14 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.02,
-        "monthlyCap": 5000,
+        "monthlyCap": 7000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "etc",
         "label": "프리미엄",
         "rate": 0.02,
-        "monthlyCap": 5000,
+        "monthlyCap": 7000,
         "note": "프리미엄 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -47248,6 +49250,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -47360,6 +49369,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10581-etc-0",
@@ -47439,6 +49455,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -47645,6 +49668,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10518-etc-0",
@@ -47756,6 +49786,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -47962,6 +49999,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10618-shopping-0",
@@ -48073,6 +50117,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 7000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -48208,7 +50259,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 15000,
     "previousSpend": 300000,
     "advertisedBenefit": "전기차/수소차 충전 최대 40% 적립",
-    "monthlyCap": 20000,
+    "monthlyCap": 5000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -48216,6 +50267,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 5000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -48227,7 +50285,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -48251,7 +50309,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -48275,7 +50333,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -48299,7 +50357,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -48323,7 +50381,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "point",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "previousMonthSpendRequired": 300000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "30만원 이상",
@@ -48344,35 +50402,35 @@ export const collectedCards: CreditCard[] = [
         "category": "etc",
         "label": "그린카드",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "note": "그린카드 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "fuel",
         "label": "주유",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "note": "주유 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
-        "monthlyCap": 5000,
+        "monthlyCap": 1250,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -48421,6 +50479,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -48532,6 +50597,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 1000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -48675,6 +50747,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -48849,6 +50928,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -49055,6 +51141,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10160-mart-0",
@@ -49259,6 +51352,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -49465,6 +51565,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 12000,
+        "label": "100만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10436-shopping-0",
@@ -49544,6 +51651,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 20000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10625-telecom-0",
@@ -49622,6 +51736,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -49797,6 +51918,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 15000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10607-telecom-0",
@@ -49907,6 +52035,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -50082,6 +52217,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10488-shopping-0",
@@ -50224,6 +52366,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -50399,6 +52548,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10637-telecom-0",
@@ -50510,6 +52666,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10638-telecom-0",
@@ -50588,6 +52751,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -50692,7 +52862,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 23000,
     "previousSpend": 400000,
     "advertisedBenefit": "기본적립 0.7% 최대 3.5% 적립",
-    "monthlyCap": 20000,
+    "monthlyCap": 23000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -50700,6 +52870,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 23000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -50711,7 +52888,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -50735,7 +52912,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -50759,7 +52936,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -50783,7 +52960,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -50807,7 +52984,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -50828,35 +53005,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.035,
-        "monthlyCap": 5000,
+        "monthlyCap": 5750,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -50897,7 +53074,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 400000,
     "advertisedBenefit": "기본적립 0.7% 최대 2.1% 적립",
-    "monthlyCap": 20000,
+    "monthlyCap": 12000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -50905,6 +53082,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 12000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -50916,7 +53100,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -50940,7 +53124,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -50964,7 +53148,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -50988,7 +53172,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -51012,7 +53196,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -51033,35 +53217,35 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "telecom",
         "label": "통신",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "note": "통신 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "transport",
         "label": "대중교통",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "note": "대중교통 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "coffee",
         "label": "카페/베이커리",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "note": "카페/베이커리 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       },
       {
         "category": "dining",
         "label": "외식",
         "rate": 0.021,
-        "monthlyCap": 5000,
+        "monthlyCap": 3000,
         "note": "외식 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -51110,6 +53294,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -51222,6 +53413,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 10000,
+        "label": "20만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10289-convenience-0",
@@ -51300,6 +53498,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -51506,6 +53711,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3055-shopping-0",
@@ -51617,6 +53829,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 120000,
+        "totalCap": 20000,
+        "label": "12만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -51792,6 +54011,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3257-ott-0",
@@ -51903,6 +54129,71 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "maxSpend": 500000,
+        "totalCap": 10000,
+        "label": "30만원~50만원",
+        "channelCaps": [
+          {
+            "label": "On-Line",
+            "cap": 6000
+          },
+          {
+            "label": "Off-Line",
+            "cap": 4000
+          }
+        ]
+      },
+      {
+        "minSpend": 500000,
+        "maxSpend": 700000,
+        "totalCap": 15000,
+        "label": "50만원~70만원",
+        "channelCaps": [
+          {
+            "label": "On-Line",
+            "cap": 9000
+          },
+          {
+            "label": "Off-Line",
+            "cap": 6000
+          }
+        ]
+      },
+      {
+        "minSpend": 700000,
+        "maxSpend": 1200000,
+        "totalCap": 25000,
+        "label": "70만원~120만원",
+        "channelCaps": [
+          {
+            "label": "On-Line",
+            "cap": 15000
+          },
+          {
+            "label": "Off-Line",
+            "cap": 10000
+          }
+        ]
+      },
+      {
+        "minSpend": 1200000,
+        "totalCap": 40000,
+        "label": "120만원 이상",
+        "channelCaps": [
+          {
+            "label": "On-Line",
+            "cap": 25000
+          },
+          {
+            "label": "Off-Line",
+            "cap": 15000
+          }
+        ]
+      }
     ],
     "benefitRules": [
       {
@@ -52109,6 +54400,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10464-shopping-0",
@@ -52314,6 +54612,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10456-shopping-0",
@@ -52426,6 +54731,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 10000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10388-etc-0",
@@ -52506,6 +54818,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10564-etc-0",
@@ -52585,6 +54904,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -52759,6 +55085,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -52965,6 +55298,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10226-telecom-0",
@@ -53169,6 +55509,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -53375,6 +55722,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10582-etc-0",
@@ -53454,6 +55808,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -53566,6 +55927,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 10000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10390-etc-0",
@@ -53645,6 +56013,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -53788,6 +56163,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -53994,6 +56376,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10621-shopping-0",
@@ -54106,6 +56495,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 13000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10624-telecom-0",
@@ -54184,6 +56580,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 36000,
+        "label": "100만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -54327,6 +56730,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -54533,6 +56943,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10287-etc-0",
@@ -54645,6 +57062,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10033-shopping-0",
@@ -54724,6 +57148,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 17000,
+        "label": "20만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10556-etc-0",
@@ -54802,6 +57233,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -54915,6 +57353,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 17000,
+        "label": "20만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-2757-etc-0",
@@ -54993,6 +57438,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -55199,6 +57651,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10369-shopping-0",
@@ -55372,6 +57831,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -55578,6 +58044,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10545-shopping-0",
@@ -55689,6 +58162,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -55832,6 +58312,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 48000,
+        "label": "100만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -56038,6 +58525,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10634-shopping-0",
@@ -56243,6 +58737,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10576-etc-0",
@@ -56321,6 +58822,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -56464,6 +58972,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -56670,6 +59185,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10294-shopping-0",
@@ -56812,6 +59334,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -57018,6 +59547,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10513-telecom-0",
@@ -57161,6 +59697,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10578-etc-0",
@@ -57239,6 +59782,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -57445,6 +59995,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10305-etc-0",
@@ -57650,6 +60207,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10567-shopping-0",
@@ -57824,6 +60388,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10555-shopping-0",
@@ -57997,6 +60568,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 20000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -58194,7 +60772,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 19000,
     "previousSpend": 400000,
     "advertisedBenefit": "요일별 가맹점 이용시 5% 포인트적립",
-    "monthlyCap": 10000,
+    "monthlyCap": 19000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -58202,6 +60780,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 19000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -58213,7 +60798,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.1,
-        "monthlyCap": 10000,
+        "monthlyCap": 19000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -58234,7 +60819,7 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.1,
-        "monthlyCap": 10000,
+        "monthlyCap": 19000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -58281,6 +60866,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -58478,7 +61070,7 @@ export const collectedCards: CreditCard[] = [
     "annualFee": 12000,
     "previousSpend": 400000,
     "advertisedBenefit": "주말 국내 1% 기부지역 1.7%적립",
-    "monthlyCap": 10000,
+    "monthlyCap": 2000,
     "excluded": [
       "상품권",
       "선불카드 충전",
@@ -58486,6 +61078,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 2000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -58497,7 +61096,7 @@ export const collectedCards: CreditCard[] = [
         ],
         "rewardType": "cashback",
         "rate": 0.017,
-        "monthlyCap": 10000,
+        "monthlyCap": 2000,
         "previousMonthSpendRequired": 400000,
         "discountedSpendCountsForPerformance": "unknown",
         "performanceBand": "40만원 이상",
@@ -58518,7 +61117,7 @@ export const collectedCards: CreditCard[] = [
         "category": "shopping",
         "label": "포인트/캐시백",
         "rate": 0.017,
-        "monthlyCap": 10000,
+        "monthlyCap": 2000,
         "note": "포인트/캐시백 영역은 네이버 카드 상세에서 수집한 혜택 카테고리를 기준으로 임시 계산합니다."
       }
     ],
@@ -58565,6 +61164,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 12000,
+        "label": "100만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -58644,6 +61250,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 750000,
+        "totalCap": 32000,
+        "label": "75만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -58850,6 +61463,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 20000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10477-shopping-0",
@@ -59055,6 +61675,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 30000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10211-ott-0",
@@ -59165,6 +61792,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -59371,6 +62005,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-3258-ott-0",
@@ -59576,6 +62217,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 16000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10404-shopping-0",
@@ -59687,6 +62335,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 32000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -59893,6 +62548,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 20000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10559-shopping-0",
@@ -60067,6 +62729,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 24000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10546-fuel-0",
@@ -60210,6 +62879,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 10000,
+        "label": "50만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10445-shopping-0",
@@ -60289,6 +62965,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10630-etc-0",
@@ -60367,6 +63050,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 15000,
+        "label": "40만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -60511,6 +63201,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 400000,
+        "totalCap": 10000,
+        "label": "40만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10583-shopping-0",
@@ -60590,6 +63287,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 48000,
+        "label": "100만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -60796,6 +63500,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 15000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10543-fuel-0",
@@ -60939,6 +63650,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10632-etc-0",
@@ -61017,6 +63735,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -61129,6 +63854,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10629-etc-0",
@@ -61207,6 +63939,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 15000,
+        "label": "30만원 이상"
+      }
     ],
     "benefitRules": [
       {
@@ -61351,6 +64090,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 1000000,
+        "totalCap": 12000,
+        "label": "100만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10437-shopping-0",
@@ -61431,6 +64177,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 200000,
+        "totalCap": 17000,
+        "label": "20만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10539-etc-0",
@@ -61510,6 +64263,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10631-etc-0",
@@ -61588,6 +64348,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
     ],
     "benefitRules": [
       {
@@ -61701,6 +64468,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10542-fuel-0",
@@ -61813,6 +64587,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 0,
+        "totalCap": 10000,
+        "label": "실적 조건 없음"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10322-transport-0",
@@ -61892,6 +64673,13 @@ export const collectedCards: CreditCard[] = [
       "연회비",
       "수수료"
     ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 300000,
+        "totalCap": 10000,
+        "label": "30만원 이상"
+      }
+    ],
     "benefitRules": [
       {
         "id": "naver-card-10345-fuel-0",
@@ -61970,6 +64758,13 @@ export const collectedCards: CreditCard[] = [
       "공과금",
       "연회비",
       "수수료"
+    ],
+    "monthlyCapTiers": [
+      {
+        "minSpend": 500000,
+        "totalCap": 10000,
+        "label": "50만원 이상"
+      }
     ],
     "benefitRules": [
       {

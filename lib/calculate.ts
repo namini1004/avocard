@@ -1,4 +1,4 @@
-import type { BenefitCategory, CreditCard } from "../data/cards";
+import type { BenefitCategory, CreditCard, MonthlyCapTier } from "../data/cards";
 
 export type SpendingProfile = Record<BenefitCategory, number> & {
   total: number;
@@ -34,6 +34,7 @@ export type CardAnalysis = {
   effectiveMonthlyCap: number;
   monthlyFee: number;
   totalRuleCap: number;
+  appliedMonthlyCapTier: MonthlyCapTier | null;
   ruleSavings: Array<{
     id: string;
     category: BenefitCategory;
@@ -56,16 +57,45 @@ function clampBenefit(value: number) {
   return Math.max(0, value);
 }
 
+function fallbackTier(card: CreditCard): MonthlyCapTier {
+  return {
+    minSpend: card.previousSpend,
+    totalCap: card.monthlyCap,
+    label: card.previousSpend > 0 ? `${Math.round(card.previousSpend / 10000)}만원 이상` : "실적 조건 없음"
+  };
+}
+
+export function getApplicableMonthlyCapTier(card: CreditCard, totalSpend: number): MonthlyCapTier | null {
+  const tiers = (card.monthlyCapTiers?.length ? card.monthlyCapTiers : [fallbackTier(card)])
+    .filter((tier) => tier.totalCap > 0)
+    .sort((a, b) => a.minSpend - b.minSpend);
+
+  const exact = tiers.find((tier) => totalSpend >= tier.minSpend && (tier.maxSpend === undefined || totalSpend < tier.maxSpend));
+  if (exact) return exact;
+
+  const lower = [...tiers].reverse().find((tier) => totalSpend >= tier.minSpend);
+  return lower ?? null;
+}
+
+function tierLabel(tier: MonthlyCapTier | null) {
+  return tier ? tier.label : "적용 구간 없음";
+}
+
 export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAnalysis {
+  const appliedMonthlyCapTier = getApplicableMonthlyCapTier(card, profile.total);
+  const tierCap = appliedMonthlyCapTier ? clampBenefit(appliedMonthlyCapTier.totalCap) : 0;
   const totalRuleCap = card.benefitRules.reduce((sum, rule) => sum + clampBenefit(rule.monthlyCap), 0);
-  const effectiveMonthlyCap = Math.min(clampBenefit(card.monthlyCap), totalRuleCap);
+  const effectiveMonthlyCap = appliedMonthlyCapTier ? Math.min(tierCap, totalRuleCap || tierCap) : 0;
   const monthlyFee = clampBenefit(card.annualFee) / 12;
 
   const baseRuleSavings = card.benefitRules.map((rule) => {
     const spend = clampBenefit(profile[rule.category] ?? 0);
     const rate = clampBenefit(rule.rate ?? 0);
     const cap = clampBenefit(rule.monthlyCap);
-    const isEligible = profile.total >= card.previousSpend && profile.total >= rule.previousMonthSpendRequired;
+    const isEligible =
+      Boolean(appliedMonthlyCapTier) &&
+      profile.total >= card.previousSpend &&
+      profile.total >= rule.previousMonthSpendRequired;
     const variableReward = isEligible ? spend * rate : 0;
     const fixedReward = isEligible ? clampBenefit(rule.fixedAmount ?? 0) : 0;
     const savingBeforeCap = variableReward + fixedReward;
@@ -83,7 +113,7 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
     };
   });
 
-  const isCardEligible = profile.total >= card.previousSpend;
+  const isCardEligible = Boolean(appliedMonthlyCapTier) && profile.total >= card.previousSpend;
   const ruleSavings = isCardEligible
     ? baseRuleSavings
     : baseRuleSavings.map((rule) => ({ ...rule, savingBeforeCap: 0, saving: 0 }));
@@ -94,22 +124,22 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
   const pickingRate = profile.total > 0 ? (monthlySaving / profile.total) * 100 : 0;
   const topBenefits = [...ruleSavings]
     .sort((a, b) => b.saving - a.saving)
-    .slice(0, 2)
+    .slice(0, 3)
     .map((rule) => rule.label)
     .filter(Boolean)
     .join(", ");
 
   const reason = isCardEligible
-    ? `피킹률은 월 순혜택 ${formatWon(monthlySaving)}을 월 사용금액 ${formatWon(profile.total)}으로 나눈 값입니다. 영역별 예상 혜택 ${formatWon(
-        matchedBenefit
-      )} 중 카드 통합 월 한도 ${formatWon(effectiveMonthlyCap)}를 적용해 ${formatWon(
-        grossMonthlySaving
-      )}까지 인정하고, 연회비 월할 ${formatWon(monthlyFee)}을 뺀 뒤 계산했습니다.${
+    ? `선택한 월 사용액 ${formatWon(profile.total)}은 ${tierLabel(appliedMonthlyCapTier)} 구간입니다. 이 구간의 통합 월 한도 ${formatWon(
+        effectiveMonthlyCap
+      )} 안에서 영역별 예상 혜택 ${formatWon(matchedBenefit)}을 인정하고, 연회비 월할 ${formatWon(
+        monthlyFee
+      )}을 뺀 ${formatWon(monthlySaving)}을 피킹률 계산에 사용했습니다.${
         topBenefits ? ` 이번 조건에서는 ${topBenefits} 영역의 기여도가 큽니다.` : ""
       }`
-    : `월 사용금액 ${formatWon(profile.total)}이 전월실적 조건 ${formatWon(
+    : `월 사용액 ${formatWon(profile.total)}이 전월실적 조건 ${formatWon(
         card.previousSpend
-      )}보다 낮아 혜택을 받을 수 없는 구간입니다. 이 경우 피킹률은 0%로 처리합니다.`;
+      )} 또는 적용 가능한 한도 구간보다 낮아 혜택을 0원으로 계산했습니다.`;
 
   return {
     card,
@@ -122,6 +152,7 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
     effectiveMonthlyCap,
     monthlyFee,
     totalRuleCap,
+    appliedMonthlyCapTier,
     ruleSavings,
     reason
   };

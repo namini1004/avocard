@@ -58,6 +58,17 @@ export type CardBenefit = {
   note: string;
 };
 
+export type MonthlyCapTier = {
+  minSpend: number;
+  maxSpend?: number;
+  totalCap: number;
+  label: string;
+  channelCaps?: Array<{
+    label: string;
+    cap: number;
+  }>;
+};
+
 export type CreditCard = {
   slug: string;
   name: string;
@@ -70,6 +81,7 @@ export type CreditCard = {
   previousSpend: number;
   advertisedBenefit: string;
   monthlyCap: number;
+  monthlyCapTiers?: MonthlyCapTier[];
   excluded: string[];
   benefitRules: BenefitRule[];
   benefits: CardBenefit[];
