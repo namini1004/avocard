@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오늘 점심 추천 — 영통구청 주변</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg0: #f5f4f0; --bg1: #ffffff; --bg2: #eeede9; --bg3: #e5e4e0;
+      --success-bg: #eaf3de; --success-fg: #27500a; --success-border: #639922;
+      --warn-bg: #faeeda;   --warn-fg: #633806;
+      --danger-bg: #fcebeb; --danger-fg: #791f1f;
+      --info-bg: #e6f1fb;   --info-fg: #0c447c;
+      --text1: #1a1a1a; --text2: #5f5e5a; --text3: #999;
+      --border: rgba(0,0,0,0.11);
+      --radius: 10px; --radius-sm: 6px;
+      --font: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Noto Sans KR', sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg0: #181816; --bg1: #1e1e1c; --bg2: #282724; --bg3: #323230;
+        --success-bg: #173404; --success-fg: #c0dd97;
+        --warn-bg: #412402;   --warn-fg: #fac775;
+        --danger-bg: #501313; --danger-fg: #f7c1c1;
+        --info-bg: #042c53;   --info-fg: #b5d4f4;
+        --text1: #f0efe9; --text2: #a0a09a;
+        --border: rgba(255,255,255,0.09);
+      }
+    }
+    body { font-family: var(--font); background: var(--bg0); color: var(--text1); min-height: 100vh; padding: 1.5rem 1rem 3rem; }
+    .wrap { max-width: 740px; margin: 0 auto; }
+    .page-title { font-size: 20px; font-weight: 600; margin-bottom: 2px; }
+    .page-sub { font-size: 13px; color: var(--text2); margin-bottom: 1.5rem; }
+    .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-bottom: 1.4rem; }
+    .stat { background: var(--bg1); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 10px; text-align: center; }
+    .stat .lbl { font-size: 11px; color: var(--text2); margin-bottom: 3px; }
+    .stat .val { font-size: 18px; font-weight: 600; }
+    .sec { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text2); margin-bottom: 9px; }
+    .card { background: var(--bg1); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; margin-bottom: 10px; }
+    .card.top1 { border: 2px solid var(--success-border); }
+    .card.top2 { border-left: 3px solid var(--info-fg); }
+    .rank-tag { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; margin-bottom: 7px; }
+    .rank-tag.r1 { background: var(--success-bg); color: var(--success-fg); }
+    .rank-tag.r2 { background: var(--info-bg); color: var(--info-fg); }
+    .rank-tag.r3 { background: var(--warn-bg); color: var(--warn-fg); }
+    .c-name { font-size: 17px; font-weight: 600; margin-bottom: 2px; }
+    .c-meta { font-size: 12px; color: var(--text2); margin-bottom: 10px; }
+    .bars { display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
+    .bar-row { display: flex; align-items: center; gap: 8px; }
+    .bar-lbl { font-size: 11px; color: var(--text2); width: 48px; flex-shrink: 0; }
+    .bar-bg { flex: 1; height: 5px; background: var(--bg2); border-radius: 3px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 3px; }
+    .g { background: #639922; } .a { background: #ba7517; } .r { background: #d94545; }
+    .bar-note { font-size: 11px; color: var(--text2); white-space: nowrap; }
+    .badges { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
+    .badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 20px; }
+    .bg { background: var(--success-bg); color: var(--success-fg); }
+    .ba { background: var(--warn-bg);    color: var(--warn-fg); }
+    .br { background: var(--danger-bg);  color: var(--danger-fg); }
+    .bi { background: var(--info-bg);    color: var(--info-fg); }
+    .pc { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px; line-height: 1.65; }
+    .pc-head { font-weight: 600; margin-bottom: 3px; }
+    .pros .pc-head { color: var(--success-fg); }
+    .cons .pc-head { color: var(--danger-fg); }
+    .pros p, .cons p { color: var(--text2); }
+    .star { color: #e6a817; }
+    .allergy-list { display: flex; flex-direction: column; }
+    .a-row { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 0.5px solid var(--border); font-size: 13px; }
+    .a-row:last-child { border: none; }
+    .chip { background: var(--bg2); border-radius: 20px; padding: 2px 9px; font-size: 12px; color: var(--text2); white-space: nowrap; flex-shrink: 0; }
+    .a-note { margin-left: auto; font-size: 12px; color: var(--text2); }
+    .rej-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .rej { background: var(--bg2); border-radius: var(--radius-sm); padding: 9px 11px; font-size: 13px; }
+    .rej .rn { font-weight: 600; margin-bottom: 3px; }
+    .rej .rd { color: var(--text2); }
+    .map-list { display: flex; flex-direction: column; gap: 6px; }
+    .map-item { display: flex; align-items: flex-start; gap: 10px; background: var(--bg1); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 9px 12px; font-size: 13px; }
+    .map-num { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+    .map-num.n1 { background: var(--success-bg); color: var(--success-fg); }
+    .map-num.n2 { background: var(--info-bg); color: var(--info-fg); }
+    .map-num.nx { background: var(--bg3); color: var(--text2); }
+    .map-info .name { font-weight: 600; }
+    .map-info .addr { color: var(--text2); font-size: 12px; margin-top: 1px; }
+    .div { margin: 1.4rem 0 1rem; border-top: 0.5px solid var(--border); padding-top: 1rem; }
+    .infobox { background: var(--bg2); border-radius: var(--radius-sm); padding: 10px 13px; font-size: 13px; color: var(--text2); margin-top: 14px; }
+    .infobox strong { color: var(--text1); }
+    @media (max-width: 480px) {
+      .stats { grid-template-columns: repeat(2,1fr); }
+      .pc { grid-template-columns: 1fr; }
+      .rej-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="page-title">오늘 점심 추천</h1>
+  <p class="page-sub">수원 영통구청 주변 · 12명 · 비 예보 · 예산 최대 16,000원 · Google Places 기반</p>
+
+  <div class="sec">오늘 조건</div>
+  <div class="stats">
+    <div class="stat"><div class="lbl">인원</div><div class="val">12명</div></div>
+    <div class="stat"><div class="lbl">예산</div><div class="val">~16K</div></div>
+    <div class="stat"><div class="lbl">가용시간</div><div class="val">45분</div></div>
+    <div class="stat"><div class="lbl">도보</div><div class="val">≤10분</div></div>
+  </div>
+
+  <div class="sec">식당 평가 (구글 데이터 + 직원 취향 교차분석)</div>
+
+  <!-- 1순위 -->
+  <div class="card top1">
+    <span class="rank-tag r1"><i class="ti ti-trophy" style="font-size:12px"></i> 1순위 추천</span>
+    <div class="c-name">달빛에구운고등어 수원망포점 <span style="font-size:13px;font-weight:400;color:var(--text2)">— 한식 · 생선구이</span></div>
+    <div class="c-meta">
+      <i class="ti ti-walk" style="font-size:13px;vertical-align:-2px"></i> 약 5분 &nbsp;·&nbsp;
+      <span class="star">★</span> 3.8 (5건) &nbsp;·&nbsp; 11:00~21:00 &nbsp;·&nbsp; 덕영대로 1499번길 28
+    </div>
+    <div class="bars">
+      <div class="bar-row"><span class="bar-lbl">선호도</span><div class="bar-bg"><div class="bar-fill g" style="width:75%"></div></div><span class="bar-note">9/12명 부합</span></div>
+      <div class="bar-row"><span class="bar-lbl">예산</span><div class="bar-bg"><div class="bar-fill g" style="width:88%"></div></div><span class="bar-note">권장 이내 추정</span></div>
+      <div class="bar-row"><span class="bar-lbl">시간</span><div class="bar-bg"><div class="bar-fill a" style="width:65%"></div></div><span class="bar-note">피크 혼잡 주의</span></div>
+    </div>
+    <div class="badges">
+      <span class="badge bg">한식·국물 선호자 다수 (김대리·오매니저·최부장·남PM·문대표)</span>
+      <span class="badge bg">셀프 사이드 뷔페</span>
+      <span class="badge ba">도보 ~5분 (비 주의)</span>
+      <span class="badge ba">혼잡 피크타임</span>
+      <span class="badge br">새우 메뉴 확인 필요 (박선임)</span>
+    </div>
+    <div class="pc">
+      <div class="pros">
+        <div class="pc-head">잘 맞는 점</div>
+        <p>· 한식·국물 선호자 다수 (김대리·오매니저·남PM·문대표·최부장)</p>
+        <p>· 셀프 사이드바로 채식(송사원) 야채 선택 가능</p>
+        <p>· 된장찌개류로 유당 민감(오매니저) 안전</p>
+        <p>· 구이 세트 14,000원 이내 추정</p>
+      </div>
+      <div class="cons">
+        <div class="pc-head">주의할 점</div>
+        <p>· 박선임 새우 알러지 — 메뉴 구성 확인 필수</p>
+        <p>· 리뷰 중 서비스 불친절 사례 있음</p>
+        <p>· 정사원(양식)·유대리(분식) 만족도 낮을 수 있음</p>
+        <p>· 계산서 발급 여부 전화 확인 필요</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2순위 -->
+  <div class="card top2">
+    <span class="rank-tag r2">2순위</span>
+    <div class="c-name">청화월 <span style="font-size:13px;font-weight:400;color:var(--text2)">— 중식 (사천요리)</span></div>
+    <div class="c-meta">
+      <i class="ti ti-walk" style="font-size:13px;vertical-align:-2px"></i> 약 10~12분 &nbsp;·&nbsp;
+      <span class="star">★</span> 4.5 (88건) &nbsp;·&nbsp; 월~금 11:00~21:00 / 일 휴무 &nbsp;·&nbsp; 청명북로 7번길 7-6
+    </div>
+    <div class="bars">
+      <div class="bar-row"><span class="bar-lbl">평점</span><div class="bar-bg"><div class="bar-fill g" style="width:90%"></div></div><span class="bar-note">4.5 ★ 최고 수준</span></div>
+      <div class="bar-row"><span class="bar-lbl">선호도</span><div class="bar-bg"><div class="bar-fill a" style="width:58%"></div></div><span class="bar-note">7/12명 부합</span></div>
+      <div class="bar-row"><span class="bar-lbl">도보</span><div class="bar-bg"><div class="bar-fill r" style="width:40%"></div></div><span class="bar-note">10~12분 (비 경계)</span></div>
+    </div>
+    <div class="badges">
+      <span class="badge bg">한주임·남PM 중식 선호 충족</span>
+      <span class="badge bg">평점 4.5 — 지역 최고</span>
+      <span class="badge bi">사천·소고기면 특색 메뉴</span>
+      <span class="badge ba">도보 10분+ (비 경계)</span>
+      <span class="badge ba">매운맛 — 김대리·정사원·송사원 주의</span>
+      <span class="badge br">일요일 휴무 확인</span>
+    </div>
+    <div class="pc">
+      <div class="pros">
+        <div class="pc-head">잘 맞는 점</div>
+        <p>· 평점 4.5, "영통 최고 식당" 리뷰 다수</p>
+        <p>· 한주임(중식·덮밥)·남PM(중식) 최선호</p>
+        <p>· 가격 합리적 리뷰 다수</p>
+      </div>
+      <div class="cons">
+        <div class="pc-head">주의할 점</div>
+        <p>· 도보 10분+ — 비 예보 시 리스크</p>
+        <p>· 사천 매운맛 — 일부 직원 불편 가능</p>
+        <p>· 남PM 12:50 복귀 시 이동 촉박</p>
+        <p>· 계산서 여부 미확인</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3순위 -->
+  <div class="card">
+    <span class="rank-tag r3">3순위 (대안)</span>
+    <div class="c-name">어글리스토브 망포점 <span style="font-size:13px;font-weight:400;color:var(--text2)">— 양식·패밀리레스토랑</span></div>
+    <div class="c-meta">
+      <i class="ti ti-walk" style="font-size:13px;vertical-align:-2px"></i> 약 8~10분 &nbsp;·&nbsp;
+      <span class="star">★</span> 4.0 (333건) &nbsp;·&nbsp; 11:00~21:30 &nbsp;·&nbsp; 덕영대로 1566 판타지움 1층
+    </div>
+    <div class="badges">
+      <span class="badge bg">정사원 양식 선호 충족</span>
+      <span class="badge bg">유당 알러지 직원 안내 사례 (리뷰)</span>
+      <span class="badge bg">주차 가능 (강책임 요구)</span>
+      <span class="badge bi">리뷰 333건 — 신뢰도 높음</span>
+      <span class="badge ba">일부 메뉴 16,000원+ 가능</span>
+      <span class="badge ba">한식 선호자 만족도 낮을 수 있음</span>
+    </div>
+    <div class="pc">
+      <div class="pros">
+        <div class="pc-head">잘 맞는 점</div>
+        <p>· 정사원 양식 선호 충족, 넓은 좌석</p>
+        <p>· 유당 알러지 대응 경험 있음 (리뷰 확인)</p>
+        <p>· 주차 편리 — 강책임 요구 충족</p>
+      </div>
+      <div class="cons">
+        <div class="pc-head">주의할 점</div>
+        <p>· 일부 메뉴 16,000원 초과 가능</p>
+        <p>· 최부장·문대표(한식 선호) 만족도 낮을 수 있음</p>
+        <p>· 계산서 발급 여부 확인 필요</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 탈락 -->
+  <div class="div">
+    <div class="sec">탈락 / 보류 식당</div>
+    <div class="rej-grid">
+      <div class="rej"><div class="rn">온미관 <span class="badge ba">거리 초과</span></div><div class="rd">매탄동 위치 — 도보 20분+, 비 오는 날 부적합</div></div>
+      <div class="rej"><div class="rn">Grotto <span class="badge ba">거리·규모</span></div><div class="rd">도보 15분+ / 브런치카페 — 12명 단체 어려움</div></div>
+      <div class="rej"><div class="rn">아름다운땅 <span class="badge ba">예산 우려</span></div><div class="rd">이탈리안 와인바 분위기, 예산 초과 가능성</div></div>
+      <div class="rej"><div class="rn">Il-Il-Yang <span class="badge br">점심 영업 없음</span></div><div class="rd">월요일 오픈 14:00 — 점심 이용 불가</div></div>
+      <div class="rej"><div class="rn">에베레스트 인도식당 <span class="badge ba">거리 초과</span></div><div class="rd">도보 15분+ / 향신료 — 일부 직원 비선호</div></div>
+    </div>
+  </div>
+
+  <!-- 알러지 체크 -->
+  <div class="div">
+    <div class="sec">알러지·제약 체크 (달빛에구운고등어 기준)</div>
+    <div class="allergy-list">
+      <div class="a-row">
+        <span class="chip">박선임</span>
+        <span style="color:var(--warn-fg)"><i class="ti ti-alert-triangle" style="font-size:13px;vertical-align:-2px"></i> 새우 알러지</span>
+        <span class="a-note">생선구이 세트 새우 포함 여부 확인 필수</span>
+      </div>
+      <div class="a-row">
+        <span class="chip">오매니저</span>
+        <span style="color:var(--warn-fg)"><i class="ti ti-alert-triangle" style="font-size:13px;vertical-align:-2px"></i> 유당 민감</span>
+        <span class="a-note">된장찌개·구이류 → 치즈류 없어 안전</span>
+      </div>
+      <div class="a-row">
+        <span class="chip">송사원</span>
+        <span style="color:var(--info-fg)"><i class="ti ti-leaf" style="font-size:13px;vertical-align:-2px"></i> 채식 지향</span>
+        <span class="a-note">셀프 사이드바 야채·두부 위주 선택 가능</span>
+      </div>
+      <div class="a-row">
+        <span class="chip">남PM</span>
+        <span style="color:var(--success-fg)"><i class="ti ti-clock" style="font-size:13px;vertical-align:-2px"></i> 12:50 복귀</span>
+        <span class="a-note">도보 5분 → 12:10 입장 시 40분 확보</span>
+      </div>
+      <div class="a-row">
+        <span class="chip">문대표</span>
+        <span style="color:var(--info-fg)"><i class="ti ti-user" style="font-size:13px;vertical-align:-2px"></i> 고객 동행 가능</span>
+        <span class="a-note">정갈한 생선구이 세트 적합 — 룸 여부 사전 확인 권장</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 위치 요약 -->
+  <div class="div">
+    <div class="sec">식당 위치 요약</div>
+    <div class="map-list">
+      <div class="map-item">
+        <div class="map-num n1">1</div>
+        <div class="map-info">
+          <div class="name">달빛에구운고등어 수원망포점</div>
+          <div class="addr">영통구 덕영대로 1499번길 28 · ☎ 031-204-3392 · 구청 도보 약 5분</div>
+        </div>
+      </div>
+      <div class="map-item">
+        <div class="map-num n2">2</div>
+        <div class="map-info">
+          <div class="name">청화월</div>
+          <div class="addr">영통구 청명북로 7번길 7-6 · ☎ 031-203-7807 · 도보 약 10~12분 / 일요일 휴무</div>
+        </div>
+      </div>
+      <div class="map-item">
+        <div class="map-num nx">3</div>
+        <div class="map-info">
+          <div class="name">어글리스토브 망포점</div>
+          <div class="addr">영통구 덕영대로 1566 판타지움 1층 · ☎ 031-204-8459 · 도보 약 8~10분</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="infobox">
+    <i class="ti ti-info-circle" style="font-size:14px;vertical-align:-2px;margin-right:4px"></i>
+    <strong>즉시 할 일:</strong> 달빛에구운고등어 ☎ 031-204-3392 에 <strong>계산서 발급 가능 여부 + 12명 자리 확보</strong> 전화 확인
+    → 불가 시 청화월 ☎ 031-203-7807 (오늘 요일 영업 여부 포함)
+  </div>
+</div>
+</body>
+</html>
