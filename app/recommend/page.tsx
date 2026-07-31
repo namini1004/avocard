@@ -3,8 +3,12 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
-import { categoryLabels, BenefitCategory } from "@/data/cards";
-import { defaultProfile, SpendingProfile } from "@/lib/calculate";
+import {
+  categoryLabels,
+  type BenefitCategory,
+  type SpendingProfile
+} from "@/data/verified-card-types";
+import { defaultProfile } from "@/lib/calculate-v2";
 
 const fields: BenefitCategory[] = [
   "transport",
@@ -48,7 +52,12 @@ export default function RecommendPage() {
       setter: setPerformanceLoad,
       options: ["40만원까지", "60만원까지", "90만원까지"]
     },
-    { label: "카드사 선호", value: issuer, setter: setIssuer, options: ["상관없음", "신한", "삼성", "현대", "국민"] },
+    {
+      label: "카드사 선호",
+      value: issuer,
+      setter: setIssuer,
+      options: ["상관없음", "신한", "현대", "롯데", "BC", "NH농협"]
+    },
     { label: "카드 유형", value: cardType, setter: setCardType, options: ["신용", "체크", "상관없음"] }
   ];
 

@@ -26,7 +26,21 @@
     "collect:naver:slow:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/naver-card-collector.mjs --mode=collect --max=1 --delay=90000 --jitter=30000",
     "collect:naver:daemon:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/naver-card-collector.mjs --mode=daemon --daemon-delay=1000 --daemon-jitter=9000 --idle-delay=10000 --idle-jitter=50000",
     "export:naver:csv:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/export-naver-card-csv.mjs",
-    "build:collected-cards:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/build-collected-card-data.mjs"
+    "build:collected-cards:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/build-collected-card-data.mjs",
+    "export:local-db": "node --experimental-strip-types scripts/export-local-card-db.mjs",
+    "export:local-db:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe --experimental-strip-types scripts/export-local-card-db.mjs",
+    "refine:cards": "node scripts/refine-card-data-pipeline.mjs",
+    "refine:cards:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/refine-card-data-pipeline.mjs",
+    "build:refined-cards": "node scripts/build-cards-from-refined-db.mjs",
+    "build:refined-cards:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/build-cards-from-refined-db.mjs",
+    "collect:external-picking": "node scripts/collect-external-picking.mjs",
+    "collect:external-picking:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe scripts/collect-external-picking.mjs",
+    "audit:integrity": "node --experimental-strip-types scripts/audit-card-integrity.mjs",
+    "audit:integrity:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe --experimental-strip-types scripts/audit-card-integrity.mjs",
+    "validate:external-picking": "node --experimental-strip-types scripts/validate-external-picking.mjs",
+    "validate:external-picking:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe --experimental-strip-types scripts/validate-external-picking.mjs",
+    "validate:verified": "node --experimental-strip-types scripts/validate-verified-cards.mjs",
+    "validate:verified:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe --experimental-strip-types scripts/validate-verified-cards.mjs"
   },
   "dependencies": {
     "next": "^16.2.7",

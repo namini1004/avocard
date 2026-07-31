@@ -1,0 +1,6 @@
+"source_id","source_name","source_type","base_url","collection_method","trust_weight","notes"
+"card_gorilla","카드고릴라","card_service","https://www.card-gorilla.com","manual_permalink_or_public_page","0.70","카드 혜택/인기 순위 검산용. 피킹률이 명시된 경우에만 benchmark로 사용."
+"naver_card_search","네이버 카드검색","card_service","https://m-card-search.naver.com","existing_collector","0.60","현재 원문 수집 기반. 외부 검산보다는 원문/요약 보강 신호로 사용."
+"ppomppu_card_forum","뽐뿌 카드 포럼","community","https://www.ppomppu.co.kr","manual_permalink_only","0.45","개별 사용자 계산값. 소비조건과 계산식이 명확한 게시글만 사용."
+"clien_card_posts","클리앙 카드 관련 게시글","community","https://www.clien.net","manual_permalink_only","0.45","개별 사용자 계산값. 댓글 요약이 아닌 원문 계산 조건 중심으로 사용."
+"blog_review","개인 블로그/브런치/티스토리 리뷰","community","https://","manual_permalink_only","0.35","작성자 계산식이 공개된 경우만 사용. 광고성 글은 낮은 가중치."

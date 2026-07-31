@@ -1,8 +1,14 @@
-import { CardAnalysis, formatWon } from "@/lib/calculate";
+import { formatPercent, formatWon, type VerifiedCardAnalysis } from "@/lib/calculate-v2";
 import { CardVisual } from "./CardVisual";
 import { ButtonLink } from "./ButtonLink";
 
-export function RecommendationCard({ analysis, rank }: { analysis: CardAnalysis; rank: number }) {
+export function RecommendationCard({
+  analysis,
+  rank
+}: {
+  analysis: VerifiedCardAnalysis;
+  rank: number;
+}) {
   return (
     <article className="grid gap-5 rounded-[2rem] border border-avocado-900/10 bg-white p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-lift lg:grid-cols-[240px_1fr]">
       <CardVisual card={analysis.card} compact />
@@ -20,15 +26,15 @@ export function RecommendationCard({ analysis, rank }: { analysis: CardAnalysis;
         <div className="grid gap-3 sm:grid-cols-3">
           <div>
             <p className="text-xs font-bold text-ink/50">순 월혜택</p>
-            <p className="text-xl font-black text-avocado-700">{formatWon(analysis.monthlySaving)}</p>
+            <p className="text-xl font-black text-avocado-700">{formatWon(analysis.sustainable.netBenefit)}</p>
           </div>
           <div>
             <p className="text-xs font-bold text-ink/50">순 연혜택</p>
             <p className="text-xl font-black text-ink">{formatWon(analysis.annualSaving)}</p>
           </div>
           <div>
-            <p className="text-xs font-bold text-ink/50">순피킹률</p>
-            <p className="text-xl font-black text-ink">{analysis.pickingRate.toFixed(2)}%</p>
+            <p className="text-xs font-bold text-ink/50">지속 피킹률</p>
+            <p className="text-xl font-black text-ink">{formatPercent(analysis.pickingRate)}</p>
           </div>
         </div>
         <ButtonLink href={`/cards/${analysis.card.slug}`} tone="secondary">

@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-06-11T13:04:13.065Z",
+  "outDir": "C:\\p4\\avocard\\data\\refined-db",
+  "cards": 391,
+  "performanceRules": 391,
+  "capTiers": 243,
+  "benefitRules": 20029,
+  "capGroups": 243,
+  "exclusions": 3672,
+  "textBlocks": 2180,
+  "reviewQueue": 391,
+  "statusCounts": {
+    "ready_for_review": 245,
+    "partial_review": 136,
+    "manual_required": 10
+  }
+}

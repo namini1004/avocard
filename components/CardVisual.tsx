@@ -1,24 +1,31 @@
-import { CreditCard } from "@/data/cards";
+import type { VerifiedCard } from "@/data/verified-card-types";
 
-export function CardVisual({ card, compact = false }: { card: CreditCard; compact?: boolean }) {
+export function CardVisual({ card, compact = false }: { card: VerifiedCard; compact?: boolean }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-[1.6rem] bg-gradient-to-br ${card.color} p-5 text-white shadow-lift ${
-        compact ? "min-h-44" : "min-h-60"
+      className={`relative aspect-[8/5] w-full overflow-hidden rounded-lg border border-black/10 p-5 shadow-lift ${
+        compact ? "max-w-[320px]" : "max-w-[520px]"
       }`}
+      style={{ backgroundColor: card.color.background, color: card.color.foreground }}
     >
-      <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-white/20" />
-      <div className="absolute -bottom-14 right-7 h-40 w-40 rounded-full bg-cream/20" />
-      <p className="text-sm font-bold opacity-80">{card.issuer}</p>
-      <p className="mt-3 max-w-56 text-2xl font-black leading-tight">{card.name}</p>
-      <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+      <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-xs font-bold opacity-75">실제 혜택 추적</p>
-          <p className="mt-1 text-lg font-black">AVO BENEFIT</p>
+          <p className="whitespace-nowrap text-xs font-black opacity-65">{card.issuer}</p>
+          <p className="mt-2 max-w-[15rem] text-xl font-black leading-tight">{card.name}</p>
         </div>
-        <div className="grid h-16 w-16 place-items-center rounded-full bg-cream">
-          <div className="h-8 w-8 rounded-full bg-seed" />
+        <div
+          className="h-8 w-11 rounded-md border border-black/15"
+          style={{ backgroundColor: card.color.accent }}
+          aria-hidden="true"
+        >
+          <div className="mx-auto mt-2 h-3 w-7 rounded-sm border border-black/15" />
         </div>
+      </div>
+      <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
+        <p className="whitespace-nowrap text-xs font-black opacity-60">
+          {card.cardType === "credit" ? "CREDIT" : "CHECK"}
+        </p>
+        <p className="whitespace-nowrap text-xs font-black opacity-55">AVOCARD VERIFIED</p>
       </div>
     </div>
   );

@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-06-18T16:46:29.999Z",
+  "cards": 391,
+  "benchmarks": 0,
+  "priorityCounts": {
+    "P0": 70,
+    "P1": 30,
+    "P2": 245,
+    "P3": 46
+  },
+  "signalCounts": {
+    "single_tier_high_cap": 110,
+    "monthly_cap_outlier": 65,
+    "high_picking_without_external_benchmark": 45,
+    "not_officially_verified": 391,
+    "estimated_rule": 301,
+    "top_rank_without_external_benchmark": 5,
+    "fallback_rule": 25
+  },
+  "reportPath": "data\\integrity\\card-integrity-report.csv",
+  "priorityPath": "data\\integrity\\external-collection-priority.csv"
+}

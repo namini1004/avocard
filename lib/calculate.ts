@@ -97,7 +97,7 @@ export function analyzeCard(card: CreditCard, profile: SpendingProfile): CardAna
       profile.total >= card.previousSpend &&
       profile.total >= rule.previousMonthSpendRequired;
     const variableReward = isEligible ? spend * rate : 0;
-    const fixedReward = isEligible ? clampBenefit(rule.fixedAmount ?? 0) : 0;
+    const fixedReward = isEligible ? Math.min(clampBenefit(rule.fixedAmount ?? 0), spend) : 0;
     const savingBeforeCap = variableReward + fixedReward;
     const saving = Math.min(savingBeforeCap, cap);
 
