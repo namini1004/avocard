@@ -1,0 +1,13 @@
+.tools/
+.next/
+node_modules/
+.codex-remote-attachments/
+.tmp-*.log
+
+# These files are source assets for offline collection and refinement.
+# Runtime pages use the generated TypeScript datasets instead.
+data/raw/
+data/local-db/
+data/refined-db/
+data/integrity/
+data/external-picking/
