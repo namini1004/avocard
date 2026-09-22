@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: #fffdf6;
 }
 
 body {
@@ -75,4 +76,32 @@ select {
 
 .keep-all {
   word-break: keep-all;
+}
+
+.mobile-safe-header {
+  padding-top: max(10px, env(safe-area-inset-top));
+}
+
+.mobile-fab-bottom {
+  bottom: max(16px, calc(env(safe-area-inset-bottom) + 12px));
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+
+  button,
+  a,
+  summary,
+  input,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-safe-header {
+    padding-top: 0;
+  }
 }

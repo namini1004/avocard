@@ -43,6 +43,7 @@
     "validate:verified:portable": ".\\.tools\\node-v22.11.0-win-x64\\node.exe --experimental-strip-types scripts/validate-verified-cards.mjs"
   },
   "dependencies": {
+    "lucide-react": "^1.47.0",
     "next": "^16.2.7",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"

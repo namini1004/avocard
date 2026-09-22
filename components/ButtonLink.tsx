@@ -18,7 +18,7 @@ export function ButtonLink({
   return (
     <Link
       href={href}
-      className={`focus-ring inline-flex min-h-12 items-center justify-center rounded-full px-6 text-sm font-black shadow-soft transition hover:-translate-y-0.5 ${className}`}
+      className={`focus-ring inline-flex min-h-12 items-center justify-center rounded-[18px] px-6 text-sm font-black shadow-soft transition hover:-translate-y-0.5 active:scale-[0.98] ${className}`}
     >
       {children}
     </Link>

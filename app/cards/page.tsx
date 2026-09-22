@@ -5,7 +5,7 @@ export default function CardsPage() {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-7xl px-5 py-8 lg:px-8">
+      <main className="site-main">
         <CardRankingBoard />
       </main>
     </>

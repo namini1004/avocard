@@ -3,6 +3,7 @@
 node_modules/
 .codex-remote-attachments/
 .tmp-*.log
+.tmp-browser/
 
 # These files are source assets for offline collection and refinement.
 # Runtime pages use the generated TypeScript datasets instead.
